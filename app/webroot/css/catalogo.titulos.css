@@ -1,0 +1,66 @@
+
+p.titulo, div.titulo{
+    background-image: url(img/diploma.png);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #5C9CCC;
+}
+
+
+.titulo H1{
+    font-size: 10pt;
+    color: black;
+    padding-left: 38px;
+    padding-top: 2px;
+}
+
+.titulo p{
+    margin: 2px 0px;
+    color: #3F3F3F;
+}
+
+.titulo UL{
+    margin: 0px 0px;
+    color: #3F3F3F;
+}
+
+
+.items-nombre {
+    text-align:left;
+}
+.items-oferta {
+    text-align:left;
+    font-style: italic;
+    margin-right: 40px;
+    float: left;
+    width: 160px
+}
+
+
+#items a{
+    text-decoration: none;
+    color: #58585A;
+}
+
+#items li a:hover{
+    color: #000000;
+}
+
+.titulosview {
+    background-color: white;   
+}
+
+.field-col {
+    width: 33%;
+    float: left;
+}
+.field-col select, .field-col input, .field-col label {
+    width:90%;
+    margin-left:4%;
+    margin-right:4%;
+}
+
+.mas_info_azul_small{
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+}

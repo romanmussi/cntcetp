@@ -1,0 +1,652 @@
+/*
+azules
+#2a546b oscurisimo
+#0082ca oscuro
+#25abe1 claro
+
+#E57609 naranja
+#ECF4F9 celeste de fondo del Buscando...
+#f1f1f2 body
+#58585a negro letra
+#b1cc2f verdoso amarillento
+#dcddde gris oscuro fondos box
+
+*/
+
+* {margin:0;padding:0;} 
+
+html, body{
+    height: 100%;
+}
+
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+content:"";
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+
+
+.error-message{
+    color: red;
+}
+
+.wrapper {
+}
+
+
+
+LABEL {
+    color: #58585a;
+    font-size: 1.2em;
+    clear: both;
+    display: block;
+}
+
+input:disabled, select:disabled{
+    background-color: white;
+    font-size: 9pt;
+}
+
+INPUT, TEXTAREA, select {
+    border: 1px solid #dcddde; 
+    background: #f1f1f2; 
+    color: #58585a; 
+}
+INPUT:HOVER, TEXTAREA:HOVER, select:HOVER{
+    background: #F7F7F7; 
+}
+INPUT:FOCUS, TEXTAREA:FOCUS, select:FOCUS{
+    background: #fff;
+}
+
+body{
+    background-color: #f1f1f2;
+    /* background-image: url(img/shadow.png); */
+    background-repeat: repeat-x;
+    background-position: 0 100px;
+    color: #58585a;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Verdana, sans-serif;
+    line-height: 1.5em;
+    font-size: 13px;
+}
+
+h1, h2{
+   color: #2A546B;
+   margin: 13px 0px 13px 0px;
+}
+
+h1 A, h1 A:visited, h2 A, h1 A:visited, h3 A, h3 A:visited, h4 A, h4 A:visited{
+   color: #58585a;
+   margin: 13px 0px 13px 0px;
+   text-decoration: none;
+}
+h1 A:HOVER, h2 A:HOVER, h3 A:HOVER, h4 A:HOVER{
+   color: #58585a;
+   margin: 13px 0px 13px 0px;
+   text-decoration: underline;
+}
+
+h1{
+    font-size: 1.36em;
+}
+
+h2{
+    font-size: 1.3em;
+}
+h3{
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+h4{
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+
+A{
+    color: #0082ca;
+}
+
+A:hover{
+    color: #25abe1;
+}
+
+A:visited{
+    /*color: #9B4B06;*/
+}
+
+h1.corpus{
+    background-color: #5C9CCC;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+    clear: both;
+}
+
+
+
+h1.titulo, h2.titulo, h3.titulo, h4.titulo {    
+    background: url(img/diploma.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+h1.instit, h2.instit, h3.instit, h4.instit{
+    background: url(img/pizarron_22.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+h3 {
+    font-weight: bold;
+    color: #b1cc2f;
+}
+
+
+
+ul {
+    list-style: url(img/listitem.gif);
+    padding-left: 30px;
+}
+
+ul ul{
+    list-style: url(img/listitem2.gif);
+    padding-left: 30px;
+}
+
+
+ul.items, ol.items{
+    margin: 0px;
+}
+
+ul.items li, ol.items li{
+    border-bottom: 1px dashed #CDCDCD;
+    height: auto !important;
+    position: relative;
+}
+
+
+
+
+dt{
+    float: left;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 15px;
+    width: 150px;
+}
+
+dd{
+    display: table;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+dd ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+.sponsors{
+    margin-top: 15px;
+    margin-bottom: 10px;   
+    overflow: hidden;
+    text-align: center;
+}
+
+.sponsors a img {
+    text-decoration: none;
+    display: inline-block;
+    margin: 13px 7px;
+    border:0px;
+}
+
+#footer{
+    border-top: solid 1px #0082ca;
+    background: #dcddde;
+    background: -moz-linear-gradient(top, #dcddde 0%, #f1f1f2 100%, #7db9e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dcddde), color-stop(100%,#f1f1f2), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #dcddde 0%,#f1f1f2 100%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #dcddde 0%,#f1f1f2 100%,#7db9e8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #dcddde 0%,#f1f1f2 100%,#7db9e8 100%); /* IE10+ */
+    background: linear-gradient(top, #dcddde 0%,#f1f1f2 100%,#7db9e8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcddde', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+
+    text-align: center;
+    font-size: x-small;
+    color: #2a546b;
+    position: relative;
+    height: 150px;
+    clear:both;
+}
+
+#container{
+}
+
+
+.boxblanca, .boxgris{
+    margin-bottom: 10px;    
+}
+
+.cuerpo{
+    border: 2px solid #5C9CCC;
+    
+    -webkit-border-top-left-radius: 2em;
+    -webkit-border-top-right-radius: 2em;
+    -moz-border-radius-topleft: 2em;
+    -moz-border-radius-topright: 2em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    
+    background-color: white;
+    
+}
+
+
+.centrado{
+    text-align: center;
+}
+
+.boxblanca{
+    background-color: #fff;
+    border: 1px solid #e2e2e4;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.boxblanca h1,.boxblanca h2,.boxblanca h3{
+    
+}
+
+.boxblancacuadrada{
+    background-color: #fff;
+    border: 2px solid #F1F1F2;
+
+}
+
+.boxgris{
+    background-color: #dcddde;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    padding: 5px 10px;
+    border: 1px solid #D1D2D3;
+    position: relative;
+}
+
+.boxgris h1,.boxgris h2,.boxgris h3{
+    color: #0082ca;
+}
+
+
+.mas_info_azul_small{
+    text-indent: -1000px;
+    overflow: hidden;
+    background: url(img/lupazul_small.png) no-repeat;
+    height: 15px;
+    display: block;
+    width: 15px;
+    outline: none;
+    vertical-align: middle;
+}
+
+.mas_info_gris_small{
+    text-indent: -1000px;
+    overflow: hidden;
+    background: url(img/lupagris_small.png)  no-repeat;
+    height: 15px;
+    width: 15px;
+    display: block;
+    outline: none;
+    vertical-align: middle;
+}
+
+
+
+.mas_info_azul{
+    text-indent: -1000px;
+    overflow: hidden;
+    background: url(img/lupazul.png) no-repeat;
+    height: 30px;
+    display: inline-block;
+    width: 30px;
+    outline: none;
+    vertical-align: middle;
+    margin: 10px 10px 15px 20px;
+}
+
+.mas_info_gris{
+    margin: 0px 10px;
+    text-indent: -1000px;
+    overflow: hidden;
+    background: url(img/lupagris.png)  no-repeat;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    outline: none;
+    vertical-align: middle;
+}
+
+.mas_info_azul:HOVER, .mas_info_gris:HOVER {
+    background-position: 1px 1px;
+}
+
+.picround{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    float: left;
+}
+
+.separador-azul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 3px;
+    background-color: #0082ca;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+}
+
+.separador{
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+
+.altrow {
+    border-bottom: 1px groove gray;
+    margin-bottom: 3px;
+}
+
+.ajax-loader {
+    text-indent: -1000px;
+    overflow: hidden;
+    background: url(img/ajax-loader.gif) no-repeat;
+    height: 32px;
+    width: 32px;
+    display: block;
+    outline: none;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+/** FORMULARIO DESIGN **/
+
+/* formulario de 6 grids */
+.formu_4{
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+.formu_4 input{
+    width: 188px;
+}
+
+
+
+.formu_4 .input{
+    margin-bottom: 3px;
+}
+
+.formu_4 label{
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 80px;
+}
+
+.formu_4 textarea{
+    width: 278px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+.formu_4 .submit{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 80px;
+}
+.formu_4 input[type='submit']{
+   width: 80px;
+}
+
+/**/
+
+.formu_6 input{
+    width: 67%;
+}
+
+.formu_6 .input{
+    margin-bottom: 3px;
+}
+
+.formu_6 label{
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    width: 80px;
+}
+
+.formu_6 textarea{
+    width: 95%;
+    margin-bottom: 2px;
+}
+
+.formu_6 .submit{
+    margin-bottom: 10px;
+    width: 80px;
+}
+.formu_6 input[type='submit']{
+   width: 80px;
+}
+/**/
+
+.boxform {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*AYUDA BUSCADOR*/
+
+.help_head{
+    height: 18px;
+    padding:2px;
+    font-weight:bolder;
+    font-size: 9pt;
+    font-family: helvetica, sans-serif;
+}
+
+.help_body{
+    width:90%;
+    font-size: 8pt;
+    width:98%;
+    margin:0px;
+    padding: 0 5px 5px 5px;
+}
+
+.help_body table{
+    width:90%;
+    margin: 10px auto;
+}
+
+.help_body table tr td{
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.borde_derecho{
+    border-right:1px solid #D1D1D1;
+}
+
+.borde_izquierdo{
+    border-left:1px solid #D1D1D1;
+    padding-left: 15px;
+
+}
+
+.box_izquierda {
+    width:48%;
+    float:left;
+    border-right: 1px solid #D1D1D1;
+    margin-right: 0px;
+}
+
+.box_derecha {
+    width:48%;
+    float:left;
+    padding-left: 10px;
+    border: 0px;
+}
+
+.box_centrada {
+    width:50%;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+.message{
+    width: 100%;
+    height: 20px;
+    background: white;
+    border-bottom: 1px solid #E2E2E4;
+    color: red;
+    text-align: center;
+    border-top: 1px solid #E2E2E4;
+    font-size: 1.2em;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    margin-top: 5px;
+}
+
+/* TABLAS */
+table
+{
+    /*font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;*/
+    font-size: 12px;
+    background: #fff;
+    margin: 5px;
+    border-collapse: collapse;
+    text-align: left;
+}
+table th
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: #58585A;
+    padding: 10px 8px;
+    border-bottom: 5px solid #25ABE1;
+}
+table td
+{
+    border-bottom: 1px dashed #58585A;
+    color: #58585A;
+    padding: 6px 8px;
+}
+table tbody tr:hover td
+{
+    color: black;
+}
+
+li{
+    margin-top: 4px;
+}
+
+.disabled{
+    display:inline;
+}
+
+.inputs_largos input, .inputs_largos select{
+    width: 95%;
+}
+.inputs_largos input[type=submit]{
+    width: 100px;
+}
+
+#head-text{
+    z-index: 997;
+}
+
+
+
+.boxestudiantes{
+    height: 168px;
+}
+
+.boxoferta{
+    height: 168px;
+}
+
+
+
+.linkconatiner-more-info{
+    display:block; 
+    cursor: hand;
+    cursor:pointer;
+    color: #58585a;
+    padding-right: 15px;
+}
+
+.linkconatiner-more-info:HOVER{
+    background: url(img/lupazul_small.png) no-repeat 100% 50%;
+    color: black;
+}
+
+
+ul.ul-horizontal{
+    margin: 0px;
+    padding: 0px;
+}
+
+.ul-horizontal li{
+    background: url(img/listitem.gif) no-repeat 0% 50%;
+    padding-left: 15px;
+    margin-left: 20px;
+    display: inline;
+}
+
+.ui-autocomplete-loading { 
+    background: url(img/loader16x16.gif) right center no-repeat !important; 
+}
+.ui-autocomplete { 
+    max-height: 300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+    /* add padding to account for vertical scrollbar */
+    padding-right: 20px;
+}
+
+
+
+#g_ministerio{
+    cursor: hand;
+    cursor: move;
+}
+

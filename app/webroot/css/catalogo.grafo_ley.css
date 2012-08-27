@@ -1,0 +1,89 @@
+.show_in_dialog{
+    display: none;
+}
+
+  #descripcion{
+    background-color: lightgray;
+    border: 2px solid gray;
+    border-radius: 10px 10px 10px 10px;
+    left: 600px;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    width: 250px;
+    display:none;
+  }
+  
+  #grafo{
+      background: url('../img/grafo/background.png') no-repeat;
+      width: 690px;
+      height: 340px;
+      position: relative;
+      margin: auto;
+      background-position:24px 66px;
+  }
+  
+  #grafo A{
+      position: absolute;
+      background-repeat: no-repeat;
+      padding: 5px;
+      text-decoration: none;
+      -webkit-transition: all 0.3s ease-in-out; 
+      -moz-transition: all 0.3s ease-in-out; 
+      -o-transition: all 0.3s ease-in-out; 
+      -ms-transition: all 0.3s ease-in-out;
+  }
+  
+  #grafo A:hover{
+        background-repeat: no-repeat;
+        -webkit-transform: scale(1.2); 
+        -moz-transform: scale(1.2); 
+        -o-transform: scale(1.2); 
+        -ms-transform: scale(1.2);
+  }
+
+  
+  .circulo{
+    top: 15px;
+    width: 106px;
+    color: #002f64;
+    background: url('../img/grafo/circulo_azul.png');
+    font-size: 8pt;
+  }
+
+  .circulo:hover{
+    background: url('../img/grafo/circulo_azul_hover.png');
+  }
+
+  #graph_proceso{  
+      color: #002f64;    
+      left: 120px;
+      height:73px;
+      padding-top: 38px !important;
+  }
+  #graph_registro{      
+      color: #002f64;
+      left: 284px;
+      height:78px;
+      padding-top: 33px !important;
+  }
+  #graph_catalogo{      
+      color: #002f64;
+      left: 445px;
+      height:102px;
+      padding-top: 32px !important;
+  }
+
+  #graph_fondo {
+      background: url("../img/grafo/coso_naranja.png") repeat scroll 0 0 transparent;
+      color: #642300;
+      font-size: 17pt;
+      height: 26px;
+      left: 84px;
+      padding-top: 11px !important;
+      top: 278px;
+      width: 507px;
+  }
+  #graph_fondo:hover{
+    background: url('../img/grafo/coso_naranja_hover.png');
+  }

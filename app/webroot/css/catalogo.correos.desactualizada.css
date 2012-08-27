@@ -1,0 +1,13 @@
+.ficha_info INPUT, .ficha_info textarea, .ficha_info select, .ficha_info label{
+    margin-left: 20%
+}
+
+
+.ficha_info{
+    min-height: 158px;
+    border: 0 none;
+    float: left;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+}

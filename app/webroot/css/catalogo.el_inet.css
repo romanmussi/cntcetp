@@ -1,0 +1,134 @@
+.show_in_dialog{
+    display: none;
+}
+
+  #descripcion{
+    background-color: lightgray;
+    border: 2px solid gray;
+    border-radius: 10px 10px 10px 10px;
+    left: 600px;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    width: 250px;
+    display:none;
+  }
+  
+  #el_inet_graph{
+      background: url('../img/el_inet/fondo.png');
+      width: 700px;
+      height: 400px;
+      position: relative;
+      margin: auto;
+      text-align: left;
+  }
+  
+  #el_inet_graph A, #el_inet_graph span{
+      position: absolute;
+      background-repeat: no-repeat;
+      text-decoration: none;
+      text-align: center;
+      -webkit-transition: all 0.3s ease-in-out; 
+      -moz-transition: all 0.3s ease-in-out; 
+      -o-transition: all 0.3s ease-in-out; 
+      -ms-transition: all 0.3s ease-in-out;
+  }
+  
+  
+   #el_inet_graph A .inner, #el_inet_graph span .inner{
+       margin: 10px;
+   }
+  
+  #el_inet_graph A:hover{
+        background-repeat: no-repeat;
+        -webkit-transform: scale(1.1); 
+        -moz-transform: scale(1.1); 
+        -o-transform: scale(1.1); 
+        -ms-transform: scale(1.1);
+        
+  }
+
+  
+  #graph_consejo_federal{
+      top: 32px;
+      left: 323px;
+      padding-top: 29px;
+  }
+  
+  
+  
+  #graph_consejo_nacional{
+      top: 298px;
+      left: 60px;     
+      padding-top: 21px;
+  }
+  
+  
+  #graph_me{
+      top: 32px;
+      left: 39px;
+      padding-top:  29px;      
+  }
+  
+  
+  #graph_inet{
+      top: 156px;
+      left: 434px;
+      padding-top: 22px;
+  }
+  
+  
+  #graph_comision{
+      top: 298px;
+      left: 396px;
+      padding-top: 22px;
+  }
+  
+  
+  #graph_secretaria_educacion{
+      top: 157px;
+      left: 54px;
+      padding-top: 22px;
+  }
+  
+  
+  #graph_secretaria_politicas_universitarias{
+      top: 157px;
+      left: 250px;
+      padding-top: 22px;
+  }
+  
+  
+  .box_azul{
+      color: white;
+      background: url('../img/el_inet/box_azul.png');
+      width: 219px;
+      height: 83px;
+  }
+  
+  .box_azul:hover{
+      color: white;
+      background: url('../img/el_inet/box_azul_hover.png');
+  }
+  
+  .box_celeste{
+      color: #000099;
+      background: url('../img/el_inet/box_celeste.png');
+      width: 161px;
+      height: 82px;
+      padding-top: 10px;
+  }
+    
+  
+  .box_roja{
+      color: #391717;
+      background: url('../img/el_inet/box_roja.png');
+      width: 219px;
+      height: 82px;
+  }
+  
+  .box_roja:hover{
+      color: #391717;
+      background: url('../img/el_inet/box_roja_hover.png');
+      
+  }

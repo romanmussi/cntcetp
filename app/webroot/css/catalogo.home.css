@@ -1,0 +1,201 @@
+
+.boxblanca .mas_info_gris, .boxblanca .mas_info_azul,
+.boxgris .mas_info_azul, .boxgris .mas_info_azul{
+    float: right;    
+}
+
+.boxcontent {
+    /*padding:5px;*/
+}
+
+
+.boxblanca h2{
+    border-bottom: 1px solid #E2E2E4;
+}
+
+
+.box_inet{
+    min-height: 323px;
+    padding-top: 6px;
+    padding-bottom: 7px
+}
+
+.box_inet img{
+    float: left; 
+    height: 244px;
+}
+
+
+.box_home_buscadores {
+    min-height: 290px;
+    padding-bottom: 10px;
+}
+
+.box_home_buscadores_separador {
+    width: 1%;
+    float: left;
+    border-right: 1px solid #e2e2e4;
+    height: 58px;
+    margin-top: 30px;
+}
+
+.photo{
+    float:right;
+    height:295px;
+    margin-left: 10px;
+    border: 1px solid #D6E6EE;
+}
+
+.home_info p{
+    padding-right:20px;
+    text-align:justify;
+}
+
+.boxgris .titulo {
+    /*font-style: italic;*/
+}
+
+.boxoferta p {
+    margin: 0px 0px 0px 10px;
+    font-style: italic;
+}
+
+#fechaRedesSociales {
+    background-color: #DEE2E4;
+    border-radius: 6px 6px 6px 6px;
+    margin-bottom: 6px;
+    overflow: hidden;
+    padding: 5px 0px 5px 0px;    
+    height: 30px;
+}
+
+#fechaRedesSociales .fecha {
+    background: url("../img/sprites_20110531-01.jpg") no-repeat scroll 0 -467px #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    font-size: 82%;
+    padding: 4px 20px 7px 29px;
+    margin-top: 0px;
+    margin-left: 5px;
+    width: 16%;
+}
+
+#redesSociales {
+    background: url("../img/sprites_20110531-01.jpg") no-repeat scroll -160px -934px #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+    float: right;
+    margin-top: 3px;
+    overflow: hidden;
+    padding: 5px 0 4px;
+    width: 25%;
+    list-style: none;
+}
+
+#redesSociales .youtube {
+    padding-left: 15px;
+}
+
+#redesSociales li {
+    float: left;
+    font-size: 82%;
+    padding-left: 9px;
+    margin-top:0px;
+}
+
+#redesSociales .youtube a {
+    background: url("../img/sprites_20110531-01.jpg") no-repeat scroll 0 -389px transparent;
+}
+#redesSociales .facebook a {
+    background: url("../img/sprites_20110531-01.jpg") no-repeat scroll 0 -413px transparent;
+}
+#redesSociales .twitter a {
+    background: url("../img/sprites_20110531-01.jpg") no-repeat scroll 0 -363px transparent;
+}
+#redesSociales .rss a {
+    background: url("../img/sprites_20110531-01.jpg") no-repeat scroll 0 -436px transparent;
+}
+
+#redesSociales .rss a {
+    background: url("../img/sprites_20110531-01.jpg") no-repeat scroll 0 -436px transparent;
+}
+#redesSociales .youtube a:hover {
+    background: url("../img/sprites_20110531-01.jpg") no-repeat scroll -18px -389px transparent;
+}
+#redesSociales .facebook a:hover {
+    background: url("../img/sprites_20110531-01.jpg") no-repeat scroll -19px -413px transparent;
+}
+#redesSociales .twitter a:hover {
+    background: url("../img/sprites_20110531-01.jpg") no-repeat scroll -18px -363px transparent;
+}
+#redesSociales .rss a:hover {
+    background: url("../img/sprites_20110531-01.jpg") no-repeat scroll -18px -436px transparent;
+}
+
+#redesSociales li a {
+    display: block;
+    height: 16px;
+    text-indent: -3000px;
+    width: 17px;
+}
+
+/*
+Slider
+*/
+#slider {
+    border: 1px solid #CCCCCC;
+    height: 285px;
+    margin: 75px auto 0;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    z-index: 10;
+}
+#buttons {
+    height: 40px;
+    margin: -100px auto;
+    position: relative;
+    width: 726px;
+    z-index: 100;
+}
+#right {
+    background-image: url("../img/next_button.png");
+    cursor: pointer;
+    float: right;
+    height: 40px;
+    text-indent: -99999px;
+    width: 105px;
+}
+#left {
+    background-image: url("../img/back_button.png");
+    cursor: pointer;
+    float: left;
+    height: 40px;
+    text-indent: -99999px;
+    width: 105px;
+}
+#slider ul {
+    position: relative;
+}
+#slider ul li {
+    float: left;
+}
+#numbers {
+    height: auto;
+    margin: 35px auto;
+    text-align: center;
+}
+#numbers li {
+    background-image: url("../img/dot_sprite.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: left;
+    height: 13px;
+    margin: 0 0 5px 0;
+    position: relative;
+    text-indent: -99999px;
+    width: 18px;
+    z-index: 100;
+}
+.activenum {
+    background-position: 0 -13px;
+}

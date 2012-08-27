@@ -1,0 +1,139 @@
+/*
+BUSCADORES
+*/
+area{    
+    cursor: pointer;
+    cursor: hand;
+    background: pink;
+}
+
+area:HOVER{    
+    background-color: pink;
+}
+
+.boxblanca .mas_info_gris, .boxblanca .mas_info_azul,
+.boxgris .mas_info_azul, .boxgris .mas_info_azul{
+    float: right;
+}
+
+.box_home_buscadores {
+    width: 49%;
+    float: left;
+    margin-top: -3px;
+
+}
+
+.box_home_buscadores_separador {
+    width: 1%;
+    float: left;
+    border-right: 1px solid #e2e2e4;
+    height: 58px;
+    margin-top: 30px;
+}
+
+.photo{
+    float:right;
+    height:295px;
+    margin-left: 10px;
+    border: 1px solid #D6E6EE;
+}
+
+.home_info p{
+    padding-right:20px;
+    text-align:justify;
+}
+
+.boxgris .titulo {
+    /*font-style: italic;*/
+}
+
+.boxoferta p {
+    margin: 0px 0px 0px 10px;
+    font-style: italic;
+}
+.references{
+    float: right;
+}
+
+.references ul{
+    font-size: 12pt;
+}
+.mapa{ 
+        margin-left: auto; 
+        margin-right: auto; 
+        text-align: center;
+    } 
+.mapwrapper{  
+        width: 487px;
+        padding: 5px;
+        cursor: move;
+        overflow: hidden; /*keep map contents from spilling over if JS is disabled*/
+        border: 1px solid #E7F3FD;
+        margin-left: auto; 
+        margin-right: auto; 
+        text-align: center;
+        position: relative;
+} 
+.viewport{ 
+        height: 688px;
+        cursor: move; 
+        overflow: hidden; /*keep map contents from spilling over if JS is disabled*/ 
+    } 
+    
+    
+.map-control {
+    background: url("../img/home/map-control.png") no-repeat scroll 0 0 transparent;
+    height: 63px;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    width: 100px;
+}
+.map-control a {
+    display: block;
+    height: 18px;
+    outline: medium none;
+    position: absolute;
+    text-indent: -999em;
+    width: 18px;
+}
+.map-control a:hover {
+    background: none repeat scroll 0 0 #535353;
+    opacity: 0.4;
+}
+.map-control a.left {
+    left: 39px;
+    top: 22px;
+}
+.map-control a.right {
+    left: 79px;
+    top: 22px;
+}
+.map-control a.up {
+    left: 59px;
+    top: 2px;
+}
+.map-control a.down {
+    left: 59px;
+    top: 42px;
+}
+.map-control a.zoom {
+    height: 21px;
+    left: 2px;
+    top: 8px;
+    width: 21px;
+}
+.map-control a.back {
+    height: 21px;
+    left: 2px;
+    top: 31px;
+    width: 21px;
+}
+
+.current-map-layer {
+    left: 0;
+}
+
+#ver-oferta-sup,#ver-oferta-fp,#ver-oferta-sec{
+    height:1559px;
+}

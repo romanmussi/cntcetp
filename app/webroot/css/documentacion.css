@@ -1,0 +1,45 @@
+.docimg{
+    margin: 10px;
+    border: 1px solid #000;
+    float: right;
+}
+
+
+#menu1 h2{
+    font-size: 9pt;
+    margin: 0px;
+}
+
+#menu1 h3{
+    font-size: 9pt;
+    margin: 0px;
+}
+
+#menu1 li{
+    margin-top: 4px;
+    color: #0082CA;
+}
+
+#menu1 div ul{
+    padding-left: 20px;
+    margin-left:0 !important; 
+}
+
+#menu1 a.current{
+     color: #0082ca;
+     text-decoration: none;
+}
+
+
+.boxdocs{
+    padding-left: 20px;
+    padding-right: 25px;
+    text-align: justify;
+}
+
+.marcos li{
+    height:22px;
+}
+.marcos li a{
+    padding-top:0;
+}

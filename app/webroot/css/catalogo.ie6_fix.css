@@ -1,0 +1,41 @@
+#header{
+   background-color: #0090d0;
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0090d0', endColorstr='#7fc2ea',GradientType=1 ); /* IE6-9 */    
+}
+
+#bandera_header{
+}
+
+#head-text{
+     
+}
+
+#logo{
+     background: none;
+}
+.logo {
+     
+}
+
+.header_wrapper{
+    background: none;
+}
+
+
+
+#header_title{
+    background: none;
+}
+.menu_wrapper{    
+}
+
+.step{
+     float: left;
+     margin-left: 10px !important;
+     margin-top: 10px !important;
+     width: 21px;
+}
+
+.filtros-aplicados{
+	width:36%!important;
+}

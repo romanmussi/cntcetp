@@ -1,0 +1,15 @@
+.boxblanca{
+    margin-top:20px;
+}
+
+.boxblanca h3, .boxblanca select, .boxblanca label, .boxblanca #Contrasenia, .boxblanca #NombreUsuario{
+    width:90%;
+    margin-left:4%;
+    margin-right:4%;
+}
+.boxblanca #entrar{
+    float:right;
+    margin-right:4%;
+    margin-top:10px;
+    margin-bottom:10px;
+}

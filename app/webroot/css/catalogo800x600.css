@@ -1,0 +1,29 @@
+
+body{
+}
+
+h1{
+    font-size: 1.2em;
+}
+
+h2{
+    font-size: 1.1em;
+}
+h3{
+    font-size: 1em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+h4{
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.boxestudiantes{
+    height: 210px;
+}
+
+.boxoferta{
+    height: 185px;
+}
