@@ -3,5 +3,6 @@ config/database.php
 app/tmp/*
 app/config/database.php
 app/config/config.email.php
+app/webroot/img/mail/*
 !empty
 *.pdf
