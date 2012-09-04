@@ -4,6 +4,7 @@ app/tmp/*
 app/config/database.php
 app/config/config.email.php
 app/webroot/img/mail/*
+nbproject/*
 !empty
 *.pdf
 
@@ -30,3 +31,4 @@ app/webroot/img/mail/*
 Icon?
 ehthumbs.db
 Thumbs.db
+/nbproject/private/

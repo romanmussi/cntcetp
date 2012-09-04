@@ -165,7 +165,7 @@ INSERT INTO instits (id, gestion_id,
                 etp_estado_id,
                 claseinstit_id,
                 orientacion_id FROM instits
-        WHERE id NOT IN(470,719,748,920,926,1005,808) AND activo = 1 AND 
+        WHERE activo = 1 AND 
         etp_estado_id = 2')
   AS t( id INTEGER,
         gestion_id INTEGER,
@@ -228,7 +228,7 @@ INSERT INTO planes (id, instit_id, oferta_id, nombre, ciclo_alta, created, modif
         p.oferta_id NOT IN(2,5,6) AND 
         p.instit_id NOT IN(select id from instits where activo = 0 OR etp_estado_id <> 2) AND 
         p.plan_estado_id = 1 AND 
-        p.estructura_plan_id NOT IN(select id from estructura_planes where etapa_id IN(1,4,102))
+        p.id NOT IN(SELECT plan_id FROM anios WHERE etapa_id IN (1,4,102))
     GROUP BY p.id, p.instit_id, p.oferta_id, p.nombre, p.ciclo_alta, t.id')
   AS t(id integer, instit_id integer, oferta_id integer, nombre character varying(200), 
         ciclo_alta integer, created timestamp without time zone, modified timestamp without time zone, 
