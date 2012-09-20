@@ -3,10 +3,10 @@ Carga de base de datos de Catálogo.
 
 Requerimientos:
 Base de datos de Registro (fuente): regetp
-Base de datos de Catálogo (orígen) con sus tablas y esquema construido.
+Base de datos de Catálogo (destino) con sus tablas y esquema construido.
 
 La migración consiste en seleccionar los registros que se quieren migrar de la
-fuente al orígen e insertarlos.
+fuente al destino e insertarlos.
 
 */
 
