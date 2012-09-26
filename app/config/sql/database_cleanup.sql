@@ -15,71 +15,74 @@ begin transaction;
 /* Se utiliza el módulo dblink para acceder a la base de datos de Registro */
 CREATE EXTENSION dblink;
 
+select dblink_connect('regetp','host=127.0.0.1 port=5432
+    dbname=regetp user=postgres password=postgres');
+
 INSERT INTO claseinstits
   SELECT id, name
-  FROM dblink('dbname=regetp', 'SELECT id, name FROM claseinstits')
+  FROM dblink('regetp', 'SELECT id, name FROM claseinstits')
   AS t(id integer, name character varying(60));
 
 INSERT INTO dependencias
   SELECT id, name
-  FROM dblink('dbname=regetp', 'SELECT id, name FROM dependencias')
+  FROM dblink('regetp', 'SELECT id, name FROM dependencias')
   AS t(id integer, name character varying(40));
 
 INSERT INTO etp_estados
   SELECT id, name
-  FROM dblink('dbname=regetp', 'SELECT id, name FROM etp_estados')
+  FROM dblink('regetp', 'SELECT id, name FROM etp_estados')
   AS t(id integer, name character varying(60))
   WHERE id = 2;
 
 INSERT INTO gestiones
   SELECT id, name
-  FROM dblink('dbname=regetp', 'SELECT id, name FROM gestiones')
+  FROM dblink('regetp', 'SELECT id, name FROM gestiones')
   AS t(id integer, name character varying(20));
 
 /* sin ofertas No Técnicas */
 INSERT INTO ofertas
   SELECT id, abrev, name, orden
-  FROM dblink('dbname=regetp', 'SELECT id, abrev, name, "order" FROM ofertas
+  FROM dblink('regetp', 'SELECT id, abrev, name, "order" FROM ofertas
     WHERE id NOT IN(2,5,6)')
   AS t(id integer, abrev character varying(10), name character varying(30), orden integer);
 
 INSERT INTO orientaciones
   SELECT id, name
-  FROM dblink('dbname=regetp', 'SELECT id, name FROM orientaciones')
+  FROM dblink('regetp', 'SELECT id, name FROM orientaciones')
   AS t(id integer, name character varying(100));
 INSERT INTO orientaciones (id,name) VALUES (0,''); /* TODO: corregir porque tiene Constrain y en instits existen casos de orientacion_id=0 */
 
 INSERT INTO jurisdicciones
   SELECT id, name
-  FROM dblink('dbname=regetp', 'SELECT id, name FROM jurisdicciones ')
+  FROM dblink('regetp', 'SELECT id, name FROM jurisdicciones ')
   AS t(id integer, name character varying(40));
 
 INSERT INTO departamentos
   SELECT id, jurisdiccion_id, name
-  FROM dblink('dbname=regetp', 'SELECT id, jurisdiccion_id, name FROM departamentos ')
+  FROM dblink('regetp', 'SELECT id, jurisdiccion_id, name FROM departamentos ')
   AS t(id integer, jurisdiccion_id integer, name character varying(64));
 
 INSERT INTO localidades
   SELECT id, departamento_id, name
-  FROM dblink('dbname=regetp', 'SELECT id, departamento_id, name FROM localidades ')
+  FROM dblink('regetp', 'SELECT id, departamento_id, name FROM localidades ')
   AS t(id integer, departamento_id integer, name character varying(64));
 
 INSERT INTO tipoinstits
   SELECT id, jurisdiccion_id, name
-  FROM dblink('dbname=regetp', 'SELECT id, jurisdiccion_id, name FROM tipoinstits ')
+  FROM dblink('regetp', 'SELECT id, jurisdiccion_id, name FROM tipoinstits ')
   AS t(id integer, jurisdiccion_id integer, name character varying(100))
   WHERE id > 0; /* SIN DATOS es id = 0 */
 
 /* Sector "Otros" y "tecnico" y sus Subsectores */
 INSERT INTO sectores (id, name, orientacion_id )
   SELECT id, name, orientacion_id
-  FROM dblink('dbname=regetp', 'SELECT id, name, orientacion_id FROM sectores
+  FROM dblink('regetp', 'SELECT id, name, orientacion_id FROM sectores
     WHERE id NOT IN(5,39)')
   AS t(id integer, name character varying(100), orientacion_id integer);
 
 INSERT INTO subsectores (id, name, sector_id )
   SELECT id, name, sector_id
-  FROM dblink('dbname=regetp', 'SELECT id, name, sector_id FROM subsectores
+  FROM dblink('regetp', 'SELECT id, name, sector_id FROM subsectores
     WHERE sector_id NOT IN(5,39)')
   AS t(id integer, name character varying(100), sector_id integer);
 
@@ -137,7 +140,7 @@ INSERT INTO instits (id, gestion_id,
                 etp_estado_id,
                 claseinstit_id,
                 orientacion_id
-  FROM dblink('dbname=regetp', 'SELECT 
+  FROM dblink('regetp', 'SELECT 
                 id,
                 gestion_id,
                 dependencia_id,
@@ -198,7 +201,7 @@ INSERT INTO instits (id, gestion_id,
 
 INSERT INTO titulos (id, name, marco_ref, oferta_id)
   SELECT id, name, marco_ref, oferta_id
-  FROM dblink('dbname=regetp', 'SELECT id, name, marco_ref, oferta_id FROM titulos
+  FROM dblink('regetp', 'SELECT id, name, marco_ref, oferta_id FROM titulos
     WHERE 
         id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39)) AND 
         oferta_id NOT IN(2,5,6)')
@@ -209,7 +212,7 @@ WHERE
 
 INSERT INTO sectores_titulos (id, titulo_id, sector_id, subsector_id, prioridad)
   SELECT id, titulo_id, sector_id, subsector_id, prioridad
-  FROM dblink('dbname=regetp', 'SELECT st.id, t.id, st.sector_id, st.subsector_id, st.prioridad FROM sectores_titulos st
+  FROM dblink('regetp', 'SELECT st.id, t.id, st.sector_id, st.subsector_id, st.prioridad FROM sectores_titulos st
     INNER JOIN titulos t ON t.id = st.titulo_id
     WHERE 
         st.sector_id NOT IN(5,39) AND 
@@ -219,7 +222,7 @@ INSERT INTO sectores_titulos (id, titulo_id, sector_id, subsector_id, prioridad)
 
 INSERT INTO planes (id, instit_id, oferta_id, nombre, ciclo_alta, created, modified, ultimo_ciclo, titulo_id)
   SELECT id, instit_id, oferta_id, nombre, ciclo_alta, created, modified, ultimo_ciclo, titulo_id
-  FROM dblink('dbname=regetp', 'SELECT p.id, p.instit_id, p.oferta_id, p.nombre, p.ciclo_alta, p.created, p.modified, max(a.ciclo_id) AS ultimo_ciclo, t.id FROM planes p 
+  FROM dblink('regetp', 'SELECT p.id, p.instit_id, p.oferta_id, p.nombre, p.ciclo_alta, p.created, p.modified, max(a.ciclo_id) AS ultimo_ciclo, t.id FROM planes p 
     INNER JOIN titulos t ON t.id = p.titulo_id
     INNER JOIN anios a ON a.plan_id = p.id
     WHERE 
