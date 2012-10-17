@@ -117,7 +117,7 @@ class FileStructureWritterHelper extends AppHelper {
         if (!empty($array)) {
             foreach ($array as $val){
                 $val = utf8_decode($val);
-                echo "<li><a href='".$this->_getFileFullPath($val)."'>".$val."</a></li>";
+                echo "<li><a href='".$this->_getFileFullPath($val)."' href='_blank'>".$val."</a></li>";
             }
         }
     }
