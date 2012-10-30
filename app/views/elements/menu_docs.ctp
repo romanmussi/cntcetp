@@ -50,7 +50,7 @@
 <!--                        <li><?php echo $html->link('Industria Naval', array('controller' => 'pages', 'action' => 'display', 'sectores/industria_naval'));?></li>-->
 	                <li><?php echo $html->link('Informática', array('controller' => 'pages', 'action' => 'display', 'sectores/informatica'));?></li>
 	                <li><?php echo $html->link('Madera y Mueble', array('controller' => 'pages', 'action' => 'display', 'sectores/madera_y_mueble'));?></li>
-	                <li><?php echo $html->link('Metalmecánica', array('controller' => 'pages', 'action' => 'display', 'sectores/metalmecanica'));?></li>
+	                <li><?php echo $html->link('Metalmecánica', array('controller' => 'pages', 'action' => 'display', 'flias/metalmecanica'));?></li>
 <!--                        <li><?php echo $html->link('Mineria', array('controller' => 'pages', 'action' => 'display', 'sectores/mineria'));?></li>-->
 <!--                        <li><?php echo $html->link('Pesca', array('controller' => 'pages', 'action' => 'display', 'sectores/pesca'));?>
                             <ul>

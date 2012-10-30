@@ -28,7 +28,9 @@ INSTALACION
 3. Crear en directorio app/config/ archivo database.php con configuración de conexión 
 a base de datos y config.email.php con configuración de servidor de email (tomar como base config.email.php.default).
 [Para más información dirigirse a http://book.cakephp.org/view/922/Database-Configuration]
-4. Dar permisos de escritura a directorio /app/tmp/.
+4. Dar permisos de escritura a los siguientes directorios: 
+	/app/tmp/
+	/app/webroot/
 
 =========================================================================================================
 MIGRACIÓN DE DATOS DESDE REGISTRO A CATÁLOGO
