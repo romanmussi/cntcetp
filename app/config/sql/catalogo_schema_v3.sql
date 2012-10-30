@@ -1,5 +1,6 @@
 
 CREATE SEQUENCE users_id_seq;
+ALTER SEQUENCE users_id_seq OWNER TO www;
 
 CREATE TABLE users (
                 id INTEGER DEFAULT nextval('users_id_seq'::regclass) NOT NULL,
@@ -15,22 +16,24 @@ CREATE TABLE users (
                 password_reset_token VARCHAR(24),
                 CONSTRAINT users_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE users OWNER to www;
 
 ALTER SEQUENCE users_id_seq OWNED BY users.id;
 
 CREATE SEQUENCE orientaciones_id_seq;
+ALTER SEQUENCE orientaciones_id_seq OWNER TO www;
 
 CREATE TABLE orientaciones (
                 id INTEGER NOT NULL DEFAULT nextval('orientaciones_id_seq'),
                 name VARCHAR(100) DEFAULT ''::character varying NOT NULL,
                 CONSTRAINT orientaciones_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE orientaciones OWNER to www;
 
 ALTER SEQUENCE orientaciones_id_seq OWNED BY orientaciones.id;
 
 CREATE SEQUENCE sectores_id_seq;
+ALTER SEQUENCE sectores_id_seq OWNER TO www;
 
 CREATE TABLE sectores (
                 id INTEGER NOT NULL DEFAULT nextval('sectores_id_seq'),
@@ -38,11 +41,12 @@ CREATE TABLE sectores (
                 orientacion_id INTEGER NOT NULL,
                 CONSTRAINT id PRIMARY KEY (id)
 );
-
+ALTER TABLE sectores OWNER to www;
 
 ALTER SEQUENCE sectores_id_seq OWNED BY sectores.id;
 
 CREATE SEQUENCE subsectores_id_seq;
+ALTER SEQUENCE subsectores_id_seq OWNER TO www;
 
 CREATE TABLE subsectores (
                 id INTEGER NOT NULL DEFAULT nextval('subsectores_id_seq'),
@@ -50,11 +54,12 @@ CREATE TABLE subsectores (
                 sector_id INTEGER NOT NULL,
                 CONSTRAINT subsectores_id PRIMARY KEY (id)
 );
-
+ALTER TABLE subsectores OWNER to www;
 
 ALTER SEQUENCE subsectores_id_seq OWNED BY subsectores.id;
 
 CREATE SEQUENCE ofertas_id_seq;
+ALTER SEQUENCE ofertas_id_seq OWNER TO www;
 
 CREATE TABLE ofertas (
                 id INTEGER NOT NULL DEFAULT nextval('ofertas_id_seq'),
@@ -63,22 +68,24 @@ CREATE TABLE ofertas (
                 orden INTEGER DEFAULT 0,
                 CONSTRAINT ofertas_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE ofertas OWNER to www;
 
 ALTER SEQUENCE ofertas_id_seq OWNED BY ofertas.id;
 
 CREATE SEQUENCE jurisdicciones_id_seq;
+ALTER SEQUENCE jurisdicciones_id_seq OWNER TO www;
 
 CREATE TABLE jurisdicciones (
                 id INTEGER DEFAULT nextval('jurisdicciones_id_seq'::regclass) NOT NULL,
                 name VARCHAR(40) NOT NULL,
                 CONSTRAINT jurisdicciones_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE jurisdicciones OWNER to www;
 
 ALTER SEQUENCE jurisdicciones_id_seq OWNED BY jurisdicciones.id;
 
 CREATE SEQUENCE matriculados_id_seq;
+ALTER SEQUENCE matriculados_id_seq OWNER TO www;
 
 CREATE TABLE matriculados (
                 id INTEGER NOT NULL DEFAULT nextval('matriculados_id_seq'),
@@ -87,11 +94,12 @@ CREATE TABLE matriculados (
                 cantidad BIGINT DEFAULT 0 NOT NULL,
                 CONSTRAINT matriculados_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE matriculados OWNER to www;
 
 ALTER SEQUENCE matriculados_id_seq OWNED BY matriculados.id;
 
 CREATE SEQUENCE tipoinstits_id_seq;
+ALTER SEQUENCE tipoinstits_id_seq OWNER TO www;
 
 CREATE TABLE tipoinstits (
                 id INTEGER NOT NULL DEFAULT nextval('tipoinstits_id_seq'),
@@ -99,44 +107,48 @@ CREATE TABLE tipoinstits (
                 name VARCHAR(100) NOT NULL,
                 CONSTRAINT tipoinstits_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE tipoinstits OWNER to www;
 
 ALTER SEQUENCE tipoinstits_id_seq OWNED BY tipoinstits.id;
 
 CREATE SEQUENCE gestiones_id_seq;
+ALTER SEQUENCE gestiones_id_seq OWNER TO www;
 
 CREATE TABLE gestiones (
                 id INTEGER NOT NULL DEFAULT nextval('gestiones_id_seq'),
                 name VARCHAR(20) NOT NULL,
                 CONSTRAINT gestiones_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE gestiones OWNER to www;
 
 ALTER SEQUENCE gestiones_id_seq OWNED BY gestiones.id;
 
 CREATE SEQUENCE etp_estados_id_seq;
+ALTER SEQUENCE etp_estados_id_seq OWNER TO www;
 
 CREATE TABLE etp_estados (
                 id INTEGER NOT NULL DEFAULT nextval('etp_estados_id_seq'),
                 name VARCHAR(60) DEFAULT ''::character varying NOT NULL,
                 CONSTRAINT etp_estados_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE etp_estados OWNER to www;
 
 ALTER SEQUENCE etp_estados_id_seq OWNED BY etp_estados.id;
 
 CREATE SEQUENCE dependencias_id_seq;
+ALTER SEQUENCE dependencias_id_seq OWNER TO www;
 
 CREATE TABLE dependencias (
                 id INTEGER NOT NULL DEFAULT nextval('dependencias_id_seq'),
                 name VARCHAR(40) NOT NULL,
                 CONSTRAINT dependencias_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE dependencias OWNER to www;
 
 ALTER SEQUENCE dependencias_id_seq OWNED BY dependencias.id;
 
 CREATE SEQUENCE departamentos_id_seq;
+ALTER SEQUENCE departamentos_id_seq OWNER TO www;
 
 CREATE TABLE departamentos (
                 id INTEGER NOT NULL DEFAULT nextval('departamentos_id_seq'),
@@ -144,11 +156,12 @@ CREATE TABLE departamentos (
                 name VARCHAR(64),
                 CONSTRAINT departamento_id PRIMARY KEY (id)
 );
-
+ALTER TABLE departamentos OWNER to www;
 
 ALTER SEQUENCE departamentos_id_seq OWNED BY departamentos.id;
 
 CREATE SEQUENCE localidades_id_seq;
+ALTER SEQUENCE localidades_id_seq OWNER TO www;
 
 CREATE TABLE localidades (
                 id INTEGER NOT NULL DEFAULT nextval('localidades_id_seq'),
@@ -156,22 +169,24 @@ CREATE TABLE localidades (
                 name VARCHAR(64),
                 CONSTRAINT localidades_id PRIMARY KEY (id)
 );
-
+ALTER TABLE localidades OWNER to www;
 
 ALTER SEQUENCE localidades_id_seq OWNED BY localidades.id;
 
 CREATE SEQUENCE claseinstits_id_seq;
+ALTER SEQUENCE claseinstits_id_seq OWNER TO www;
 
 CREATE TABLE claseinstits (
                 id INTEGER NOT NULL DEFAULT nextval('claseinstits_id_seq'),
                 name VARCHAR(60) DEFAULT ''::character varying NOT NULL,
                 CONSTRAINT claseinstits_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE claseinstits OWNER to www;
 
 ALTER SEQUENCE claseinstits_id_seq OWNED BY claseinstits.id;
 
 CREATE SEQUENCE titulos_id_seq;
+ALTER SEQUENCE titulos_id_seq OWNER TO www;
 
 CREATE TABLE titulos (
                 id INTEGER NOT NULL DEFAULT nextval('titulos_id_seq'),
@@ -180,11 +195,12 @@ CREATE TABLE titulos (
                 oferta_id INTEGER NOT NULL,
                 CONSTRAINT titulos_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE titulos OWNER to www;
 
 ALTER SEQUENCE titulos_id_seq OWNED BY titulos.id;
 
 CREATE SEQUENCE sectores_titulos_id_seq;
+ALTER SEQUENCE sectores_titulos_id_seq OWNER TO www;
 
 CREATE TABLE sectores_titulos (
                 id INTEGER NOT NULL DEFAULT nextval('sectores_titulos_id_seq'),
@@ -194,11 +210,12 @@ CREATE TABLE sectores_titulos (
                 prioridad INTEGER DEFAULT 0 NOT NULL,
                 CONSTRAINT sectores_titulos_pk PRIMARY KEY (id)
 );
-
+ALTER TABLE sectores_titulos OWNER to www;
 
 ALTER SEQUENCE sectores_titulos_id_seq OWNED BY sectores_titulos.id;
 
 CREATE SEQUENCE instits_id_seq;
+ALTER SEQUENCE instits_id_seq OWNER TO www;
 
 CREATE TABLE instits (
                 id INTEGER NOT NULL DEFAULT nextval('instits_id_seq'),
@@ -230,11 +247,12 @@ CREATE TABLE instits (
                 orientacion_id INTEGER NOT NULL,
                 CONSTRAINT instits_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE instits OWNER to www;
 
 ALTER SEQUENCE instits_id_seq OWNED BY instits.id;
 
 CREATE SEQUENCE planes_id_seq;
+ALTER SEQUENCE planes_id_seq OWNER TO www;
 
 CREATE TABLE planes (
                 id INTEGER NOT NULL DEFAULT nextval('planes_id_seq'),
@@ -248,7 +266,7 @@ CREATE TABLE planes (
                 titulo_id INTEGER NOT NULL,
                 CONSTRAINT planes_pkey PRIMARY KEY (id)
 );
-
+ALTER TABLE planes OWNER to www;
 
 ALTER SEQUENCE planes_id_seq OWNED BY planes.id;
 
