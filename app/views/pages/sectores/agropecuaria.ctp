@@ -7,14 +7,9 @@ $this->pageTitle= 'Agropecuaria';
 
 <div class="grid_9">
     <div class="boxblanca boxdocs">
-		<?php  
-        $vops = array(
-            'foroName' => 'Agropecuario',
-            'fliaProfesional' => array('nombre'=>'Agropecuario',
-                           'link'=>'/pages/flias/agropecuaria')
-        );
-        echo $this->element('foro', $vops);
-		?>
+        <h2>Sector Agropecuaria</h2>
+	<?php echo $this->element('marcos_ref')?>
+        <br />
 		<h3>Subsectores</h3>
 		<ul>
 			<li>Apí­cola</li>
@@ -36,6 +31,6 @@ $this->pageTitle= 'Agropecuaria';
 		</ul>
     
         <br />
-        <?php echo $html->link('Ver títulos del sector Agropecuario', array('controller'=>'titulos', 'action'=>'search', 0, 3)) ?>
+        <?php echo $html->link('< Volver a la familia profesional', array('controller' => 'pages', 'action' => 'display', 'flias/agropecuaria'));?>
     </div>
 </div>

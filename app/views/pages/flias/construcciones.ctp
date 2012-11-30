@@ -245,7 +245,7 @@ echo $this->element('menu_docs')
         <br />
         <h3>Más información</h3>
         
-        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/construccion'));?>
+        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/construcciones'));?>
         
         <br />
         <?php echo $html->link('Ver títulos del sector de Construcciones', '/titulos-construcciones') ?>
