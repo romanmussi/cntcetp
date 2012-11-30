@@ -30,7 +30,8 @@ a base de datos y config.email.php con configuración de servidor de email (toma
 [Para más información dirigirse a http://book.cakephp.org/view/922/Database-Configuration]
 4. Dar permisos de escritura a los siguientes directorios: 
 	/app/tmp/
-	/app/webroot/
+	/app/webroot/css
+	/app/webroot/js
 
 =========================================================================================================
 MIGRACIÓN DE DATOS DESDE REGISTRO A CATÁLOGO

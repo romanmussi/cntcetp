@@ -1,14 +1,18 @@
-<?php echo $this->element('menu_docs')?>
+<?php 
+define('DIR', 'files/pdfs/textil_indumentaria/');
+echo $this->element('menu_docs')
+?>
   <div id="cuerpo1" class="grid_9">
     <div class=" boxblanca boxdocs">
-    <h2>Familia profesional del sector Textil</h2>
-    <table>
-    <thead>
-      <tr>
-        <th colspan="2">Agrupamiento</th>
-        <th>Figura formativa </th>
-        <th>Perfil de Referencia</th>
-        <th></th>
+    <h2>Sector Textil e Indumentaria</h2>
+    <h3>Familia profesional</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Agrupamiento</th>
+      <th>Figura Formativa y Marco de Referencia</th>
+      <th>Perfiles de referencia</th>
+      <th></th>
       </tr>
     </thead>
   <tbody>
@@ -292,5 +296,35 @@
     </tr>
   </tbody>
 </table>
+   <br />
+    	<?php  
+        $vops = array(
+            'foroName' => '',
+            'participantes' => array(
+                'Asociación Argentina de Químicos Coloristas Textiles',
+                'Asociación Confeccionistas de Pergamino',
+                'Asociación Obrera Textil',
+                'Federación Argentina de Industrias Textiles',
+                'Federación Argentina de la Industria de la Indumentaria',
+                'Fundación Pro-Tejer',
+                'Instituto Nacional de Tecnología Industrial',
+                'Unión Cortadores de la Indumentaria',
+                'Unión Industrial Argentina',
+            ),
+        );
+        echo $this->element('foro2', $vops);
+		?>
+        
+        <h3>Informes</h3>
+        <?php //echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
+        <br />
+        <br />
+        <h3>Más información</h3>
+        
+        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/textil_indumentaria'));?>
+        
+        <br />
+        <?php echo $html->link('Ver títulos del sector Textil e Indumentaria', '/titulos-textil-e-indumentaria') ?>
+
   </div>
 </div>

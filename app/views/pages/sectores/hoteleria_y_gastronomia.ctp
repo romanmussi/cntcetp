@@ -7,26 +7,9 @@ $this->pageTitle= 'Hotelería y Gastronomía';
 
 <div class="grid_9">
     <div class="boxblanca boxdocs">
-		<?php  
-        $vops = array(
-            'foroName' => 'Hotelería y Gastronomía',
-            'participantes' => array(
-                'Escuela de Cocineros "Gato Dumas"',
-                'FEDUTEC',
-                'Ministerio de TESS',
-                'UTHGRA',
-                'FEHGRA',
-                'Unión Docentes Argentinos',
-                'CTERA' ,
-                'CAIEP',
-                'AMET',
-            ),
-            'fliaProfesional' => array('nombre'=>'Hotelería y Gastronomía',
-                           'link'=>'/pages/flias/hoteleria_gastronomia')
-        );
-        echo $this->element('foro', $vops);
-		?>
-    <br />
-        <?php echo $html->link('Ver títulos del sector Hotelería y Gastronomía', array('controller'=>'titulos', 'action'=>'search', 0, 34)) ?>
+        <h2>Sector Hotelería y Gastronomía</h2>
+	<?php echo $this->element('marcos_ref')?>
+        <br />
+        <?php echo $html->link('< Volver a la familia profesional', array('controller' => 'pages', 'action' => 'display', 'flias/hoteleria_y_gastronomia'));?>
     </div>
 </div>

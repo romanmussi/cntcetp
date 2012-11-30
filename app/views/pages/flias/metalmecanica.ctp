@@ -156,20 +156,23 @@ echo $this->element('menu_docs')
         $vops = array(
             'foroName' => '',
             'participantes' => array(
-                'Ministerio de la Producción.',
-                'CAME',
-                'UOM',
-                'UDA',
-                'ASIMRA',
-                'FNPT',
-                'AMET' ,
-                'ADIMRA',
+                'Asociación de Industriales Metalúrgicos de la República Argentina',
+                'Asociación de Supervisores Metalmecánicos de la República Argentina',
+                'Asociación del Magisterio de Enseñanza Técnica',
+                'Coordinadora de Actividades Mercantiles Empresarias',
+                'Foro Nacional de Profesionales Técnicos',
+                'Ministerio de Industria de la Nación' ,
+                'Unión Docentes Argentinos',
+                'Unión Obrera Metalúrgica'
             ),
-            'docInfoSectorial' => '/files/pdfs/info_sectorial/madera y mueble.pdf',
         );
         echo $this->element('foro2', $vops);
 		?>
         
+        <h3>Informes</h3>
+        <?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
+        <br />
+        <br />
         <h3>Más información</h3>
         
         <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/metalmecanica'));?>

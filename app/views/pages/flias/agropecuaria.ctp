@@ -1,13 +1,17 @@
-<?php echo $this->element('menu_docs')?>
+<?php 
+define('DIR', 'files/pdfs/agropecuaria/');
+echo $this->element('menu_docs')
+?>
   <div id="cuerpo1" class="grid_9">
     <div class=" boxblanca boxdocs">
-    <h2>Familia profesional del sector Agropecuaria</h2>
+    <h2>Sector Agropecuaria</h2>
+    <h3>Familia profesional</h3>
     <table>
 	<thead>
 		<tr>
 			<th>Agrupamiento</th>
-			<th>Figura Formativa</th>
-			<th>Perfiles de referencia</th>
+                        <th>Figura Formativa y Marco de Referencia</th>
+                        <th>Perfiles de referencia</th>
 			<th></th>
 		</tr>	
 	</thead>
@@ -175,6 +179,84 @@
 		</tr>
 	</tbody>
 </table>
+<br />
+    	<?php  
+        $vops = array(
+            'foroName' => '',
+            'participantes' => array(
+                'Agencia Provincial para el Desarrollo Económico Rionegrino Crear',
+'Asociación Civil Santafesina de Genética',
+'Asociación de Pequeñas y Medianas Empresas Lácteas de Santa Fe',
+'Asociación de Productores de Frutas y Hortalizas de Salta',
+'Asociación del Litoral de Entidades de Control Lechero',
+'Asociación Forestal Argentina',
+'Asociación Pro Calidad de la Leche y sus Derivados',
+'Cámara Agraria y Frutícola Río Negro',
+'Cámara Argentina de Florerías',
+'Cámara Argentina de Productores Avícolas',
+'Cámara de Productores Frutihortícolas de la provincia de Río Negro',
+'Centro de la Industria Lechera Argentina',
+'Confederación Argentina de la Mediana Empresa',
+'Confederación Intercooperativa Agropecuaria',
+'Empresa San Miguel',
+'Establecimiento Agropecuario Glanitec Sociedad Anónima',
+'Federación Argentina Industria Maderera y Afines',
+'Finca Ampascachi',
+'Foro de Floricultura',
+'Instituto de Desarrollo Rural',
+'Instituto Nacional de Semillas',
+'Instituto Nacional de Tecnología Agropecuaria',
+'Instituto Nacional de Tecnología Industrial',
+'La Moraleja Sociedad Anónima',
+'Ministerio de Agricultura, Ganadería y Alimentos de la Provincia de Córdoba',
+'Ministerio de Agricultura, Ganadería y Pesca de la Nación',
+'Ministerio de Desarrollo Económico de la provincia de Salta',
+'Ministerio de Educación de la provincia de Córdoba',
+'Ministerio de Educación de la provincia de Jujuy.',
+'Ministerio de Educación de la provincia de Río Negro',
+'Ministerio de Educación de la provincia de Salta',
+'Ministerio de Educación de la provincia de Santa Fe',
+'Ministerio de Educación, Ciencia y Tecnología de la provincia de Catamarca',
+'Ministerio de Gobierno y Reforma del Estado de la provincia de Santa Fe',
+'Ministerio de Industria de la Nación',
+'Ministerio de la Producción de la provincia de Chubut',
+'Ministerio de la Producción de la provincia de Santa Fe',
+'Ministerio de Producción provincia de Santa Cruz',
+'Ministerio de Trabajo y Seguridad Social de la provincia de Santa Fe',
+'Ministerio de Trabajo, Empleo y Seguridad Social de la Nación',
+'Plantaciones Catamarca',
+'Red de Instituciones de Desarrollo Tecnológico de la Industria Maderera',
+'Registro Nacional de Trabajadores Rurales y Empleadores',
+'Secretaría de Ambiente y Desarrollo Sustentable',
+'Secretaría de Estado de Ciencia, Tecnología e Innovación de la provincia de Santa Fe',
+'Secretaría de Estado de Trabajo de la Provincia de Tucumán.',
+'Secretaría de Fruticultura de la provincia de Río Negro',
+'Servicio Nacional de Sanidad y Calidad Agroalimentaria',
+'Sociedad Rural Argentina',
+'Subsecretaría de Educación de la provincia de Neuquén',
+'Tabacal Agroindustria',
+'Unión Argentina de Trabajadores Rurales y Estibadores',
+'Universidad de Buenos Aires - Facultad de Agronomía',
+'Universidad Nacional del Litoral',
+'Universidad Nacional de Lomas',
+'Universidad Nacional de Luján',
+'Universidad Nacional de Río Negro',
+'Universidad Nacional de Salta',
+'Universidad Nacional del Comahue'            ),
+        );
+        echo $this->element('foro2', $vops);
+		?>
+        
+        <h3>Informes</h3>
+        <?php //echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
+        <br />
+        <br />
+        <h3>Más información</h3>
+        
+        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/agropecuaria'));?>
+        
+        <br />
+        <?php echo $html->link('Ver títulos del sector Agropecuaria', '/titulos-agropecuarios') ?>
 
     </div>	
 </div>

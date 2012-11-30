@@ -7,17 +7,9 @@ $this->pageTitle= 'Construcciones';
 
 <div class="grid_9">
     <div class="boxblanca boxdocs">
-		<?php  
-        $vops = array(
-            'foroName' => 'Construcciones',
-            'fliaProfesional' => array('nombre'=>'Construcciones',
-                           'link'=>'/pages/flias/construccion')
-        );
-        echo $this->element('foro', $vops);
-		?>
-        
+        <h2>Sector Construcciones</h2>
+	<?php echo $this->element('marcos_ref')?>
         <br />
-        <?php echo $html->link('Ver títulos del sector de Construcciones', '/titulos-construcciones') ?>
+        <?php echo $html->link('< Volver a la familia profesional', array('controller' => 'pages', 'action' => 'display', 'flias/construcciones'));?>
     </div>
-    
 </div>

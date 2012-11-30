@@ -7,29 +7,9 @@ $this->pageTitle= 'Estética Profesional';
 
 <div class="grid_9">
     <div class="boxblanca boxdocs">
-		<?php  
-        $vops = array(
-            'foroName' => 'Estética Profesional',
-            'participantes' => array(
-                'Confederación General de Peluqueros y Peinadores de la R:A:',
-                'Federación Nacional de Trabajadores de Peluquería y Afines.',
-                'Confederación Nacional de Patrones Peluqueros',
-                'Escuela de Cosmetología, Cosmiatría, Estética Corporal y Maquillaje. (Viviana Bustos)',
-                'FACE',
-                'APPYA',
-                'Asociación Argentina de Cosmetología y Estética',
-                'AMRA',
-                'ANMAT',
-                'Ministerio de Salud ',
-            ),
-            'docInfoSectorial' => '/files/pdfs/info_sectorial/Informe_sectorial_estetica_profesional.pdf',
-            'fliaProfesional' => array('nombre'=>'Estética Profesional',
-                                       'link'=>'/pages/flias/estetica_profesional')
-        );
-        echo $this->element('foro', $vops);
-		?>
-        
+        <h2>Sector Estética Profesional</h2>
+	<?php echo $this->element('marcos_ref')?>
         <br />
-        <?php echo $html->link('Ver títulos del sector Estética Profesional', '/titulos-estetica-profesional') ?>
+        <?php echo $html->link('< Volver a la familia profesional', array('controller' => 'pages', 'action' => 'display', 'flias/estetica_profesional'));?>
     </div>
 </div>

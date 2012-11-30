@@ -1,11 +1,15 @@
-<?php echo $this->element('menu_docs')?>
+<?php 
+define('DIR', 'files/pdfs/construccion/');
+echo $this->element('menu_docs')
+?>
   <div id="cuerpo1" class="grid_9">
     <div class=" boxblanca boxdocs">
-    <h2>Familia profesional del sector Construcción</h2>
+    <h2>Sector Construcción</h2>
+    <h3>Familia profesional</h3>
     <table>
 	<thead>
 		<th>Agrupamiento</th>
-		<th>Figura Formativa</th>
+		<th>Figura Formativa y Marco de Referencia</th>
 		<th>Perfiles de referencia</th>
 		<th></th>
 	</thead>
@@ -208,5 +212,44 @@
 	</tbody>
 </table>
 
-    </div>	
+<br />
+    	<?php  
+        $vops = array(
+            'foroName' => '',
+            'participantes' => array(
+                'Asociación Provincial de Electricistas Matriculados',
+                'Cámara Argentina de Instaladores Electricistas',
+                'Cámara Argentina de la Construcción',
+                'Cámara de Empresarios Pintores y Restauraciones Afines de la República Argentina',
+                'Confederación de Trabajadores de la Educación de la República Argentina',
+                'Escuelas ORT',
+                'Federación Argentina de Colegios de Técnicos de la Arquitectura, Industria e Ingeniería',
+                'Federación de Empleados de la Industria de la Construcción',
+                'Federación Obrera Ceramista de la República Argentina',
+                'Foro Nacional de Profesionales Técnicos',
+                'Instituto de Estadística y Registro de la Industria de la Construcción',
+                'Junta Coordinadora de Asociaciones de la Enseñanza Privada',
+                'Ministerio de Industria de la Nación',
+                'Ministerio de Trabajo, Empleo y Seguridad Social de la Nación', 
+                'Sindicato de Luz y Fuerza',
+                'Unión Docentes Argentinos',
+                'Unión Obrera de la Construcción de la República Argentina',
+            ),
+        );
+        echo $this->element('foro2', $vops);
+		?>
+        
+        <h3>Informes</h3>
+        <?php //echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
+        <br />
+        <br />
+        <h3>Más información</h3>
+        
+        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/construccion'));?>
+        
+        <br />
+        <?php echo $html->link('Ver títulos del sector de Construcciones', '/titulos-construcciones') ?>
+
+  </div>
 </div>
+

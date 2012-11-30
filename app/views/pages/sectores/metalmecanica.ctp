@@ -7,27 +7,9 @@ $this->pageTitle= 'Metalmecánica';
 
 <div class="grid_9">
     <div class="boxblanca boxdocs">
-		<?php  
-        $vops = array(
-            'foroName' => 'Metalmecánica',
-            'participantes' => array(
-                'Ministerio de la Producción.',
-                'CAME',
-                'UOM',
-                'UDA',
-                'ASIMRA',
-                'FNPT',
-                'AMET' ,
-                'ADIMRA',
-            ),
-            'docInfoSectorial' => '/files/pdfs/info_sectorial/madera y mueble.pdf',
-            'fliaProfesional' => array('nombre'=>'Metalmecánica',
-                                       'link'=>'/pages/flias/metalmecanica')
-        );
-        echo $this->element('foro', $vops);
-		?>
-        
+        <h2>Sector Metalmecánica</h2>
+	<?php echo $this->element('marcos_ref')?>
         <br />
-        <?php echo $html->link('Ver títulos del sector Metalmecánica', '/titulos-metalmecanica') ?>
+        <?php echo $html->link('< Volver a la familia profesional', array('controller' => 'pages', 'action' => 'display', 'flias/metalmecanica'));?>
     </div>
 </div>

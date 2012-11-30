@@ -1,9 +1,12 @@
-<?php echo $this->element('menu_docs')?>
+<?php 
+define('DIR', 'files/pdfs/madera_y_mueble/');
+echo $this->element('menu_docs')
+?>
   <div id="cuerpo1" class="grid_9">
     <div class=" boxblanca boxdocs">
-    <h2>Familia profesional del sector Madera y Mueble</h2>
-<table>
-	
+    <h2>Sector Madera y Mueble</h2>
+    <h3>Familia profesional</h3>
+<table>	
 	<thead>
 		<tr>
 			<th>Agrupamiento</th>
@@ -78,5 +81,33 @@
 		</tr>
 	</tbody>
 </table>
-    </div>	
+     
+    <br />
+    	<?php  
+        $vops = array(
+            'foroName' => '',
+            'participantes' => array(
+                'Asociación Forestal Argentina',
+                'Federación Argentina Industria Maderera y Afines',
+                'Instituto Nacional de Tecnología Industrial',
+                'Ministerio de Industria de la Nación',
+                'Red de Instituciones de Desarrollo Tecnológico de la Industria Maderera',
+            ),
+        );
+        echo $this->element('foro2', $vops);
+		?>
+        
+        <h3>Informes</h3>
+        <?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
+        <br />
+        <br />
+        <h3>Más información</h3>
+        
+        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/madera_y_mueble'));?>
+        
+        <br />
+        <?php echo $html->link('Ver títulos del sector Madera y Mueble', '/titulos-madera-y-mueble') ?>
+
+  </div>
 </div>
+

@@ -1,12 +1,16 @@
-<?php echo $this->element('menu_docs')?>
+<?php 
+define('DIR', 'files/pdfs/energia_electrica/');
+echo $this->element('menu_docs')
+?>
   <div id="cuerpo1" class="grid_9">
     <div class=" boxblanca boxdocs">
-    <h2>Familia profesional del sector Energía Eléctrica</h2>
+    <h2>Sector Energía Eléctrica</h2>
+    <h3>Familia profesional</h2>
 <table>
 	<thead>
 		<tr>
 			<th>Agrupamiento</th>
-			<th>Figura Formativa</th>
+			<th>Figura Formativa y Marco de Referencia</th>
 			<th>Perfiles de referencia</th>
 			<th></th>
 		</tr>
@@ -171,7 +175,7 @@
 		</tr>
 	</tbody>
 </table>
-<p>
+<!--<p>
 	<ol>
 		<li>Controlador de Procesos de Centrales de generación de E.E. Figura incluida 	</li>
 		<li>Electricista de Subestación de transformación. Figura incluida</li>
@@ -190,6 +194,41 @@
 		</ol>
 		</li>
 	</ol>
-</p>
-    </div>	
+</p>-->
+    
+     <br />
+    	<?php  
+        $vops = array(
+            'foroName' => '',
+            'participantes' => array(
+                'Asociación de Transportistas de Energía Eléctrica de la República Argentina',
+                'Asociación del Personal Superior de Empresas de Energía',
+                'Asociación para la Promoción de la Seguridad Eléctrica',
+                'Cámara Argentina de Distribuidores de Materiales Eléctricos',
+                'Cámara Argentina de Instaladores Electricistas',
+                'Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A.',
+                'EDENOR',
+                'EDESUR',
+                'Federación Argentina de Colegios de Técnicos de la Arquitectura, Industria e Ingeniería',
+                'Federación Argentina de Trabajadores de Luz y Fuerza',
+                'Foro Nacional de Profesionales Técnicos',
+                'Ministerio de Industria de la Nación',
+                'Sindicato de Luz y Fuerza',
+            ),
+        );
+        echo $this->element('foro2', $vops);
+		?>
+        
+        <h3>Informes</h3>
+        <?php //echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
+        <br />
+        <br />
+        <h3>Más información</h3>
+        
+        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/energia_electrica'));?>
+        
+        <br />
+        <?php echo $html->link('Ver títulos del sector Energía Eléctrica', '/titulos-energia-electrica') ?>
+
+  </div>
 </div>

@@ -7,23 +7,9 @@ $this->pageTitle= 'Energía Eléctrica';
 
 <div class="grid_9">
     <div class="boxblanca boxdocs">
-		<?php  
-        $vops = array(
-            'foroName' => 'Energía Eléctrica',
-            'participantes' => array(
-                'ACYEDE', 'CADIME','APSE','EDENOR','EDESUR',
-                'Ministerio de la Producción', 'ATEERA', 'TRANSENER', 
-                'Sindicato de Luz y Fuerza', 'FATLyF', 'APSEE', 
-                'FACTéc', 'FNPT'
-            ),
-            'docInfoSectorial' => '/files/pdfs/info_sectorial/INFORME SECTORIAL SECTOR ENERGIA ELECTRICA.pdf',
-            'fliaProfesional' => array('nombre'=>'Energía Eléctrica',
-                                       'link'=>'/pages/flias/energia_electrica')
-        );
-        echo $this->element('foro', $vops);
-		?>
-        
+        <h2>Sector Energía Eléctrica</h2>
+	<?php echo $this->element('marcos_ref')?>
         <br />
-        <?php echo $html->link('Ver títulos del sector Energía Eléctrica', '/titulos-energia-electrica') ?>
+        <?php echo $html->link('< Volver a la familia profesional', array('controller' => 'pages', 'action' => 'display', 'flias/energia_electrica'));?>
     </div>
 </div>

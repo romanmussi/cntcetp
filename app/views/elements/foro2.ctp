@@ -11,7 +11,7 @@
                     <?php $i++; if($i == ceil(count($participantes)/2)+1):?>
                         </ul><ul class="grid_3">
                     <?php endif ?>
-                    <li><?php echo $p?></li>
+                    <li style="text-align:left;"><?php echo $p?></li>
                 <?php } ?>
             </ul>
         <?php } ?>

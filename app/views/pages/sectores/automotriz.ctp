@@ -1,5 +1,5 @@
 <?php 
-$this->pageTitle= 'Automotríz';
+$this->pageTitle= 'Automotriz';
 ?>
 
 <?php echo $this->element('menu_docs')?>
@@ -7,32 +7,9 @@ $this->pageTitle= 'Automotríz';
 
 <div class="grid_9">
     <div class="boxblanca boxdocs">
-		<?php  
-	        $vops = array(
-	            'foroName' => 'Automotriz',
-	            'participantes' => array(
-	                'ACRABA',
-	                'APTA' ,
-	                'ATAAP' ,
-	                'ATRAR',
-	                'FNPT' ,
-	                'Ministerio de la Producción',
-	                'SMATA' ,
-	                'MTEySS',
-	                'UDA' ,
-	                'UTMAN' ,
-	                'FAATRA',
-	                'AMET',
-	                'UMAM',
-	            ),
-	            'docInfoSectorial' => '/files/pdfs/info_sectorial/Sector automotriz - Informe Final.pdf',
-	            'fliaProfesional' => array('nombre'=>'Mecánica Automotriz',
-	                                       'link'=>'/pages/flias/mecanica_automotriz')
-	        );
-	        echo $this->element('foro', $vops);
-                
-                ?>
+        <h2>Sector Automotriz</h2>
+	<?php echo $this->element('marcos_ref')?>
         <br />
-        <?php echo $html->link('Ver títulos del sector Automotriz', '/titulos-automotriz') ?>
+        <?php echo $html->link('< Volver a la familia profesional', array('controller' => 'pages', 'action' => 'display', 'flias/automotriz'));?>
     </div>
 </div>
