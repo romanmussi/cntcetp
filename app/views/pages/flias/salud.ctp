@@ -15,10 +15,9 @@ echo $this->element('menu_docs')
         
         
         <h3>Más información</h3>
-        
-        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/salud'));?>
-        
-        <br />
-    <?php echo $html->link('Ver títulos del sector Salud', '/titulos-salud') ?>
+            <ul>
+                <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/salud'));?></li>
+                <li><?php echo $html->link('Ver títulos del sector Salud', '/titulos-salud') ?></li>
+            </ul>
     </div>
 </div>

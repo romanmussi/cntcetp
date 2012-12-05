@@ -320,11 +320,9 @@ echo $this->element('menu_docs')
         <br />
         <br />
         <h3>Más información</h3>
-        
-        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/textil_indumentaria'));?>
-        
-        <br />
-        <?php echo $html->link('Ver títulos del sector Textil e Indumentaria', '/titulos-textil-e-indumentaria') ?>
-
+            <ul>
+                <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/textil_indumentaria'));?></li>
+                <li><?php echo $html->link('Ver títulos del sector Textil e Indumentaria', '/titulos-textil-e-indumentaria') ?></li>
+            </ul>
   </div>
 </div>

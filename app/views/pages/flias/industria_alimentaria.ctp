@@ -15,10 +15,9 @@ echo $this->element('menu_docs')
         
         
         <h3>Más información</h3>
-        
-        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/industria_alimentaria'));?>
-        
-        <br />
-    <?php echo $html->link('Ver títulos del sector Industria Alimentaria', array('controller'=>'titulos', 'action'=>'search', 0, 15)) ?>
+            <ul>
+                <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/industria_alimentaria'));?></li>
+                <li><?php echo $html->link('Ver títulos del sector Industria Alimentaria', array('controller'=>'titulos', 'action'=>'search', 0, 15)) ?></li>
+            </ul>
     </div>
 </div>

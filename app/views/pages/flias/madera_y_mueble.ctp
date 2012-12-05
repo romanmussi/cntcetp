@@ -98,16 +98,16 @@ echo $this->element('menu_docs')
 		?>
         
         <h3>Informes</h3>
-        <?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
+            <ul>
+                <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?></li>
+            </ul>
         <br />
         <br />
         <h3>Más información</h3>
-        
-        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/madera_y_mueble'));?>
-        
-        <br />
-        <?php echo $html->link('Ver títulos del sector Madera y Mueble', '/titulos-madera-y-mueble') ?>
-
+            <ul>
+                <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/madera_y_mueble'));?></li>
+                <li><?php echo $html->link('Ver títulos del sector Madera y Mueble', '/titulos-madera-y-mueble') ?></li>
+            </ul>
   </div>
 </div>
 

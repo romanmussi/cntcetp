@@ -29,10 +29,8 @@ echo $this->element('menu_docs')
         
         
         <h3>Más información</h3>
-        
-        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/automotriz'));?>
-        
-        <br />
-    <?php echo $html->link('Ver títulos del sector Automotriz', '/titulos-automotriz') ?>
-    </div>
+            <ul>
+                <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/automotriz'));?></li>
+                <li><?php echo $html->link('Ver títulos del sector Automotriz', '/titulos-automotriz') ?></li>
+    </div>  </ul>
 </div>

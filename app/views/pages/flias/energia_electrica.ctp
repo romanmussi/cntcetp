@@ -224,11 +224,9 @@ echo $this->element('menu_docs')
         <br />
         <br />
         <h3>Más información</h3>
-        
-        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/energia_electrica'));?>
-        
-        <br />
-        <?php echo $html->link('Ver títulos del sector Energía Eléctrica', '/titulos-energia-electrica') ?>
+            <ul>
+                <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/energia_electrica'));?></li>
+                <li><?php echo $html->link('Ver títulos del sector Energía Eléctrica', '/titulos-energia-electrica') ?></li>
 
   </div>
 </div>

@@ -76,11 +76,9 @@ echo $this->element('menu_docs')
         <br />
         <br />
         <h3>Más información</h3>
-        
-        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/estetica_profesional'));?>
-        
-        <br />
-        <?php echo $html->link('Ver títulos del sector Estética Profesional', '/titulos-estetica-profesional') ?>
-
+            <ul>
+                <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/estetica_profesional'));?></li>
+                <li><?php echo $html->link('Ver títulos del sector Estética Profesional', '/titulos-estetica-profesional') ?></li>
+            </ul>
   </div>
 </div>

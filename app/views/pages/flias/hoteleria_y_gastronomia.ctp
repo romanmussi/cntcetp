@@ -120,12 +120,10 @@ echo $this->element('menu_docs')
         <br />
         <br />
         <h3>Más información</h3>
-        
-        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/hoteleria_y_gastronomia'));?>
-        
-        <br />
-        <?php echo $html->link('Ver títulos del sector Hotelería y Gastronomía', array('controller'=>'titulos', 'action'=>'search', 0, 34)) ?>
-
+            <ul>
+                <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/hotele<ria_y_gastronomia'));?></li>
+                <li><?php echo $html->link('Ver títulos del sector Hotelería y Gastronomía', array('controller'=>'titulos', 'action'=>'search', 0, 34)) ?></li>
+            </ul>
   </div>
 </div>
 

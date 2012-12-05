@@ -170,15 +170,13 @@ echo $this->element('menu_docs')
 		?>
         
         <h3>Informes</h3>
-        <?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
+        <?php //echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
         <br />
         <br />
         <h3>Más información</h3>
-        
-        <?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/metalmecanica'));?>
-        
-        <br />
-        <?php echo $html->link('Ver títulos del sector Metalmecánica', '/titulos-metalmecanica') ?>
-
+            <ul>
+                <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/metalmecanica'));?></li>
+                <li><?php echo $html->link('Ver títulos del sector Metalmecánica', '/titulos-metalmecanica') ?></li>
+            </ul>    
   </div>
 </div>
