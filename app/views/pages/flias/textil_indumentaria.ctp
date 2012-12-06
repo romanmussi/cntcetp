@@ -9,10 +9,10 @@ echo $this->element('menu_docs')
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Agrupamiento</th>
       <th>Figura Formativa y Marco de Referencia</th>
       <th>Perfiles de referencia</th>
-      <th></th>
       </tr>
     </thead>
   <tbody>
@@ -199,7 +199,7 @@ echo $this->element('menu_docs')
       <td></td>
     </tr>
     <tr>
-      <td rowspan="18">INDUMENTARIA</td>
+      <td rowspan="18">Indumentaria</td>
       <td></td>
       <td>Diseñador de Indumentaria</td>
       <td>Diseñador de Indumentaria</td>
