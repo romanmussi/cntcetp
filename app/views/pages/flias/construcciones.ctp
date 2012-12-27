@@ -1,5 +1,5 @@
 <?php 
-define('DIR', 'files/pdfs/construccion/');
+define('DIR', 'files/pdfs/construcciones/');
 echo $this->element('menu_docs')
 ?>
   <div id="cuerpo1" class="grid_9">
@@ -16,39 +16,39 @@ echo $this->element('menu_docs')
 	<tbody>
 		<tr>
 			<td>Media Técnica</td>
-			<td>Maestro mayor de obras</td>
-			<td>Maestro mayor de obras</td>
+                        <td><a href="<?php echo $html->url('/').DIR ?>sec/Maestro Mayor de Obras - 2007.pdf" target="_blank">Maestro Mayor de Obras</a></td>
+			<td>Maestro Mayor de Obras</td>
 		</tr>
 		<tr>
 			<td rowspan="13">Construcciones Tradicionales de base húmeda</td>
-			<td>Auxiliar en construcciones</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Auxiliar en Construcciones - 2010.pdf" target="_blank">Auxiliar en construcciones</a></td>
 			<td>Auxiliar en contrucciones tradicionales</td>
 		</tr>
 		<tr>
-			<td>Colocador de revestimientos con base húmeda</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Colocador de Revestimientos con Base Húmeda - 2010.pdf" target="_blank">Colocador de revestimientos con base húmeda</a></td>
 			<td>Colocador de revestimientos con base húmeda</td>
 		</tr>
 		<tr>
-			<td>Albañil</td>
+                        <td><a href="<?php echo $html->url('/').DIR ?>fp/Albañil - 2010.pdf" target="_blank">Albañil</a></td>
 			<td>Albañil en construcciones tradicionales</td>
 		</tr>
 		<tr>
-			<td>Armador de hierros para hormigón armado</td>
+                        <td><a href="<?php echo $html->url('/').DIR ?>fp/Armador de Hierros para HA - 2010.pdf" target="_blank">Armador de hierros para hormigón armado</a></td>
 			<td rowspan="2">Armador y carpintero en hormigón armado</td>
 		</tr>
 		<tr>
-			<td>Carpintero para hormigón armado</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Carpintero para Hormigón Armado - 2010.pdf" target="_blank">Carpintero para hormigón armado</a></td>
 			</tr>
 		<tr>
-			<td>Techista de faldones inclinados</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Techista de Faldones Inclinados - 2010.pdf" target="_blank">Techista de faldones inclinados</a></td>
 			<td>Techista de cubiertas de faldones inclinados</td>
 		</tr>
 		<tr>
-			<td>Yesero</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Yesero - 2011.pdf" target="_blank">Yesero</a></td>
 			<td>Yesero</td>
 		</tr>
 		<tr>
-			<td>Armador y montador de andamios para obras civiles</td>
+                        <td><a href="<?php echo $html->url('/').DIR ?>fp/Armador y Montador de Andamios para Obras Civiles - 2011.pdf" target="_blank">Armador y montador de andamios para obras civiles</a></td>
 			<td>Armador y montador de andamios</td>
 		</tr>
 		<tr>
@@ -73,7 +73,7 @@ echo $this->element('menu_docs')
 		</tr>
 		<tr>
 			<td rowspan="7">Construcciones en seco livianas</td>
-			<td>Auxiliar en construcción en seco de componentes livianos</td>
+                        <td><a href="<?php echo $html->url('/').DIR ?>fp/Auxiliar en Construcciones en Seco con Componentes Livianos - 2011.pdf" target="_blank">Auxiliar en construcción en seco de componentes livianos</a></td>
 			<td>Auxiliar en construcción en seco de componentes livianos</td>
 		</tr>
 		<tr>
@@ -81,11 +81,11 @@ echo $this->element('menu_docs')
 			<td>Auxiliar en construcción en seco de paneles portantes livianos</td>
 		</tr>
 		<tr>
-			<td>Armador y montador de paneles y cielorrasos con placas de roca de yeso</td>
+                    <td><a href="<?php echo $html->url('/').DIR ?>fp/Armador y Montador de Paneles y Cielorrasos de Placas de Roca de Yeso - 2011.pdf" target="_blank">Armador y montador de paneles y cielorrasos con placas de roca de yeso</a></td>
 			<td>Armador y Montador de Tabiques y Cielorrasos de Placa de Yeso de Roca</td>
 		</tr>
 		<tr>
-			<td>Armador y montador de componentes metálicos livianos</td>
+                    <td><a href="<?php echo $html->url('/').DIR ?>fp/Armador y Montador de Componentes Metálicos Livianos - 2011.pdf" target="_blank">Armador y montador de componentes metálicos livianos</a></td>
 			<td>Armador y montador de componentes metálicos livianos</td>
 		</tr>
 		<tr>
@@ -102,15 +102,15 @@ echo $this->element('menu_docs')
 		</tr>
 		<tr>
 			<td rowspan="4">Terminaciones decorativas y funcionales</td>
-			<td>Carpintero de obra fina</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Carpintero de Obra Fina - 2010.pdf" target="_blank">Carpintero de obra fina</a></td>
 			<td>Carpintero de obra fina</td>
 		</tr>
 		<tr>
-			<td>Colocador de revestimientos decorativos</td>
+                    <td><a href="<?php echo $html->url('/').DIR ?>fp/Colocador de Revestimientos Decorativos y Funcionales - 2011.pdf" target="_blank">Colocador de revestimientos decorativos</a></td>
 			<td>Colocador de revestimientos decorativos</td>
 		</tr>
 		<tr>
-			<td>Pintor de obra</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Pintor de Obra - 2011.pdf" target="_blank">Pintor de obra</a></td>
 			<td>Pintor de obra</td>
 		</tr>
 		<tr>
@@ -119,7 +119,7 @@ echo $this->element('menu_docs')
 		</tr>
 		<tr>
 			<td rowspan="8">Instalaciones sanitarias y de gas</td>
-			<td>Auxiliar en instalaciones sanitarias y de gas domiciliarias</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Auxiliar en Instalaciones Sanitarias y de Gas Domiciliarias - 2010.pdf" target="_blank">Auxiliar en instalaciones sanitarias y de gas domiciliarias</a></td>
 			<td>Auxiliar de instalaciones</td>
 		</tr>
 		<tr>
@@ -127,11 +127,11 @@ echo $this->element('menu_docs')
 			<td>Auxiliar de redes de gas</td>
 		</tr>
 		<tr>
-			<td>Montador de instalaciones sanitarias domiciliarias</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Montador de Instalaciones Sanitarias Domiciliarias - 2010.pdf" target="_blank">Montador de instalaciones sanitarias domiciliarias</a></td>
 			<td>Ejecutor de instalaciones sanitarias domiciliarias</td>
 		</tr>
 		<tr>
-			<td>Montador de instalaciones domiciliarias de gas </td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Montador de Instalaciones Domiciliarias de Gas - 2010.pdf" target="_blank">Montador de instalaciones domiciliarias de gas</a></td>
 			<td>Ejecutor de instalaciones domiciliarias de gas</td>
 		</tr>
 		<tr>
@@ -139,11 +139,11 @@ echo $this->element('menu_docs')
 			<td>Instalador y Reparador de Redes de Gas</td>
 		</tr>
 		<tr>
-			<td>Gasista domiciliario</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Gasista Domiciliario - 2011.pdf" target="_blank">Gasista domiciliario</a></td>
 			<td>Gasista domiciliario</td>
 		</tr>
 		<tr>
-			<td>Gasista de unidades unifuncionales</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Gasista de Unidades Unifuncionales - 2012.pdf" target="_blank">Gasista de unidades unifuncionales</a></td>
 			<td>Gasista de unidades unifuncionales</td>
 		</tr>
 		<tr>
@@ -152,11 +152,11 @@ echo $this->element('menu_docs')
 		</tr>
 		<tr>
 			<td rowspan="3">Instalaciones de energía eléctrica de consumo en inmuebles</td>
-			<td>Auxiliar en instalaciones eléctricas domiciliarias</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Auxiliar en Instalaciones Eléctricas Domiciliarias - 2010.pdf" target="_blank">Auxiliar en instalaciones eléctricas domiciliarias</a></td>
 			<td>Auxiliar de instalaciones eléctricas</td>
 		</tr>
 		<tr>
-			<td>Montador electricista domiciliario</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Montador Electricista Domiciliario - 2010.pdf" target="_blank">Montador electricista domiciliario</a></td>
 			<td>Instalador Eléctrico Domiciliario</td>
 		</tr>
 		<tr>
@@ -239,9 +239,9 @@ echo $this->element('menu_docs')
         echo $this->element('foro2', $vops);
 		?>
         
+        <br />
         <h3>Informes</h3>
         <?php //echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
-        <br />
         <br />
         <h3>Más información</h3>
             <ul>

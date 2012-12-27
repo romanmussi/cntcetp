@@ -19,7 +19,7 @@ echo $this->element('menu_docs')
 	<tbody>
 
 		<tr>
-			<td rowspan="8">Desarrollo, Supervisión y Gestión de Proyectos Eléctricos</td>
+			<td rowspan="7"></td>
 			<td>Técnico Superior en Energía</td>
 			<td>Técnico Superior en Energía</td>
 			<td></td>
@@ -27,11 +27,6 @@ echo $this->element('menu_docs')
 		<tr>
 			<td>Técnico Superior en Automatización y Robótica</td>
 			<td>Técnico Superior en Automatización y Robótica</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Técnico Superior en Control Eléctrico y Accionamientos</td>
-			<td>Técnico Superior en Control Eléctrico y Accionamientos</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -60,55 +55,60 @@ echo $this->element('menu_docs')
 			<td></td>
 		</tr>
 		<tr>
-			<td rowspan="4">Generación, transporte y distribución </td>
-			<td>Auxiliar en mantenimiento de tableros de distribución de baja tensión</td>
-			<td>Auxiliar en mantenimiento de tableros de distribución de baja tensión</td>
+			<td rowspan="5">Generación, transporte y distribución </td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Electricista de Centrales de Generación de Energía Eléctrica - 2012.pdf" target="_blank">Electricista de Centrales de Generación de E.E.</a></td>
+			<td>Electricista de Centrales de Generación de E.E.</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Electricista de Centrales de generación de E.E.(1)</td>
-			<td>Electricista de Centrales de generación de E.E.(1)</td>
+                        <td><a href="<?php echo $html->url('/').DIR ?>fp/Electricista de Redes de Alta Tensión - 2012.pdf" target="_blank">Electricista de Redes de Alta Tensión</a></td>
+			<td>Electricista de Redes de Alta Tensión</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Electricista de redes de alta tensión.(2)</td>
-			<td>Electricista de redes de alta tensión.(2)</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Electricista de Redes de Distribución de Media y Baja Tensión - 2011.pdf" target="_blank">Electricista de Redes de distribución de media y baja tensión</a></td>
+			<td>Electricista de Redes de distribución de media y baja tensión</td>
 			<td></td>
 		</tr>
-		<tr>
-			<td>Electricista de redes de distribución de media y baja tensión(2)</td>
-			<td>Electricista de redes de distribución de media y baja tensión(2)</td>
+                <tr>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Auxiliar Electricista de Redes de Distribución de Media y Baja Tensión - 2011.pdf" target="_blank">Auxiliar Electricista de Redes de distribución de media y baja tensión</a></td>
+			<td>Auxiliar Electricista de Redes de distribución de media y baja tensión</td>
+			<td></td>
+		</tr>
+                <tr>
+			<td>Operador de Estaciones de Transformación</td>
+			<td>Operador de Estaciones de Transformación</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td rowspan="10">Utilización de Energía Eléctrica</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Electricista Industrial - 2011.pdf" target="_blank">Electricista Industrial</a></td>
 			<td>Electricista Industrial</td>
-			<td>Electricista Industrial</td>
 			<td></td>
 		</tr>
 		<tr>
+                    <td><a href="<?php echo $html->url('/').DIR ?>fp/Auxiliar Electricista Industrial - 2011.pdf" target="_blank">Auxiliar Electricista Industrial</a></td>
 			<td>Auxiliar Electricista Industrial</td>
-			<td>Auxiliar Electricista Industrial</td>
 			<td></td>
 		</tr>
 		<tr>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Electricista en Inmuebles - 2011.pdf" target="_blank">Electricista en Inmuebles</a></td>
 			<td>Electricista en Inmuebles</td>
-			<td>Electricista en Inmuebles</td>
 			<td></td>
 		</tr>
 		<tr>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Instalador de Sistemas Eléctricos de Energías Renovables - 2012.pdf" target="_blank">Instalador de Sistemas Eléctricos de Energía Renovable</a></td>
 			<td>Instalador de Sistemas Eléctricos de Energía Renovable</td>
-			<td>Instalador de Sistemas Eléctricos de Energía Renovable</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Instalador de Sistemas de Iluminación Interior (3)</td>
-			<td>Instalador de Sistemas de Iluminación Interior (3)</td>
+			<td>Instalador de Sistemas de Iluminación Interior</td>
+			<td>Instalador de Sistemas de Iluminación Interior</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Operador de sistemas de acumulación de E.E.</td>
-			<td>Operador de sistemas de acumulación de E.E.</td>
+			<td>Auxiliar en Sistemas de Acumulación de Energía Eléctrica</td>
+			<td>Auxiliar en Sistemas de Acumulación de Energía Eléctrica</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -117,8 +117,8 @@ echo $this->element('menu_docs')
 			<td></td>
 		</tr>
 		<tr>
-			<td>Instalador de Sistemas de MBT</td>
-			<td>Instalador de Sistemas de MBT</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Instalador de Sistemas de Muy Baja Tensión (MBT) - 2012.pdf" target="_blank">Instalador de Sistemas de Muy Baja Tensión (MBT)</a></td>
+			<td>Instalador de Sistemas de Muy Baja Tensión (MBT)</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -127,40 +127,40 @@ echo $this->element('menu_docs')
 			<td></td>
 		</tr>
 		<tr>
-			<td>Montador Electricista de Sistemas de Potencia</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Montador Tablerista en Sistemas de Potencia - 2012.pdf" target="_blank">Montador Electricista de Sistemas de Potencia</a></td>
 			<td>Montador Electricista de Sistemas de Potencia</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td rowspan="4">Reparación y mantenimiento de máquinas y equipos eléctricos -electrónicos.</td>
-			<td>Bobinador de máquinas eléctricas</td>
-			<td>Bobinador de máquinas eléctricas</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Bobinador de Máquinas Eléctricas - 2012.pdf" target="_blank">Bobinador de Máquinas Eléctricas</a></td>
+			<td>Bobinador de Máquinas Eléctricas</td>
+			<td></td>
+		</tr>
+                <tr>
+			<td>Electricista Reparador de Electrodomésticos</td>
+			<td>Electricista Reparador de E lectrodomésticos</td>
+			<td></td>
+		</tr>
+                <tr>
+			<td>Reparador de Equipos de Climatización</td>
+			<td>Reparador de Equipos de Climatización</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Reparador de Equipos de Refrigeración(3) </td>
-			<td>Reparador de Equipos de Refrigeración(3) </td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Reparador de Equipos de Climatización(3)</td>
-			<td>Reparador de Equipos de Climatización(3)</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Reparador de electrodomésticos(3)</td>
-			<td>Reparador de electrodomésticos(3)</td>
+			<td>Reparador de Equipos de Refrigeración</td>
+			<td>Reparador de Equipos de Refrigeración</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td rowspan="4">Industria de productos eléctricos</td>
-			<td>Montador de pequeños electrodomésticos(4)</td>
-			<td>Montador de pequeños electrodomésticos(4)</td>
+			<td>Montador de pequeños electrodomésticos</td>
+			<td>Montador de pequeños electrodomésticos</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Montador de grandes electrodomésticos(5)</td>
-			<td>Montador de grandes electrodomésticos(5)</td>
+			<td>Montador de grandes electrodomésticos</td>
+			<td>Montador de grandes electrodomésticos</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -219,9 +219,9 @@ echo $this->element('menu_docs')
         echo $this->element('foro2', $vops);
 		?>
         
+        <br />
         <h3>Informes</h3>
         <?php //echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
-        <br />
         <br />
         <h3>Más información</h3>
             <ul>

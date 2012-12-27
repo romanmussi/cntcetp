@@ -18,27 +18,27 @@ echo $this->element('menu_docs')
   <tbody>
     <tr>
       <td rowspan="6">Hotelería</td>
+      <td><a href="<?php echo $html->url('/').DIR ?>fp/Mucama - 2011.pdf" target="_blank">Mucama</a></td>
       <td>Mucama</td>
-      <td>Mucama</td>
       <td></td>
     </tr>
     <tr>
+      <td><a href="<?php echo $html->url('/').DIR ?>fp/Recepcionista de Hotel - 2011.pdf" target="_blank">Recepcionista</a></td>
       <td>Recepcionista</td>
-      <td>Recepcionista</td>
       <td></td>
     </tr>
     <tr>
+      <td><a href="<?php echo $html->url('/').DIR ?>fp/Ama de Llaves - 2011.pdf" target="_blank">Ama de llaves</a></td>
       <td>Ama de llaves</td>
-      <td>Ama de llaves</td>
       <td></td>
     </tr>
     <tr>
-      <td>Organizador de operaciones hoteleras</td>
+      <td><a href="<?php echo $html->url('/').DIR ?>fp/Organizador de Operaciones de Hoteleras - 2011.pdf" target="_blank">Organizador de operaciones hoteleras</a></td>
       <td>Organizador de operaciones hoteleras</td>
       <td></td>
     </tr>
     <tr>
-      <td>Organizador de eventos</td>
+      <td><a href="<?php echo $html->url('/').DIR ?>fp/Organizador de Eventos - 2011.pdf" target="_blank">Organizador de eventos</a></td>
       <td>Organizador de eventos</td>
       <td></td>
     </tr>
@@ -49,7 +49,7 @@ echo $this->element('menu_docs')
     </tr>
     <tr>
       <td rowspan="9">Gastronomía</td>
-      <td>Mozo</td>
+      <td><a href="<?php echo $html->url('/').DIR ?>fp/Mozo-Camarero de Salón - 2011.pdf" target="_blank">Mozo</a></td>
       <td>Mozo</td>
       <td></td>
     </tr>
@@ -69,17 +69,17 @@ echo $this->element('menu_docs')
       <td></td>
     </tr>
     <tr>
-      <td>Cocinero</td>
+      <td><a href="<?php echo $html->url('/').DIR ?>fp/Cocinero - 2011.pdf" target="_blank">Cocinero</a></td>
       <td>Cocinero</td>
       <td></td>
     </tr>
     <tr>
-      <td>Pastelero</td>
+      <td><a href="<?php echo $html->url('/').DIR ?>fp/Pastelero - 2011.pdf" target="_blank">Pastelero</a></td>
       <td>Pastelero</td>
       <td></td>
     </tr>
     <tr>
-      <td>Panadero</td>
+      <td><a href="<?php echo $html->url('/').DIR ?>fp/Panadero - 2011.pdf" target="_blank">Panadero</a></td>
       <td>Panadero</td>
       <td></td>
     </tr>
@@ -114,10 +114,10 @@ echo $this->element('menu_docs')
         );
         echo $this->element('foro2', $vops);
 		?>
-        
+ 
+        <br />
         <h3>Informes</h3>
         <?php //echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
-        <br />
         <br />
         <h3>Más información</h3>
             <ul>

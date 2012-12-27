@@ -22,7 +22,7 @@ echo $this->element('menu_docs')
 			<td>Técnico en Industrialización de la Madera y el Mueble</td>
 		</tr>
 		<tr>
-			<td rowspan="4">PrimeraTransformación</td>
+			<td rowspan="2">Primera Transformación</td>
 			<td>Auxiliar de  Aserradero</td>
 			<td>Auxiliar de  Aserradero</td>
 		</tr>
@@ -31,53 +31,50 @@ echo $this->element('menu_docs')
 			<td>Operador de Máquina Principal de Aserradero</td>
 		</tr>
 		<tr>
-			<td></td>
-			<td>Oficial de mantenimiento</td>
-		</tr>
-		<tr>
+                        <td rowspan="4">Segunda Transformación</td>
 			<td>Operador de Moldurera</td>
 			<td>Operador de Moldurera</td>
 		</tr>
 		<tr>
-			<td rowspan="3">Segunda Transformación</td>
 			<td>Operador de Secado y Tratamiento Térmico de la Madera</td>
 			<td>Operador de Camara de Secado</td>
 		</tr>
+                <tr>
+			<td>Operador de Protección y Preservación de la Madera</td>
+			<td>Operador de Protección y Preservación de la Madera</td>
+		</tr>
 		<tr>
 			<td>Operador de Máquinas de Remanufactura de la madera</td>
 			<td>Operador de Máquinas de Remanufactura de la madera</td>
 		</tr>
 		<tr>
-			<td>Operador de Protección y Preservación de la Madera</td>
-			<td>Operador de Protección y Preservación de la Madera</td>
-		</tr>
-		<tr>
-			<td rowspan="7">TerceraTransformación</td>
-			<td>Auxiliar Carpintero de Banco</td>
-			<td>Auxiliar Carpintero de Banco</td>
-		</tr>
-		<tr>
+			<td rowspan="7">Tercera Transformación</td>
 			<td>Carpintero de Banco</td>
-			<td rowspan="2">Carpintero de banco</td>
+			<td>Carpintero de Banco</td>
 		</tr>
 		<tr>
 			<td>Carpintero de Obra</td>
-			</tr>
-		<tr>
-			<td>Operador de Sala de Afilado (pertinente también a la Primera Transforamción)</td>
-			<td>Afilador</td>
+                        <td>Carpintero de Obra</td>
 		</tr>
 		<tr>
-			<td>Operador de Máquinas y Herramientas para manufacturas en madera</td>
-			<td>Operador de Máquinas y Herramientas para manufacturas en madera</td>
+			<td>Operador de Sala de Afilado (pertinente también a la Primera y Segunda Transformación)</td>
+			<td>Afilador</td>
+		</tr>
+                <tr>
+			<td>Operador de Centro de Mecanizado</td>
+                        <td>Operador de Centro de Mecanizado</td>
 		</tr>
 		<tr>
 			<td>Operador en Tratamiento de Superficies</td>
-			<td>Operario de tratamiento y acabado de superficies</td>
+			<td>Operario de tratamiento y acabado de Superficies</td>
 		</tr>
 		<tr>
 			<td>Tapicero de Muebles</td>
 			<td>Tapicero de Muebles</td>
+		</tr>
+                <tr>
+			<td>Auxiliar de Carpintero de Banco</td>
+			<td>Auxiliar de Carpintero de Banco</td>
 		</tr>
 	</tbody>
 </table>
@@ -96,12 +93,12 @@ echo $this->element('menu_docs')
         );
         echo $this->element('foro2', $vops);
 		?>
-        
+    
+        <br />
         <h3>Informes</h3>
             <ul>
                 <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?></li>
             </ul>
-        <br />
         <br />
         <h3>Más información</h3>
             <ul>

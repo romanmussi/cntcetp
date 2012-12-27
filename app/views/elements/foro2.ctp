@@ -6,7 +6,7 @@
         $i = 0;
         if (!empty($participantes) && count($participantes) > 0) {?>
             Participantes:<br />
-            <ul class="grid_8">
+            <ul>
                 <?php foreach ($participantes as $p) { ?>
                     <li><?php echo $p?></li>
                 <?php } ?>

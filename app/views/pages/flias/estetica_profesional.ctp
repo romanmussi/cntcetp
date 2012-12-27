@@ -39,8 +39,8 @@ echo $this->element('menu_docs')
 			<td></td>
 		</tr>
 		<tr>
-			<td>Depilación y manicuría</td>
-			<td>Depilación y manicuría</td>
+			<td>Depilación, Epilación y manicuría</td>
+			<td>Depilación, Epilación y manicuría</td>
 			<td></td>
 		</tr>
 		<tr>

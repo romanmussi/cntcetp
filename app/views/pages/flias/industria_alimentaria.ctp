@@ -13,7 +13,7 @@ echo $this->element('menu_docs')
         echo $this->element('foro2', $vops);
 		?>
         
-        
+        <br />
         <h3>Más información</h3>
             <ul>
                 <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/industria_alimentaria'));?></li>

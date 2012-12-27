@@ -18,46 +18,30 @@ echo $this->element('menu_docs')
 
 	<tbody>
 		<tr>
-			<td rowspan="2">Títulos existentes </td>
-			<td>Técnico en Computación</td>
-			<td>Técnico en Computación</td>
+			<td>Orientación a lo Funcional</td>
+			<td>Técnico Superior en Análisis Funcional de Sistemas Informáticos</td>
+			<td>Técnico Superior en Análisis Funcional de Sistemas Informáticos</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Técnico Superior en Análisis de Sistemas </td>
-			<td>Técnico Superior en Análisis de Sistemas </td>
-			<td></td>
-		</tr>
-		<tr>
-			<td rowspan="2">Funcional</td>
-			<td>Administrador de Recursos de Tecnologías de la Información/Integrador/ Analista de Sistemas</td>
-			<td>Administrador de Recursos de Tecnologías de la Información/Integrador/ Analista de Sistemas</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Técnico Superior en Análisis Funcional de Procesos</td>
-			<td>Técnico Superior en Análisis Funcional de Procesos</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td rowspan="3">Desarrollo de software</td>
+			<td rowspan="3">Orientación al desarrollo de software</td>
 			<td>Programador</td>
 			<td>Programador</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Técnico en Programación de Computadoras  </td>
-			<td>Técnico en Programación de Computadoras  </td>
+			<td><a href="<?php echo $html->url('/').DIR ?>sec/Técnico en Programación - 2011.pdf" target="_blank">Técnico en Programación de Computadoras</a></td>
+			<td>Técnico en Programación de Computadoras</td>
+			<td></td>
+		</tr>
+                <tr>
+			<td><a href="<?php echo $html->url('/').DIR ?>sup/Técnico Superior en Desarrollo de Software - 2011.pdf" target="_blank">Técnico Superior en Desarrollo de Software</a></td>
+			<td>Técnico Superior en Desarrollo de Software</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Técnico Superior en Desarrollo de Software</td>
-			<td>Técnico Superior en Desarrollo de Software</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td rowspan="2">Tecnología y equipamiento</td>
-			<td>Técnico en Informática Profesional y Personal</td>
+			<td rowspan="2">Orientado a la Tecnología y equipamiento</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>sec/Técnico en Informática Profesional y Personal - 2007.pdf" target="_blank">Técnico en Informática Profesional y Personal</a></td>
 			<td>Técnico en Informática Profesional y Personal</td>
 			<td></td>
 		</tr>
@@ -67,8 +51,8 @@ echo $this->element('menu_docs')
 			<td></td>
 		</tr>
 		<tr>
-			<td>Capcitación de Usuarios</td>
-			<td>Operador de Informática para Administración y Gestión</td>
+			<td>Capacitación de usuarios</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Operador de Informática para Administración y Gestión - 2007.pdf" target="_blank">Operador de Informática para Administración y Gestión</a></td>
 			<td>Operador de Informática para Administración y Gestión</td>
 			<td></td>
 		</tr>
@@ -98,9 +82,9 @@ echo $this->element('menu_docs')
         echo $this->element('foro2', $vops);
 		?>
         
+        <br />
         <h3>Informes</h3>
         <?php //echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
-        <br />
         <br />
         <h3>Más información</h3>
             <ul>

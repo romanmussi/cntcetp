@@ -19,19 +19,19 @@ echo $this->element('menu_docs')
 
 		<tr>
 			<td></td>
-			<td>Técnico medio en Producción Agropecuaria</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Técnico medio en Producción Agropecuaria - 2007.pdf" target="_blank">Técnico medio en Producción Agropecuaria</a></td>
 			<td>Técnico medio en Producción Agropecuaria</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>Técnico Superior en Producción Agropecuaria</td>
-			<td>Técnico Superior en Gestión de laProducción Agropecuaria</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Técnico Superior en Producción Agropecuaria - 2009.pdf" target="_blank">Técnico Superior en Producción Agropecuaria</a></td>
+			<td>Técnico Superior en Gestión de la Producción Agropecuaria</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>Técnico Superior Forestal</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Técnico Superior Forestal - 2011.pdf" target="_blank">Técnico Superior Forestal</a></td>
 			<td>Técnico Superior Forestal</td>
 			<td></td>
 		</tr>
@@ -42,12 +42,12 @@ echo $this->element('menu_docs')
 			<td></td>
 		</tr>
 		<tr>
-			<td>Operario Hortícola </td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Operario Hortícola - 2012.pdf" target="_blank">Operario Hortícola</a></td>
 			<td>Operario Hortícola </td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Horticultor</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Horticultor - 2012.pdf" target="_blank">Horticultor</a></td>
 			<td>Horticultor</td>
 			<td></td>
 		</tr>
@@ -116,12 +116,12 @@ echo $this->element('menu_docs')
 		</tr>
 		<tr>
 			<td rowspan="4">Ganadería(Producción Lechera)</td>
-			<td>Asistente de Producción Lechera</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Asistente de Producción Lechera - 2011.pdf" target="_blank">Asistente de Producción Lechera</a></td>
 			<td>Asistente de Producción Lechera</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Operario en Producción Lechera</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Operario en Producción Lechera - 2011.pdf" target="_blank">Operario en Producción Lechera</a></td>
 			<td>Operario en Producción Lechera</td>
 			<td></td>
 		</tr>
@@ -163,17 +163,17 @@ echo $this->element('menu_docs')
 		</tr>
 		<tr>
 			<td rowspan="3">Apícola</td>
-			<td>Operario Apícola</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Operario Apícola - 2007.pdf" target="_blank">Operario Apícola</a></td>
 			<td>Operario Apícola</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Asistente Apícola</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Asistente Apícola - 2007.pdf" target="_blank">Asistente Apícola</a></td>
 			<td>Asistente Apícola</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>Apicultor</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Apicultor - 2007.pdf" target="_blank">Apicultor</a></td>
 			<td>Apicultor</td>
 			<td></td>
 		</tr>
@@ -246,31 +246,27 @@ echo $this->element('menu_docs')
         );
         echo $this->element('foro2', $vops);
 		?>
-        
+        <br />
         <h3>Informes</h3>
         <?php //echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
-        <br />
-        <br />
-        <h3>Subsectores</h3>
+        <ul>
+            <li>Apí­cola</li>
+            <li>Avícola</li>
+            <li>Florí­cola</li>
+            <li>Forestal</li>
+            <li>Frutí­cola - Olivicultura</li>
+            <li>Hortícola
+                    <ul>
+                            <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/horticultura_informe_final.pdf', array('target'=>'_blank')) ?></li>
+                    </ul>
+            </li>
+            <li>Producción Lechera
             <ul>
-                <li>Apí­cola</li>
-                <li>Avícola</li>
-                <li>Florí­cola</li>
-                <li>Forestal</li>
-                <li>Frutí­cola - Olivicultura</li>
-                <li>Hortícola
-                        <ul>
-                                <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/horticultura_informe_final.pdf', array('target'=>'_blank')) ?></li>
-                        </ul>
-                </li>
-                <li>Producción Lechera
-                <ul>
-                        <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/informe_lechero.pdf', array('target'=>'_blank')) ?></li>
-                </ul>
-                </li>
-                <li>Vitivinicultura</li>
+                    <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/informe_lechero.pdf', array('target'=>'_blank')) ?></li>
             </ul>
-        <br />
+            </li>
+            <li>Vitivinicultura</li>
+        </ul>
         <br />
         <h3>Más información</h3>
             <ul>
