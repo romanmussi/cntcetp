@@ -57,6 +57,7 @@
         Router::connect('/titulos-metalmecanica', array('controller' => 'titulos', 'action' => 'search', 0, 18));
         Router::connect('/titulos-salud', array('controller' => 'titulos', 'action' => 'search', 0, 30));
         Router::connect('/titulos-textil-e-indumentaria', array('controller' => 'titulos', 'action' => 'search', 0, 40));
+        Router::connect('/titulos-cuero-y-calzado', array('controller' => 'titulos', 'action' => 'search', 0, 9));
         
 
         Router::connect('/buscador-de-titulos-y-certificaciones', array('controller' => 'titulos', 'action' => 'search'));

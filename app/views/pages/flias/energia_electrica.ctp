@@ -221,7 +221,9 @@ echo $this->element('menu_docs')
         
         <br />
         <h3>Informes</h3>
-        <?php //echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/madera y mueble.pdf') ?>
+            <ul>
+                <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/energia-electrica-informe-sectorial.pdf') ?></li>
+            </ul>
         <br />
         <h3>Más información</h3>
             <ul>

@@ -75,7 +75,7 @@ echo $this->element('menu_docs')
     </tr>
     <tr>
         <td><a href="<?php echo $html->url('/').DIR ?>fp/Auxiliar Mecánico Motores Diesel - 2007.pdf" target="_blank">Auxiliar Mecánico de Motores  Diesel</a></td>
-      <td>Auxiliar Mecánico de Motores  Diesel</td>
+      <td>Auxiliar Mecánico de Motores Diesel</td>
       <td></td>
     </tr>
     <tr>
@@ -178,6 +178,11 @@ echo $this->element('menu_docs')
         echo $this->element('foro2', $vops);
 		?>
         
+        <br />
+        <h3>Informes</h3>
+            <ul>
+                <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/automotriz-informe-sectorial.pdf') ?></li>
+            </ul>
         <br />
         <h3>Más información</h3>
             <ul>

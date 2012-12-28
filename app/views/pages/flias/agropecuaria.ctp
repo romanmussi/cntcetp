@@ -252,18 +252,21 @@ echo $this->element('menu_docs')
         <ul>
             <li>Apí­cola</li>
             <li>Avícola</li>
+                <ul>
+                    <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/avicola-informe-sectorial.pdf', array('target'=>'_blank')) ?></li>
+                </ul>
             <li>Florí­cola</li>
             <li>Forestal</li>
             <li>Frutí­cola - Olivicultura</li>
             <li>Hortícola
-                    <ul>
-                            <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/horticultura_informe_final.pdf', array('target'=>'_blank')) ?></li>
-                    </ul>
+                <ul>
+                    <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/horticultura-informe-sectorial.pdf', array('target'=>'_blank')) ?></li>
+                </ul>
             </li>
             <li>Producción Lechera
-            <ul>
-                    <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/informe_lechero.pdf', array('target'=>'_blank')) ?></li>
-            </ul>
+                <ul>
+                    <li><?php echo $html->link('Informe sectorial', '/files/pdfs/info_sectorial/lechero-informe-sectorial.pdf', array('target'=>'_blank')) ?></li>
+                </ul>
             </li>
             <li>Vitivinicultura</li>
         </ul>

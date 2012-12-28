@@ -35,10 +35,11 @@
                         </li>
 	                <li><?php echo $html->link('Automotriz', array('controller' => 'pages', 'action' => 'display', 'flias/automotriz'));?></li>
                         <li><?php echo $html->link('Construcciones', array('controller' => 'pages', 'action' => 'display', 'flias/construcciones'));?></li>
-<!--                        <li><?php echo $html->link('Cuero y Calzado', array('controller' => 'pages', 'action' => 'display', 'flias/cuero_y_calzado'));?></li>-->
+                        <li><?php echo $html->link('Cuero y Calzado', array('controller' => 'pages', 'action' => 'display', 'flias/cuero_y_calzado'));?></li>
+<!--                        -->
 <!--                        <li><?php echo $html->link('Electrónica', array('controller' => 'pages', 'action' => 'display', 'flias/electronica'));?>
                             <ul>
-                                <li><?php echo $html->link('Telecomunicaciones', array('controller' => 'pages', 'action' => 'display', 'flias/telecomunicaciones'));?></li>
+                            
                                 <li><?php echo $html->link('Electrónica Industrial', array('controller' => 'pages', 'action' => 'display', 'flias/electronica_industrial'));?></li>
                                 <li><?php echo $html->link('Instrumentación y Control', array('controller' => 'pages', 'action' => 'display', 'flias/instrumentacion_y_control'));?></li>
                             </ul>
@@ -61,6 +62,7 @@
 <!--                        <li><?php echo $html->link('Petróleo y Gas', array('controller' => 'pages', 'action' => 'display', 'flias/petroleo_y_gas'));?></li>-->
 <!--                        <li><?php echo $html->link('Química y Farmacia', array('controller' => 'pages', 'action' => 'display', 'flias/quimica_y_farmacia'));?></li>-->
                         <li><?php echo $html->link('Salud', array('controller' => 'pages', 'action' => 'display', 'flias/salud'));?></li>
+                        <li><?php echo $html->link('Telecomunicaciones', array('controller' => 'pages', 'action' => 'display', 'flias/telecomunicaciones'));?></li>
                         <li><?php echo $html->link('Textil e Indumentaria', array('controller' => 'pages', 'action' => 'display', 'flias/textil_indumentaria'));?></li>
 <!--                        <li><?php echo $html->link('Turismo', array('controller' => 'pages', 'action' => 'display', 'flias/turismo'));?></li>-->
 	            </ul>
