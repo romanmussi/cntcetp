@@ -18,7 +18,7 @@ echo $this->element('menu_docs')
 	<tbody>
 		<tr>
 			<td></td>
-			<td>Técnico en Industrialización de la Madera y el Mueble</td>
+                        <td><a href="<?php echo $html->url('/').DIR ?>sec/Técnico en Industrialización de la Madera y el Mueble - 2011.pdf" target="_blank">Técnico en Industrialización de la Madera y el Mueble</a></td>
 			<td>Técnico en Industrialización de la Madera y el Mueble</td>
 		</tr>
 		<tr>

@@ -46,7 +46,7 @@ echo $this->element('menu_docs')
 			<td></td>
 		</tr>
 		<tr>
-			<td>Técnico Superior en Soporte de Infraestructura de Tecnología de la Información</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>sup/Técnico Superior en Soporte de Infraestructura de Tecnología de la Información - 2010.pdf" target="_blank">Técnico Superior en Soporte de Infraestructura de Tecnología de la Información</a></td>
 			<td>Técnico Superior en Soporte de Infraestructura de Tecnología de la Información</td>
 			<td></td>
 		</tr>
