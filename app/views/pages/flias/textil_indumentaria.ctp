@@ -11,7 +11,7 @@ echo $this->element('menu_docs')
     <tr>
       <th colspan="2">Agrupamiento</th>
       <th>Figura Formativa y Marco de Referencia</th>
-      <th>Perfiles de referencia</th>
+      <th>Perfiles profesionales</th>
       </tr>
     </thead>
   <tbody>

@@ -10,8 +10,8 @@ echo $this->element('menu_docs')
 	<thead>
 		<tr>
 			<th>Agrupamiento</th>
-                        <th>Figura Formativa y Marco de Referencia</th>
-                        <th>Perfiles de referencia</th>
+                        <th>Figura Formativa y Marco de Referencia (*)</th>
+                        <th>Perfiles profesionales</th>
 			<th></th>
 		</tr>	
 	</thead>
@@ -19,19 +19,19 @@ echo $this->element('menu_docs')
 
 		<tr>
 			<td></td>
-			<td><a href="<?php echo $html->url('/').DIR ?>fp/Técnico medio en Producción Agropecuaria - 2007.pdf" target="_blank">Técnico medio en Producción Agropecuaria</a></td>
+			<td><a href="<?php echo $html->url('/').DIR ?>sec/Técnico medio en Producción Agropecuaria - 2007.pdf" target="_blank">Técnico medio en Producción Agropecuaria</a></td>
 			<td>Técnico medio en Producción Agropecuaria</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td><a href="<?php echo $html->url('/').DIR ?>fp/Técnico Superior en Producción Agropecuaria - 2009.pdf" target="_blank">Técnico Superior en Producción Agropecuaria</a></td>
+			<td><a href="<?php echo $html->url('/').DIR ?>sup/Técnico Superior en Producción Agropecuaria - 2009.pdf" target="_blank">Técnico Superior en Producción Agropecuaria</a></td>
 			<td>Técnico Superior en Gestión de la Producción Agropecuaria</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td><a href="<?php echo $html->url('/').DIR ?>fp/Técnico Superior Forestal - 2011.pdf" target="_blank">Técnico Superior Forestal</a></td>
+			<td><a href="<?php echo $html->url('/').DIR ?>sup/Técnico Superior Forestal - 2011.pdf" target="_blank">Técnico Superior Forestal</a></td>
 			<td>Técnico Superior Forestal</td>
 			<td></td>
 		</tr>
@@ -179,6 +179,9 @@ echo $this->element('menu_docs')
 		</tr>
 	</tbody>
 </table>
+<br />
+(*) Cuando la Figura Formativa tiene Marco de Referencia aprobado por el Consejo Federal de Educación se ha agregado el link correspondiente para facilitar el acceso directo. Por otro lado, es posible consultar el listado completo de Marcos de Referencia del Sector haciendo <?php echo $html->link('click aquí', array('controller' => 'pages', 'action' => 'display', 'sectores/agropecuaria'));?>.
+<br />
 <br />
     	<?php  
         $vops = array(

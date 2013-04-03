@@ -10,8 +10,8 @@ echo $this->element('menu_docs')
 	<thead>
 		<tr>
 			<th>Agrupamiento</th>
-			<th>Figura Formativa</th>
-			<th>Perfiles de referencia</th>
+			<th>Figura Formativa y Marco de Referencia</th>
+			<th>Perfiles profesionales</th>
 		</tr>
 	</thead>
 

@@ -7,7 +7,7 @@
       <tr>
         <th>Agrupamiento</th>
         <th>Figura Formativa</th>
-        <th>Perfiles de referencia</th>
+        <th>Perfiles profesionales</th>
         <th></th>
       </tr>
     </thead>

@@ -5,13 +5,14 @@ echo $this->element('menu_docs')
   <div id="cuerpo1" class="grid_9">
     <div class=" boxblanca boxdocs">
     <h2>Sector Automotriz</h2>
+    <h3>Familia profesional</h3>
 
     <table>
   <thead>
     <tr>
       <th>Agrupamiento</th>
       <th>Figura Formativa y Marco de Referencia</th>
-      <th>Perfiles de referencia</th>
+      <th>Perfiles profesionales</th>
       <th></th>
             </tr>
       </thead>

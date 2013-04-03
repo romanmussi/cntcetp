@@ -11,7 +11,7 @@ echo $this->element('menu_docs')
     <tr>
       <th>Agrupamiento</th>
       <th>Figura Formativa y Marco de Referencia</th>
-      <th>Perfiles de referencia</th>
+      <th>Perfiles profesionales</th>
       <th></th>
     </tr>
   </thead>
@@ -29,7 +29,7 @@ echo $this->element('menu_docs')
       <td></td>
     </tr>
     <tr>
-      <td><a href="<?php echo $html->url('/').DIR ?>sec/Mecánico - 2007.pdf" target="_blank">Técnico Mecánico</a></td>
+      <td><a href="<?php echo $html->url('/').DIR ?>sec/Técnico Mecánico - 2007.pdf" target="_blank">Técnico Mecánico</a></td>
       <td>Técnico Mecánico</td>
       <td></td>
     </tr>

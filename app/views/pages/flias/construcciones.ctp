@@ -10,7 +10,7 @@ echo $this->element('menu_docs')
 	<thead>
 		<th>Agrupamiento</th>
 		<th>Figura Formativa y Marco de Referencia</th>
-		<th>Perfiles de referencia</th>
+		<th>Perfiles profesionales</th>
 		<th></th>
 	</thead>
 	<tbody>
