@@ -643,10 +643,40 @@ ul.ul-horizontal{
     padding-right: 20px;
 }
 
-
-
 #g_ministerio{
     cursor: hand;
     cursor: move;
 }
 
+#barra-gris {
+    background: url(img/bkg_barra2.png) repeat-x scroll 0 0 transparent;
+    height: 48px;
+}
+
+#barra-gris div {
+    margin: 0 auto;
+    position: relative;
+    width: 935px;
+}
+
+#barra-gris a.logo-me {
+    background: url(img/logo-me.png) no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 36px;
+    left: 13px;
+    position: absolute;
+    text-indent: -99999px;
+    top: 5px;
+    width: 118px;
+}
+
+#barra-gris p.slogan {
+    background: url(img/txt-educacion-calidad.png) no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 23px;
+    left: 150px;
+    position: absolute;
+    text-indent: -99999px;
+    top: 22px;
+    width: 326px;
+}
