@@ -1,7 +1,7 @@
 
 <div id="barra-gris">
     <div>
-        <a title="Ministerio de Educación" href="http://www.me.gov.ar/" class="logo-me">Ministerio de Educación</a>
+        <a title="Ministerio de Educación" href="http://www.me.gov.ar/" target="_blank" class="logo-me">Ministerio de Educación</a>
         <p class="slogan">Educación de calidad para una sociedad más justa.</p>
     </div>
 </div>
