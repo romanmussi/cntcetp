@@ -7,7 +7,7 @@ echo $html->css('catalogo.estaticas', false);
 
 <div class="grid_4">
     <div class="boxblanca boxestudiantes">
-        <h3>Guía del Estudiante</h3>
+        <h3><?php echo $html->link('Guía del Estudiante',array('controller'=>'titulos', 'action'=>'guiaDelEstudiante'));?></h3>
         
         <?php echo $html->link('más información',
                 array('controller'=>'titulos', 'action'=>'guiaDelEstudiante'),
@@ -21,10 +21,9 @@ echo $html->css('catalogo.estaticas', false);
 
 <div class="grid_8">
     <div class="boxblanca boxestudiantes">
-        <h3>Empresas, profesionales, funcionarios, sindicatos.</h3>
         <div class="box_home_buscadores">
             <div class="box_pad_wrapper" style="margin-right: 15px">
-                <h4><?php echo $html->link('Búsqueda de títulos y certificaciones',array('controller'=>'titulos', 'action'=>'search'));?></h4>
+                <h3><?php echo $html->link('Búsqueda de títulos y certificaciones',array('controller'=>'titulos', 'action'=>'search'));?></h3>
                
                 <?php 
                      echo $html->link('más información',
@@ -41,7 +40,7 @@ echo $html->css('catalogo.estaticas', false);
 
         <div class="box_home_buscadores">
             <div class="box_pad_wrapper" style="margin-left: 20px; padding-right: 0px;">
-                <h4><?php echo $html->link('Búsqueda por instituciones',array('controller'=>'instits', 'action'=>'search'))?></h4>
+                <h3><?php echo $html->link('Búsqueda por instituciones',array('controller'=>'instits', 'action'=>'search'))?></h3>
                
                 <?php echo $html->link('más información',
                         array('controller'=>'instits', 'action'=>'search'),

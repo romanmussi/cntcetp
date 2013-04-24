@@ -255,10 +255,14 @@ input[type=radio]{
 
 #ofertas_section label{
     text-decoration: none !important;
+    height: 26px;
+    margin-left: 17px;
 }
 #gestion_section label{
     float:left;
     text-decoration: none !important;
+    margin-left: 3px;
+    margin-right: 12px;
 }
 
 .results li a{

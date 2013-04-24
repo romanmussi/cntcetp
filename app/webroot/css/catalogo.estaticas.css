@@ -31,6 +31,12 @@ area:HOVER{
     margin-top: 30px;
 }
 
+.boxestudiantes h3 a {
+    color: #B1CC2F;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .photo{
     float:right;
     height:295px;

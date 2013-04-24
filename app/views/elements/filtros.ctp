@@ -26,7 +26,7 @@
             )
             ?>
         </div>
-        <div style="padding:2px 0 2px 0;">
+        <div style="padding:6px 0 2px 0;">
             <?php echo $form->input('Titulo.tituloName',
             array(
             'div'=>false,
@@ -94,7 +94,7 @@
                 </div>
                 <div class="clear"></div>
             </div>
-            <div style="padding:2px 0 2px 0;">
+            <div style="padding:6px 0 2px 0;">
                 <?php echo $form->input('Instit.nombre',
                 array(
                 'div'=>false,

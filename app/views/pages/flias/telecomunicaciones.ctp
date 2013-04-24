@@ -10,7 +10,7 @@ echo $this->element('menu_docs')
   <thead>
     <tr>
       <th>Agrupamiento</th>
-      <th>Figura Formativa y Marco de Referencia</th>
+      <th>Figura Formativa y Marco de Referencia (*)</th>
       <th>Perfiles profesionales</th>
       <th></th>
     </tr>
@@ -78,7 +78,10 @@ echo $this->element('menu_docs')
 			<td></td>
 		</tr>
   </table>
-  <br />
+<br />
+(*) Cuando la Figura Formativa tiene Marco de Referencia aprobado por el Consejo Federal de Educación se ha agregado el link correspondiente para facilitar el acceso directo. Por otro lado, es posible consultar el listado completo de Marcos de Referencia del Sector haciendo <?php echo $html->link('click aquí', array('controller' => 'pages', 'action' => 'display', 'sectores/telecomunicaciones'));?>.
+<br />
+<br />
     	<?php  
         $vops = array(
             'foroName' => '',

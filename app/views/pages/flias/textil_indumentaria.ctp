@@ -10,7 +10,7 @@ echo $this->element('menu_docs')
   <thead>
     <tr>
       <th colspan="2">Agrupamiento</th>
-      <th>Figura Formativa y Marco de Referencia</th>
+      <th>Figura Formativa y Marco de Referencia (*)</th>
       <th>Perfiles profesionales</th>
       </tr>
     </thead>
@@ -306,7 +306,10 @@ echo $this->element('menu_docs')
     </tr>
   </tbody>
 </table>
-   <br />
+<br />
+(*) Cuando la Figura Formativa tiene Marco de Referencia aprobado por el Consejo Federal de Educación se ha agregado el link correspondiente para facilitar el acceso directo. Por otro lado, es posible consultar el listado completo de Marcos de Referencia del Sector haciendo <?php echo $html->link('click aquí', array('controller' => 'pages', 'action' => 'display', 'sectores/textil_indumentaria'));?>.
+<br />
+<br />
     	<?php  
         $vops = array(
             'foroName' => '',

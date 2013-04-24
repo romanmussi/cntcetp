@@ -10,7 +10,7 @@ echo $this->element('menu_docs')
 	<thead>
 		<tr>
 			<th>Agrupamiento</th>
-			<th>Figura Formativa y Marco de Referencia</th>
+			<th>Figura Formativa y Marco de Referencia (*)</th>
 			<th>Perfiles profesionales</th>
 			<th></th>
 		</tr>
@@ -175,28 +175,10 @@ echo $this->element('menu_docs')
 		</tr>
 	</tbody>
 </table>
-<!--<p>
-	<ol>
-		<li>Controlador de Procesos de Centrales de generación de E.E. Figura incluida 	</li>
-		<li>Electricista de Subestación de transformación. Figura incluida</li>
-		<li>Figura formativa que tiene especializaciones</li>
-		<li>Figura formativa que tiene especializaciones
-			<ol>
-				<li>Elementos Caloríficos </li>
-				<li>Elementos motorizados</li>
-			</ol>
-		</li>
-		<li>Figura formativa que tiene especializaciones
-		<ol>
-			<li>Refrigeración</li>
-			<li>Calor</li>
-			<li>Máquina de Lavar</li>
-		</ol>
-		</li>
-	</ol>
-</p>-->
-    
-     <br />
+<br />
+(*) Cuando la Figura Formativa tiene Marco de Referencia aprobado por el Consejo Federal de Educación se ha agregado el link correspondiente para facilitar el acceso directo. Por otro lado, es posible consultar el listado completo de Marcos de Referencia del Sector haciendo <?php echo $html->link('click aquí', array('controller' => 'pages', 'action' => 'display', 'sectores/energia_electrica'));?>.
+<br />
+<br />
     	<?php  
         $vops = array(
             'foroName' => '',

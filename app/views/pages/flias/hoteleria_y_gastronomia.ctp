@@ -10,7 +10,7 @@ echo $this->element('menu_docs')
   <thead>
     <tr>
       <th>Agrupamiento</th>
-      <th>Figura Formativa y Marco de Referencia</th>
+      <th>Figura Formativa y Marco de Referencia (*)</th>
       <th>Perfiles profesionales</th>
       <th></th>
             </tr>
@@ -95,8 +95,10 @@ echo $this->element('menu_docs')
     </tr>
   </tbody>
 </table>
-
- <br />
+<br />
+(*) Cuando la Figura Formativa tiene Marco de Referencia aprobado por el Consejo Federal de Educación se ha agregado el link correspondiente para facilitar el acceso directo. Por otro lado, es posible consultar el listado completo de Marcos de Referencia del Sector haciendo <?php echo $html->link('click aquí', array('controller' => 'pages', 'action' => 'display', 'sectores/hoteleria_y_gastronomia'));?>.
+<br />
+<br />
     	<?php  
         $vops = array(
             'foroName' => '',
@@ -123,7 +125,7 @@ echo $this->element('menu_docs')
         <br />
         <h3>Más información</h3>
             <ul>
-                <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/hotele<ria_y_gastronomia'));?></li>
+                <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/hoteleria_y_gastronomia'));?></li>
                 <li><?php echo $html->link('Ver títulos del sector Hotelería y Gastronomía', array('controller'=>'titulos', 'action'=>'search', 0, 34)) ?></li>
             </ul>
   </div>

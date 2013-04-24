@@ -10,7 +10,7 @@ echo $this->element('menu_docs')
   <thead>
     <tr>
       <th colspan="2">Agrupamiento</th>
-      <th>Figura Formativa y Marco de Referencia</th>
+      <th>Figura Formativa y Marco de Referencia (*)</th>
       <th>Perfiles profesionales</th>
     </tr>
   </thead>
@@ -107,6 +107,9 @@ echo $this->element('menu_docs')
 		</tr>
   </table>
   <br />
+(*) Cuando la Figura Formativa tiene Marco de Referencia aprobado por el Consejo Federal de Educación se ha agregado el link correspondiente para facilitar el acceso directo. 
+<br />
+<br />
     	<?php  
         $vops = array(
             'foroName' => '',
