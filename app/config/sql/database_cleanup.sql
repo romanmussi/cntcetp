@@ -199,13 +199,13 @@ INSERT INTO instits (id, gestion_id,
         orientacion_id INTEGER);
 
 
-INSERT INTO titulos (id, name, marco_ref, oferta_id)
-  SELECT id, name, marco_ref, oferta_id
-  FROM dblink('rfietp', 'SELECT id, name, marco_ref, oferta_id FROM titulos
+INSERT INTO titulos (id, name, marco_ref, oferta_id, es_bb)
+  SELECT id, name, marco_ref, oferta_id, es_bb
+  FROM dblink('rfietp', 'SELECT id, name, marco_ref, oferta_id, es_bb FROM titulos
     WHERE 
         id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39)) AND 
         oferta_id NOT IN(2,5,6)')
-  AS t(id integer, name character varying(200), marco_ref boolean, oferta_id integer)
+  AS t(id integer, name character varying(200), marco_ref boolean, oferta_id integer, es_bb boolean)
 WHERE 
         id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39)) AND 
         oferta_id NOT IN(2,5,6);

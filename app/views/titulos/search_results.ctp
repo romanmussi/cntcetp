@@ -60,14 +60,22 @@ $paginator->options(array( 'url' => $this->passedArgs,
                         ?>
                     </span>
                     <span class="items-nombre">
-                                <strong><?php
-                                /*$linkTitulo = $html->link(
-                                        " (".count($titulo['Plan'])." planes)",
-                                        '/titulos/corrector_de_planes/Plan.titulo_id:'.$titulo['Titulo']['id'],
-                                        array('target'=>'_blank')
-                                        );*/
-                                echo $titulo['Titulo']['name']; ?>
-                                </strong>
+                        <strong><?php
+                        /*$linkTitulo = $html->link(
+                                " (".count($titulo['Plan'])." planes)",
+                                '/titulos/corrector_de_planes/Plan.titulo_id:'.$titulo['Titulo']['id'],
+                                array('target'=>'_blank')
+                                );*/
+                        echo $titulo['Titulo']['name']; ?> 
+                        <?php $titulo['Titulo']['es_bb'] ? 
+                                        $html->image('bb.png', array(
+                                            'alt'=> __("Carrera prioritaria", true),
+                                            'border'=>"0",
+                                            )) : $html->image('bb.png', array(
+                                            'alt'=> __("Carrera prioritaria", true),
+                                            'border'=>"0",
+                                            )) ?>
+                        </strong>
                     </span>
                     
             

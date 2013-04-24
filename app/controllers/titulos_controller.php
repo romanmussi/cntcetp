@@ -130,7 +130,7 @@ class TitulosController extends AppController {
                 $this->Buscable->aplicarCriteriosDeBusqueda($ops, true);  
                  
                  //datos de paginacion
-                $this->paginate['Titulo']['fields'] = array('Titulo.id', 'Titulo.name','Titulo.marco_ref', 'Titulo.oferta_id', 'Oferta.abrev', 'Oferta.name');
+                $this->paginate['Titulo']['fields'] = array('Titulo.id', 'Titulo.name','Titulo.marco_ref', 'Titulo.oferta_id', 'Titulo.es_bb', 'Oferta.abrev', 'Oferta.name');
                 $this->paginate['Titulo']['group'] = $this->paginate['Titulo']['fields'];
                 $this->paginate['Titulo']['order'] = array('Titulo.name' => 'ASC', 'Titulo.oferta_id' => 'ASC');
                 $this->paginate['Titulo']['recursive'] = 3;

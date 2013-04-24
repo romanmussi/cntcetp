@@ -187,7 +187,14 @@ if ($vino_formulario) {
                                             '/titulos/corrector_de_planes/Plan.titulo_id:'.$titulo['Titulo']['id'],
                                             array('target'=>'_blank')
                                             );*/
-                                    echo $titulo['Titulo']['name']; ?>
+                                    echo $titulo['Titulo']['name']; ?> 
+                                    <?php echo ($titulo['Titulo']['es_bb'] ? 
+                                        $html->image('bb.png', array(
+                                            'alt'=> __("Carrera prioritaria", true),
+                                            'title'=> __("Carrera prioritaria", true),
+                                            'border'=>"0",
+                                            'class'=>'prioritaria-icon'
+                                            )) : '') ?>
                                     </strong>
                         </span>
 

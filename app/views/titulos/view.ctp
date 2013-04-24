@@ -14,7 +14,13 @@ $this->pageTitle =  $titulo['Titulo']['name'];
     });
 </script>
 <div class="grid_12">
-    <h1><?php echo $titulo['Titulo']['name']?></h1>
+    <h1><?php echo $titulo['Titulo']['name']?> <?php echo ($titulo['Titulo']['es_bb'] ? 
+                                        $html->image('bb.png', array(
+                                            'alt'=> __("Carrera prioritaria", true),
+                                            'title'=> __("Carrera prioritaria", true),
+                                            'border'=>"0",
+                                            'class'=>'prioritaria-icon'
+                                            )) : '') ?></h1>
     <div class="boxblanca">
         <h3 class="titulo">Datos generales del título o certificación</h3>
         <dl>

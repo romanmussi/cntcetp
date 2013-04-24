@@ -193,6 +193,7 @@ CREATE TABLE titulos (
                 name VARCHAR(200) NOT NULL,
                 marco_ref BOOLEAN DEFAULT false NOT NULL,
                 oferta_id INTEGER NOT NULL,
+                es_bb BOOLEAN DEFAULT false NOT NULL,
                 CONSTRAINT titulos_pkey PRIMARY KEY (id)
 );
 ALTER TABLE titulos OWNER to www;
