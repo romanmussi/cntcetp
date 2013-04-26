@@ -176,7 +176,7 @@ class CombinatorHelper extends Helper {
             $this->libs['js'][] = $lib;
         }
         foreach($tmplibs['css'] as $lib) {
-           $this->libs['css'][] = $lib;
+            $this->libs['css'][] = $lib;
         }
     } 
 
