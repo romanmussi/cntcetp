@@ -9,7 +9,16 @@ echo $html->css(array('jquery.loadmask', 'catalogo.guia_del_estudiante'), $inlin
         <input type="radio" class="styled_checkbox" name="data[Plan][titulo_id]" value="${Titulo.id}" id="check_${Titulo.id}" />
         <label for="check_${Titulo.id}" class="titulo_label">
         <span class="items-nombre">
-            <strong>${Titulo.name}</strong>
+            <strong>${Titulo.name} 
+                    {{if Titulo.es_bb == 1}} 
+                        <?php echo $html->image('bb.png', array(
+                        'alt'=> __("Carrera prioritaria", true),
+                        'title'=> __("Carrera prioritaria", true),
+                        'border'=>"0",
+                        'class'=>'prioritaria-icon'
+                        )); ?>
+                    {{/if}}
+            </strong>
         </span>
         <br />
         <span class="items-oferta">

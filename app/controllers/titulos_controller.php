@@ -467,7 +467,7 @@ class TitulosController extends AppController {
             $array_condiciones['page'] = $this->Session->read($this->sesNames['page']);
         }
 
-        $array_condiciones['fields'] = array('Titulo.id', 'Titulo.name','Titulo.marco_ref', 'Titulo.oferta_id', 'Oferta.abrev');
+        $array_condiciones['fields'] = array('Titulo.id', 'Titulo.name','Titulo.marco_ref', 'Titulo.oferta_id', 'Titulo.es_bb', 'Oferta.abrev');
         
         $array_condiciones['group'] = $array_condiciones['fields'];
         $array_condiciones['order'] = array('Titulo.name ASC, Titulo.oferta_id ASC');

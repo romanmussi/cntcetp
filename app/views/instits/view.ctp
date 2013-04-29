@@ -172,6 +172,14 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
                 $planNombre .= ' (' .  $plan['Titulo']['name'] . ')';
             }
 
+            if ($plan['Titulo']['es_bb']) {
+                $planNombre .= " ". $html->image('bb.png', array(
+                    'alt'=> __("Carrera prioritaria", true),
+                    'title'=> __("Carrera prioritaria", true),
+                    'border'=>"0",
+                    'class'=>'prioritaria-icon'
+                    ));
+            }
             ?>
             <li onclick="viewTitulo('<?php echo $html->url('/titulos/view_titulo_plan/'.$plan['Titulo']['id'].'/'.$plan['Plan']['id'])?>', '<?php echo $plan['Titulo']['name']?>');">
                 <a class="linkconatiner-more-info">

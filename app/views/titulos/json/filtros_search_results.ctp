@@ -3,6 +3,7 @@ $filtros_aux = array();
 /* @var $paginator PaginatorHelper */
 foreach ( $titulos as &$t) {
     $t['Titulo']['name'] = utf8_encode($t['Titulo']['name']);
+    $t['Titulo']['es_bb'] = utf8_encode($t['Titulo']['es_bb']);
     $t['Oferta']['name'] = utf8_encode($t['Oferta']['name']);
 }
 
