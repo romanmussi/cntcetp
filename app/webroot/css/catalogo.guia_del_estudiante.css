@@ -152,6 +152,10 @@ H2{
 input[type=text], textarea, select{
     width: 90%;
 }
+.results_titulos #items input {
+    margin-right: 3px;
+    margin-top: 6px;
+}
 
 ol, ul {
     padding-left: 0px;
