@@ -234,4 +234,9 @@ if ($vino_formulario) {
     </div>
 <?php } ?>
     
+    <?php 
+    if ($contieneBb) {
+        echo $this->element('aclaracion_bb');
+    } ?>
+    
 </div>

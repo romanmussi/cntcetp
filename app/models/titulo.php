@@ -206,6 +206,21 @@ class Titulo extends AppModel {
 
         return $titulos;
     }
+    
+    /**
+     * Retorna true si la colección de titulos contiene algun título de carrera prioritaria
+     * @param type $titulos
+     * @return boolean 
+     */
+    function contieneBb($titulos) {
+
+        foreach($titulos as $titulo) {
+            if ($titulo['Titulo']['es_bb'])
+                return true;
+        }
+        
+        return false;
+    }
 
 }
 ?>

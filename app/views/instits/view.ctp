@@ -179,6 +179,8 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
                     'border'=>"0",
                     'class'=>'prioritaria-icon'
                     ));
+                
+                $contieneBb = true;
             }
             ?>
             <li onclick="viewTitulo('<?php echo $html->url('/titulos/view_titulo_plan/'.$plan['Titulo']['id'].'/'.$plan['Plan']['id'])?>', '<?php echo $plan['Titulo']['name']?>');">
@@ -198,6 +200,11 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
         ?>
         <div class="clear"></div>
     </div>
+    
+    <?php 
+    if (!empty($contieneBb) && $contieneBb) {
+        echo $this->element('aclaracion_bb');
+    } ?>
     
 
     <? /*echo $html->link(

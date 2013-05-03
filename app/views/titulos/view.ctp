@@ -75,4 +75,8 @@ $this->pageTitle =  $titulo['Titulo']['name'];
     </div>
     
     <div class="clear"></div>
+    <?php 
+    if ($titulo['Titulo']['es_bb']) {
+        echo $this->element('aclaracion_bb');
+    } ?>
 </div>

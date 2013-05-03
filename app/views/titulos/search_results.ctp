@@ -107,3 +107,8 @@ $paginator->options(array( 'url' => $this->passedArgs,
         <?php  } ?>
     <div class="clear"></div>
 </div>
+
+<?php 
+if ($contieneBb) {
+    echo $this->element('aclaracion_bb');
+} ?>

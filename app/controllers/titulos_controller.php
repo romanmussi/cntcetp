@@ -135,6 +135,9 @@ class TitulosController extends AppController {
                 $this->paginate['Titulo']['order'] = array('Titulo.name' => 'ASC', 'Titulo.oferta_id' => 'ASC');
                 $this->paginate['Titulo']['recursive'] = 3;
                 $titulos = $this->paginate('Titulo');
+                
+                // si contiene carreras prioritarias
+                $contieneBb = $this->Titulo->contieneBb($titulos);
 
                 $this->set('titulos', $titulos);
                 $this->set('url_conditions', $this->passedArgs);
@@ -177,7 +180,7 @@ class TitulosController extends AppController {
         $this->set('titulos', $this->paginate());
         $this->set('localidad', $localidad);
         $this->set(compact('ofertas', 'sectores', 'subsectores', 'jurisdicciones', 
-                'departamentos', 'bySession','bloquearOferta'));
+                'departamentos', 'bySession','bloquearOferta', 'contieneBb'));
         
         $this->set('vino_formulario', $vino_formulario);
 
@@ -476,9 +479,10 @@ class TitulosController extends AppController {
         $this->paginate = $array_condiciones;
         $titulos = $this->paginate();
 
+        // si contiene carreras prioritarias
+        $contieneBb = $this->Titulo->contieneBb($titulos);
+        
         //FILTROS
-        
-        
         $array_condiciones['recursive'] = -1;
         $array_condiciones['contain'] = null;
         $array_condiciones['order'] = null;
@@ -588,6 +592,7 @@ class TitulosController extends AppController {
         
         $this->set('titulos', $titulos);
         $this->set('filtros', $filtros);
+        $this->set('contieneBb', $contieneBb);
     }
 
 

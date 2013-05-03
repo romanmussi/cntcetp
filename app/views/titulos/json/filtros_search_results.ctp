@@ -65,7 +65,8 @@ $paginator = array(
 $titulos = array(
     'paginator' => $paginator,
     'data' => $titulos,
-    'filtros' => $filtros_aux
+    'filtros' => $filtros_aux,
+    'contieneBb' => $contieneBb
 );
 
 echo $javascript->object($titulos);

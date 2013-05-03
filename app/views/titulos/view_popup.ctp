@@ -10,20 +10,6 @@ jQuery(document).ready(function() {
 </script>
 <div class="titulosview">
     <ul>
-        <?php
-        if ($plan['Titulo']['es_bb']) {
-        ?>
-        <li class="">
-            Carrera prioritaria <?php echo $html->image('bb.png', array(
-                        'alt'=> __("Carrera prioritaria", true),
-                        'title'=> __("Carrera prioritaria", true),
-                        'border'=>"0",
-                        'class'=>'prioritaria-icon'
-                        )); ?>
-        </li>
-        <?php 
-        }
-        ?>
         <li class="">
             <strong><?php __('Nivel'); ?>:</strong> <?php echo $plan['Oferta']['name']; ?>
         </li>
@@ -42,6 +28,20 @@ jQuery(document).ready(function() {
         }
         ?>
         </li>
+        <?php
+        if ($plan['Titulo']['es_bb']) {
+        ?>
+        <li class="">
+            Carrera prioritaria <?php echo $html->image('bb.png', array(
+                        'alt'=> __("Carrera prioritaria", true),
+                        'title'=> __("Carrera prioritaria", true),
+                        'border'=>"0",
+                        'class'=>'prioritaria-icon'
+                        )); ?>
+        </li>
+        <?php 
+        }
+        ?>
         <?php
         if (!empty($plan['Plan']['ultimo_ciclo'])) {
         ?>

@@ -396,7 +396,10 @@
         
         // meto la nueva data
         titulosTemplate.tmpl( data.data ).appendTo( titulosContainer );
-
+        
+        if (data.contieneBb == true) {
+            $('#bb_div').show();
+        }
         //titulosContainer.delegate('li','click',onChangeHandlerTitulos );
         titulosContainer.find('li > input').change( onChangeHandlerTitulos );
 
