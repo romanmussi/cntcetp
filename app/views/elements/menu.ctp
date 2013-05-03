@@ -46,6 +46,9 @@ function currentPara($view, $donde){
         <li class="<?php echo ($this->here == $this->base.'/pages/doc_territorial_index')?'current':''?> ">
             <?php echo $html->link('Información Territorial', array('controller'=>'pages', 'action'=>'doc_territorial_index'), array('class'=>'menu-item')); ?>
         </li>
+        <li class="<?php echo ($this->here == $this->base.'/pages/glosario')?'current':''?> ">
+            <?php echo $html->link('Glosario', array('controller'=>'pages', 'action'=>'glosario'), array('class'=>'menu-item')); ?>
+        </li>
         <li class="<?php echo (strstr($this->here,$this->base.'/contacto'))?'current':''?>">
             <?php echo $html->link('Contacto', array(
                                                 'controller' => 'correos',
