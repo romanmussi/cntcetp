@@ -77,13 +77,13 @@ INSERT INTO tipoinstits
 INSERT INTO sectores (id, name, orientacion_id )
   SELECT id, name, orientacion_id
   FROM dblink('rfietp', 'SELECT id, name, orientacion_id FROM sectores
-    WHERE id NOT IN(5,39)')
+    WHERE id NOT IN(5,39,14)')
   AS t(id integer, name character varying(100), orientacion_id integer);
 
 INSERT INTO subsectores (id, name, sector_id )
   SELECT id, name, sector_id
   FROM dblink('rfietp', 'SELECT id, name, sector_id FROM subsectores
-    WHERE sector_id NOT IN(5,39)')
+    WHERE sector_id NOT IN(5,39,14)')
   AS t(id integer, name character varying(100), sector_id integer);
 
 
@@ -203,11 +203,11 @@ INSERT INTO titulos (id, name, marco_ref, oferta_id, es_bb)
   SELECT id, name, marco_ref, oferta_id, es_bb
   FROM dblink('rfietp', 'SELECT id, name, marco_ref, oferta_id, es_bb FROM titulos
     WHERE 
-        id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39)) AND 
+        id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39,14)) AND 
         oferta_id NOT IN(2,5,6)')
   AS t(id integer, name character varying(200), marco_ref boolean, oferta_id integer, es_bb boolean)
 WHERE 
-        id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39)) AND 
+        id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39,14)) AND 
         oferta_id NOT IN(2,5,6);
 
 INSERT INTO sectores_titulos (id, titulo_id, sector_id, subsector_id, prioridad)
@@ -215,23 +215,33 @@ INSERT INTO sectores_titulos (id, titulo_id, sector_id, subsector_id, prioridad)
   FROM dblink('rfietp', 'SELECT st.id, t.id, st.sector_id, st.subsector_id, st.prioridad FROM sectores_titulos st
     INNER JOIN titulos t ON t.id = st.titulo_id
     WHERE 
-        st.sector_id NOT IN(5,39) AND 
+        st.sector_id NOT IN(5,39,14) AND 
         st.titulo_id NOT IN(select id from titulos where oferta_id IN(2,5,6))')
   AS t(id integer, titulo_id integer, sector_id integer, subsector_id integer, prioridad integer);
 
 
 INSERT INTO planes (id, instit_id, oferta_id, nombre, ciclo_alta, created, modified, ultimo_ciclo, titulo_id)
   SELECT id, instit_id, oferta_id, nombre, ciclo_alta, created, modified, ultimo_ciclo, titulo_id
-  FROM dblink('rfietp', 'SELECT p.id, p.instit_id, p.oferta_id, p.nombre, p.ciclo_alta, p.created, p.modified, max(a.ciclo_id) AS ultimo_ciclo, t.id FROM planes p 
-    INNER JOIN titulos t ON t.id = p.titulo_id
-    INNER JOIN anios a ON a.plan_id = p.id
-    WHERE 
-        p.titulo_id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39)) AND 
+  FROM dblink('rfietp', 'SELECT p.id, p.instit_id, p.oferta_id, p.nombre, p.ciclo_alta, p.created, p.modified, max(a.ciclo_id) AS ultimo_ciclo, t.id
+        FROM
+	(SELECT anios.plan_id, anios.ciclo_id, sum(anios.matricula) AS matricula
+		FROM anios
+		JOIN 
+		--Este subselect devuelve plan_id, maxciclo_id (ultimo ciclo con info del plan) 
+		(SELECT plan_id, max(ciclo_id) as maxciclo_id FROM anios GROUP BY plan_id ORDER BY plan_id) AS myanios 
+		ON anios.plan_id = myanios.plan_id AND anios.ciclo_id = myanios.maxciclo_id
+	GROUP BY anios.plan_id, anios.ciclo_id) AS a
+	--ahora pegamos resto de datos descriptivos
+	LEFT JOIN planes AS p ON (a.plan_id = p.id)
+	LEFT JOIN titulos AS t ON (p.titulo_id = t.id) 
+        WHERE
+	p.titulo_id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39,14)) AND 
         p.titulo_id NOT IN(select id from titulos where oferta_id IN(2,5,6)) AND 
         p.oferta_id NOT IN(2,5,6) AND 
         p.instit_id NOT IN(select id from instits where activo = 0 OR etp_estado_id <> 2) AND 
         p.plan_estado_id = 1 AND 
-        p.id NOT IN(SELECT plan_id FROM anios WHERE etapa_id IN (1,4,102))
+        p.id NOT IN(SELECT plan_id FROM anios WHERE etapa_id IN (1,4,102)) AND 
+        a.ciclo_id > 2010
     GROUP BY p.id, p.instit_id, p.oferta_id, p.nombre, p.ciclo_alta, t.id')
   AS t(id integer, instit_id integer, oferta_id integer, nombre character varying(200), 
         ciclo_alta integer, created timestamp without time zone, modified timestamp without time zone, 
