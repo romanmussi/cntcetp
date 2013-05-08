@@ -3,7 +3,7 @@ $this->pageTitle = "Glosario"
 ?> 
 <div class="grid_12">
     <h1>Glosario</h1>
-    <div class="boxblanca boxdocs" style="text-align: justify">        
+    <div class="boxblanca boxdocs" style="text-align: justify; padding: 25px 80px;">        
         <b>Proceso de homologación:</b> (Res CFCyE Nro. 261/06) consiste en el análisis de planes de estudio relativos a titulaciones técnicas o certificados de formación profesional y su evaluación comparativa con un conjunto de criterios básicos y estándares indicados como referencia para cada uno de ellos (marcos de referencia), a efectos de establecer su correspondencia.
         <br /><br />
         <b>Marcos de referencia:</b> (Res CFCyE Nro. 261/06) enuncian el conjunto de los criterios básicos y estándares que definen y caracterizan los aspectos sustantivos a ser considerados en el proceso de homologación de los títulos o certificados y sus correspondientes ofertas formativas, brindando los elementos necesarios para llevar a cabo las acciones de análisis y de evaluación comparativa antes señaladas.
