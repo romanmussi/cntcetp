@@ -12,6 +12,7 @@ fuente al destino e insertarlos.
 
 begin transaction;
 
+
 /* Se utiliza el módulo dblink para acceder a la base de datos de Registro */
 CREATE EXTENSION dblink;
 
@@ -141,35 +142,49 @@ INSERT INTO instits (id, gestion_id,
                 claseinstit_id,
                 orientacion_id
   FROM dblink('rfietp', 'SELECT 
-                id,
-                gestion_id,
-                dependencia_id,
-                nombre_dep,
-                tipoinstit_id,
-                jurisdiccion_id,
-                cue,
-                anexo,
-                esanexo,
-                nombre,
-                nroinstit,
-                direccion,
-                cp,
-                telefono,
-                mail,
-                web,
-                activo,
-                created,
-                modified,
-                localidad_id,
-                departamento_id,
-                lugar,
-                mail_alternativo,
-                telefono_alternativo,
-                etp_estado_id,
-                claseinstit_id,
-                orientacion_id FROM instits
-        WHERE activo = 1 AND 
-        etp_estado_id = 2')
+                i.id,
+                i.gestion_id,
+                i.dependencia_id,
+                i.nombre_dep,
+                i.tipoinstit_id,
+                i.jurisdiccion_id,
+                i.cue,
+                i.anexo,
+                i.esanexo,
+                i.nombre,
+                i.nroinstit,
+                i.direccion,
+                i.cp,
+                i.telefono,
+                i.mail,
+                i.web,
+                i.activo,
+                i.created,
+                i.modified,
+                i.localidad_id,
+                i.departamento_id,
+                i.lugar,
+                i.mail_alternativo,
+                i.telefono_alternativo,
+                i.etp_estado_id,
+                i.claseinstit_id,
+                i.orientacion_id 
+        FROM 
+            (SELECT anios.plan_id, anios.ciclo_id FROM anios
+                    JOIN (SELECT plan_id, max(ciclo_id) as maxciclo_id FROM anios GROUP BY plan_id ORDER BY plan_id) AS myanios 
+                    ON anios.plan_id = myanios.plan_id AND anios.ciclo_id = myanios.maxciclo_id
+            GROUP BY anios.plan_id, anios.ciclo_id) AS a
+            INNER JOIN planes AS p ON (a.plan_id = p.id)
+            INNER JOIN instits AS i ON (p.instit_id = i.id)
+        WHERE
+            p.titulo_id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39,14)) AND 
+            p.titulo_id NOT IN(select id from titulos where oferta_id IN(2,5,6)) AND 
+            p.oferta_id NOT IN(2,5,6) AND 
+            p.instit_id NOT IN(select id from instits where activo = 0 OR etp_estado_id <> 2) AND 
+            p.plan_estado_id = 1 AND 
+            p.id NOT IN(SELECT plan_id FROM anios WHERE etapa_id IN (1,4,102)) AND 
+            a.ciclo_id > 2010
+        GROUP BY i.id')
   AS t( id INTEGER,
         gestion_id INTEGER,
         dependencia_id INTEGER,
@@ -201,10 +216,22 @@ INSERT INTO instits (id, gestion_id,
 
 INSERT INTO titulos (id, name, marco_ref, oferta_id, es_bb)
   SELECT id, name, marco_ref, oferta_id, es_bb
-  FROM dblink('rfietp', 'SELECT id, name, marco_ref, oferta_id, es_bb FROM titulos
-    WHERE 
-        id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39,14)) AND 
-        oferta_id NOT IN(2,5,6)')
+  FROM dblink('rfietp', 'SELECT t.id, t.name, t.marco_ref, t.oferta_id, t.es_bb 
+            FROM 
+                (SELECT anios.plan_id, anios.ciclo_id FROM anios
+                        JOIN (SELECT plan_id, max(ciclo_id) as maxciclo_id FROM anios GROUP BY plan_id ORDER BY plan_id) AS myanios 
+                        ON anios.plan_id = myanios.plan_id AND anios.ciclo_id = myanios.maxciclo_id
+                GROUP BY anios.plan_id, anios.ciclo_id) AS a
+                INNER JOIN planes AS p ON (a.plan_id = p.id)
+                INNER JOIN titulos AS t ON (p.titulo_id = t.id)
+            WHERE 
+                t.id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39,14)) AND 
+                t.oferta_id NOT IN(2,5,6) AND 
+                p.instit_id NOT IN(select id from instits where activo = 0 OR etp_estado_id <> 2) AND 
+                p.plan_estado_id = 1 AND 
+                p.id NOT IN(SELECT plan_id FROM anios WHERE etapa_id IN (1,4,102)) AND 
+                a.ciclo_id > 2010
+            GROUP BY t.id')
   AS t(id integer, name character varying(200), marco_ref boolean, oferta_id integer, es_bb boolean)
 WHERE 
         id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39,14)) AND 
@@ -212,11 +239,23 @@ WHERE
 
 INSERT INTO sectores_titulos (id, titulo_id, sector_id, subsector_id, prioridad)
   SELECT id, titulo_id, sector_id, subsector_id, prioridad
-  FROM dblink('rfietp', 'SELECT st.id, t.id, st.sector_id, st.subsector_id, st.prioridad FROM sectores_titulos st
-    INNER JOIN titulos t ON t.id = st.titulo_id
-    WHERE 
-        st.sector_id NOT IN(5,39,14) AND 
-        st.titulo_id NOT IN(select id from titulos where oferta_id IN(2,5,6))')
+  FROM dblink('rfietp', 'SELECT st.id, t.id, st.sector_id, st.subsector_id, st.prioridad 
+                FROM 
+                (SELECT anios.plan_id, anios.ciclo_id FROM anios
+                        JOIN (SELECT plan_id, max(ciclo_id) as maxciclo_id FROM anios GROUP BY plan_id ORDER BY plan_id) AS myanios 
+                        ON anios.plan_id = myanios.plan_id AND anios.ciclo_id = myanios.maxciclo_id
+                GROUP BY anios.plan_id, anios.ciclo_id) AS a
+                INNER JOIN planes AS p ON (a.plan_id = p.id)
+                INNER JOIN titulos AS t ON (p.titulo_id = t.id)
+                INNER JOIN sectores_titulos AS st ON (st.titulo_id = t.id)
+            WHERE 
+                st.sector_id NOT IN(5,39,14) AND  
+                st.titulo_id NOT IN(select id from titulos where oferta_id IN(2,5,6)) AND 
+                p.instit_id NOT IN(select id from instits where activo = 0 OR etp_estado_id <> 2) AND 
+                p.plan_estado_id = 1 AND 
+                p.id NOT IN(SELECT plan_id FROM anios WHERE etapa_id IN (1,4,102)) AND 
+                a.ciclo_id > 2010
+            GROUP BY st.id, t.id, st.sector_id, st.subsector_id, st.prioridad')
   AS t(id integer, titulo_id integer, sector_id integer, subsector_id integer, prioridad integer);
 
 
@@ -224,25 +263,23 @@ INSERT INTO planes (id, instit_id, oferta_id, nombre, ciclo_alta, created, modif
   SELECT id, instit_id, oferta_id, nombre, ciclo_alta, created, modified, ultimo_ciclo, titulo_id
   FROM dblink('rfietp', 'SELECT p.id, p.instit_id, p.oferta_id, p.nombre, p.ciclo_alta, p.created, p.modified, max(a.ciclo_id) AS ultimo_ciclo, t.id
         FROM
-	(SELECT anios.plan_id, anios.ciclo_id, sum(anios.matricula) AS matricula
+            (SELECT anios.plan_id, anios.ciclo_id
 		FROM anios
 		JOIN 
-		--Este subselect devuelve plan_id, maxciclo_id (ultimo ciclo con info del plan) 
 		(SELECT plan_id, max(ciclo_id) as maxciclo_id FROM anios GROUP BY plan_id ORDER BY plan_id) AS myanios 
 		ON anios.plan_id = myanios.plan_id AND anios.ciclo_id = myanios.maxciclo_id
-	GROUP BY anios.plan_id, anios.ciclo_id) AS a
-	--ahora pegamos resto de datos descriptivos
-	LEFT JOIN planes AS p ON (a.plan_id = p.id)
-	LEFT JOIN titulos AS t ON (p.titulo_id = t.id) 
+            GROUP BY anios.plan_id, anios.ciclo_id) AS a
+            INNER JOIN planes AS p ON (a.plan_id = p.id)
+            INNER JOIN titulos AS t ON (p.titulo_id = t.id) 
         WHERE
-	p.titulo_id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39,14)) AND 
-        p.titulo_id NOT IN(select id from titulos where oferta_id IN(2,5,6)) AND 
-        p.oferta_id NOT IN(2,5,6) AND 
-        p.instit_id NOT IN(select id from instits where activo = 0 OR etp_estado_id <> 2) AND 
-        p.plan_estado_id = 1 AND 
-        p.id NOT IN(SELECT plan_id FROM anios WHERE etapa_id IN (1,4,102)) AND 
-        a.ciclo_id > 2010
-    GROUP BY p.id, p.instit_id, p.oferta_id, p.nombre, p.ciclo_alta, t.id')
+            p.titulo_id NOT IN(select titulo_id from sectores_titulos where sector_id IN(5,39,14)) AND 
+            p.titulo_id NOT IN(select id from titulos where oferta_id IN(2,5,6)) AND 
+            p.oferta_id NOT IN(2,5,6) AND 
+            p.instit_id NOT IN(select id from instits where activo = 0 OR etp_estado_id <> 2) AND 
+            p.plan_estado_id = 1 AND 
+            p.id NOT IN(SELECT plan_id FROM anios WHERE etapa_id IN (1,4,102)) AND 
+            a.ciclo_id > 2010
+        GROUP BY p.id, p.instit_id, p.oferta_id, p.nombre, p.ciclo_alta, t.id')
   AS t(id integer, instit_id integer, oferta_id integer, nombre character varying(200), 
         ciclo_alta integer, created timestamp without time zone, modified timestamp without time zone, 
         ultimo_ciclo integer, titulo_id integer);
