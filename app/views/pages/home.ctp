@@ -8,7 +8,7 @@ $this->pageTitle = "Inicio";
             El Catálogo
 -->
 <div class="grid_9 alpha">
-    <div class="boxblanca inet">
+    <div class="boxblanca">
         <h2>Catálogo Nacional de Títulos y Certificaciones</h2>
         <div class="boxcontent box_catalogo">
             <div class="picround" style="margin-right: 10px;">
@@ -22,9 +22,6 @@ El propósito de este Catálogo es ser un servicio permanente de información actua
 
             <div class="clear"></div>
 
-            <ul class="ul-horizontal" style="text-align: right">
-                <li><?php echo $html->link('Ver más', array('controller' => 'pages', 'action' => 'el_inet')); ?></li>
-            </ul>
         </div>
     </div>
     
