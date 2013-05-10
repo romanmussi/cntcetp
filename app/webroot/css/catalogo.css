@@ -684,3 +684,9 @@ ul.ul-horizontal{
 .prioritaria-icon {
     height: 16px;
 }
+
+#buscadores_leyenda {
+    font-size: 11px;
+    margin-top: 10px;
+    text-align: justify;
+}

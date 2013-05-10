@@ -106,3 +106,13 @@ echo $html->css('catalogo.estaticas', false);
         </ul>
     </div>
 </div>
+
+<div class="clear separador"></div>
+
+<div id="buscadores_leyenda">
+   <?php echo $html->image('exclamation.png', array(
+            'border'=>"0",
+            'width'=>"12"
+            )) ?>  La fuente de datos del Catalogo Nacional de Títulos y Certificados es la información presentada y actualizada por las Jurisdicciones al Registro Federal de Instituciones de Educación Técnico Profesional de acuerdo a lo establecido en la RES CFE N° 175:
+"Con el propósito de asegurar que el Registro Federal de Instituciones de Educación Técnico Profesional disponga de una base de datos con información precisa, actualizada y completa para ser considerada en la definición y la gestión de las acciones de mejora continua de la calidad de la ETP, así como para ser difundida a través del Catálogo Nacional de Títulos y Certificados de Educación Técnico Profesional, se establece que las instituciones que integren dicha base de datos deberán contar con denominaciones adecuadas a la legislación vigente - nacional y/o provincial y mostrar información acerca de su oferta formativa actualizada al menos al año precedente". (Res CFE N° 175 Párrafo 21)
+</div>

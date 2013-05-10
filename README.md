@@ -32,6 +32,7 @@ a base de datos y config.email.php con configuración de servidor de email (toma
 	/app/tmp/
 	/app/webroot/css
 	/app/webroot/js
+5. Crear directorio /app/webroot/img/mail con permisos de escritura
 
 =========================================================================================================
 MIGRACIÓN DE DATOS DESDE REGISTRO A CATÁLOGO

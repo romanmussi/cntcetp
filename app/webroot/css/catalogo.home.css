@@ -12,22 +12,30 @@
 .boxblanca h2{
     border-bottom: 1px solid #E2E2E4;
 }
+.boxgris h2{
+    margin-bottom: 18px;
+}
 
 
 .box_inet{
-    min-height: 323px;
+    min-height: 182px;
     padding-top: 6px;
     padding-bottom: 7px
 }
 
-.box_inet img{
+.box_catalogo{
+    padding-top: 6px;
+    padding-bottom: 7px
+}
+
+.box_catalogo img{
     float: left; 
     height: 244px;
 }
 
 
 .box_home_buscadores {
-    min-height: 290px;
+    min-height: 317px;
     padding-bottom: 10px;
 }
 
@@ -37,6 +45,11 @@
     border-right: 1px solid #e2e2e4;
     height: 58px;
     margin-top: 30px;
+}
+
+
+.box_inferior {
+    min-height: 367px;
 }
 
 .photo{

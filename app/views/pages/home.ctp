@@ -5,15 +5,60 @@ $this->pageTitle = "Inicio";
 <div class="clear separador"></div> 
 
 <!--                
-            INET
+            El Catálogo
 -->
 <div class="grid_9 alpha">
     <div class="boxblanca inet">
-        <h2>El Instituto Nacional de Educación Tecnológica</h2>
-        <div class="boxcontent box_inet">
+        <h2>Catálogo Nacional de Títulos y Certificaciones</h2>
+        <div class="boxcontent box_catalogo">
             <div class="picround" style="margin-right: 10px;">
             <?php echo $html->image('material/fotoinet.jpg') ?>
             </div>
+
+            <div style="margin-bottom: 4px;">
+               En este sitio usted encontrará la oferta de educación técnico profesional de nivel secundario, superior y formación profesional de gestión estatal y privada. La oferta aquí declarada resulta de la información suministrada por cada una de las jurisdicciones (las 23 provincias y la Ciudad Autónoma de Buenos Aires).
+El propósito de este Catálogo es ser un servicio permanente de información actualizada sobre los títulos técnicos y certificaciones de formación profesional, de forma de constituirse en un canal de información contínua sobre la oferta técnica existente en todo el territorio del país.
+            </div>
+
+            <div class="clear"></div>
+
+            <ul class="ul-horizontal" style="text-align: right">
+                <li><?php echo $html->link('Ver más', array('controller' => 'pages', 'action' => 'el_inet')); ?></li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+<!--                
+            Buscador
+-->
+<div class="grid_3 omega">
+    <div class="boxgris box_home_buscadores">
+        <h2>Buscadores</h2>
+        <div>
+            Por medio de los buscadores se facilita a los distintos usuarios una 
+            consulta ágil referida a la oferta de títulos y certificados, según 
+            sectores, niveles y especialidades, así como su localización en las 
+            instituciones educativas de gestión estatal y privada de las provincias 
+            y la Ciudad Autónoma de Buenos Aires.
+        </div>
+        <br />
+        <?= $html->image('search.png', array('style'=>'float: right; position: absolute; right: 10px; width: 36px; bottom: -7px'))?>
+        <ul>
+            <li><?php echo $html->link('Realizar búsquedas', array('controller' => 'pages', 'action' => 'buscadores')); ?></li>
+        </ul>
+    </div>
+</div>
+
+<div class="clear separador"></div>
+<!--                
+            El INET
+-->
+<div class="grid_12 alpha">
+    <div class="boxblanca inet">
+        <h2>El Instituto Nacional de Educación Tecnológica</h2>
+        <div class="boxcontent box_inet">
 
             <div style="margin-bottom: 4px;">
                El INET es el organismo del Ministerio de Educación que tiene a su cargo la coordinación de la
@@ -39,37 +84,11 @@ propuestas a ser presentadas para su aprobación al Consejo Federal de Educación.
     </div>
     
 </div>
-
-<!--                
-            Buscador
--->
-<div class="grid_3 omega">
-    <div>
-        <?php echo $html->link($html->image('logo_me_trans.png', array( 'border'=> 0, 'width'=>'100%')),'http://www.me.gov.ar/', array('target' => '_blank'), null, false); ?>
-    </div>
-    <div class="boxgris box_home_buscadores">
-        <h2>Buscadores</h2>
-        <div>
-            Por medio de los buscadores se facilita a los distintos usuarios una 
-            consulta ágil referida a la oferta de títulos y certificados, según 
-            sectores, niveles y especialidades, así como su localización en las 
-            instituciones educativas de gestión estatal y privada de las provincias 
-            y la Ciudad Autónoma de Buenos Aires.
-        </div>
-        <br />
-        <?= $html->image('search.png', array('style'=>'float: right; position: absolute; right: 10px; width: 36px; bottom: -7px'))?>
-        <ul>
-            <li><?php echo $html->link('Realizar búsquedas', array('controller' => 'pages', 'action' => 'buscadores')); ?></li>
-        </ul>
-    </div>
-</div>
-
-<div class="clear separador"></div>
 <!--                
             Politicas
 -->
 <div class="grid_6 alpha">
-    <div class="boxblanca politicas">
+    <div class="boxblanca box_inferior">
             <h2>Las políticas para la Educación Técnico Profesional en Argentina</h2>
             <h3>Ideas Eje</h3>
             <div class="boxcontent">
@@ -104,7 +123,7 @@ propuestas a ser presentadas para su aprobación al Consejo Federal de Educación.
             Graficos
 -->
 <div class="grid_6 omega">
-    <div class="boxblanca cifras">
+    <div class="boxblanca box_inferior">
         <h2>La Educación Técnico Profesional en cifras<br />&nbsp;</h2>
             <div class="boxcontent">
                
@@ -115,7 +134,7 @@ propuestas a ser presentadas para su aprobación al Consejo Federal de Educación.
                 <p>
                     Las fuentes de información son: 
                 </p>
-                 <?php echo $html->image('mapaFP.jpg', array('style' => 'float: left; margin: 0px 10px 0px 0px; height: 196px;')); ?>
+                 <?php echo $html->image('mapaFP.jpg', array('style' => 'float: left; margin: 7px 10px 0px 0px; height: 196px;')); ?>
                 <p>                    
                     1) el Relevamiento Anual llevado
 a cabo por la Dirección Nacional de Información y Evaluación de la Calidad
