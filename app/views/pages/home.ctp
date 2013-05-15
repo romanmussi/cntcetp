@@ -17,7 +17,7 @@ $this->pageTitle = "Inicio";
 
             <div style="margin-bottom: 4px;">
                En este sitio usted encontrará la oferta de educación técnico profesional de nivel secundario, superior y formación profesional de gestión estatal y privada. La oferta aquí declarada resulta de la información suministrada por cada una de las jurisdicciones (las 23 provincias y la Ciudad Autónoma de Buenos Aires).
-El propósito de este Catálogo es ser un servicio permanente de información actualizada sobre los títulos técnicos y certificaciones de formación profesional, de forma de constituirse en un canal de información contínua sobre la oferta técnica existente en todo el territorio del país.
+El propósito de este Catálogo es ofrecer un servicio permanente de información actualizada sobre los títulos técnicos y certificaciones de formación profesional, de forma de constituirse en un canal de información contínua sobre la oferta técnica existente en todo el territorio del país.
             </div>
 
             <div class="clear"></div>
