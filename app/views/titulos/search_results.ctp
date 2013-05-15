@@ -69,10 +69,10 @@ $paginator->options(array( 'url' => $this->passedArgs,
                         echo $titulo['Titulo']['name']; ?> 
                         <?php $titulo['Titulo']['es_bb'] ? 
                                         $html->image('bb.png', array(
-                                            'alt'=> __("Carrera prioritaria", true),
+                                            'alt'=> __("Carrera Prioritaria - Becas Bicentenario", true),
                                             'border'=>"0",
                                             )) : $html->image('bb.png', array(
-                                            'alt'=> __("Carrera prioritaria", true),
+                                            'alt'=> __("Carrera Prioritaria - Becas Bicentenario", true),
                                             'border'=>"0",
                                             )) ?>
                         </strong>

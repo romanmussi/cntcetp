@@ -1,7 +1,7 @@
 <div>
     <?php echo $html->image('bb.png', array(
-                                'alt'=> __("Carrera prioritaria", true),
-                                'title'=> __("Carrera prioritaria", true),
+                                'alt'=> __("Carrera Prioritaria - Becas Bicentenario", true),
+                                'title'=> __("Carrera Prioritaria - Becas Bicentenario", true),
                                 'border'=>"0",
                                 'class'=>'prioritaria-icon'
                                 )) ?> 
