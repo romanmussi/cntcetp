@@ -22,23 +22,31 @@
     padding-top: 6px;
     padding-bottom: 7px
 }
+.box_inet img{
+    float: left; 
+    height: 244px;
+}
 
 .box_catalogo{
     padding-top: 6px;
     padding-bottom: 7px;
-    min-height: 194px;
 }
 
 .box_catalogo img{
     float: left; 
     height: 244px;
 }
+.box_catalogo_titulo{
+    width:450px;
+}
 
 
 .box_home_buscadores {
     padding-bottom: 10px;
 }
-
+.box_home_buscadores .interna {
+    min-height: 171px;
+}
 .box_home_buscadores_separador {
     width: 1%;
     float: left;

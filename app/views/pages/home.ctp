@@ -7,10 +7,11 @@ $this->pageTitle = "Inicio";
 <!--                
             El Catálogo
 -->
-<div class="grid_9 alpha">
+<div class="grid_8 alpha">
     <div class="boxblanca">
         <?php echo $html->image('catalogotitulo.png', array(
                     'border'=> 0,
+                    'class' => 'box_catalogo_titulo'
                     )); 
                 ?>
         <div class="boxcontent box_catalogo">
@@ -29,10 +30,10 @@ El propósito de este Catálogo es ofrecer un servicio permanente de información a
 <!--                
             Buscador
 -->
-<div class="grid_3 omega">
+<div class="grid_4 omega">
     <div class="boxgris box_home_buscadores">
         <h2>Buscadores</h2>
-        <div>
+        <div class="interna">
             Por medio de los buscadores se facilita a los distintos usuarios una 
             consulta ágil referida a la oferta de títulos y certificados, según 
             sectores, niveles y especialidades, así como su localización en las 
