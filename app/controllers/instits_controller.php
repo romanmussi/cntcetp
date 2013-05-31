@@ -40,7 +40,7 @@ class InstitsController extends AppController {
                'Titulo.Oferta',
                'Oferta',
            ),
-           'order' => array( 'Oferta.orden' ),
+           'order' => array( 'Oferta.orden','Plan.nombre' ),
            'conditions' => array(
                 'Plan.instit_id' => $id,
             )
