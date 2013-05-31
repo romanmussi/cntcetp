@@ -15,7 +15,7 @@ $this->pageTitle = "Inicio";
                     )); 
                 ?>
         <div class="boxcontent box_catalogo">
-            <div style="margin-bottom: 4px;">
+            <div class="interna">
                En este sitio usted encontrará la oferta de educación técnico profesional de nivel secundario, superior y formación profesional de gestión estatal y privada. La oferta aquí declarada resulta de la información suministrada por cada una de las jurisdicciones (las 23 provincias y la Ciudad Autónoma de Buenos Aires).
 El propósito de este Catálogo es ofrecer un servicio permanente de información actualizada sobre los títulos técnicos y certificaciones de formación profesional, de forma de constituirse en un canal de información contínua sobre la oferta técnica existente en todo el territorio del país.
             </div>
@@ -59,7 +59,7 @@ El propósito de este Catálogo es ofrecer un servicio permanente de información a
             <div class="picround" style="margin-right: 10px;">
             <?php echo $html->image('material/fotoinet.jpg') ?>
             </div>
-            <div style="margin-bottom: 4px;">
+            <div class="interna">
                El INET es el organismo del Ministerio de Educación que tiene a su cargo la coordinación de la
 aplicación de las políticas públicas de manera concertada y concurrente con las provincias y la
 Ciudad Autónoma de Buenos Aires, relativas a la educación técnico profesional en los niveles

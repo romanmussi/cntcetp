@@ -22,14 +22,22 @@
     padding-top: 6px;
     padding-bottom: 7px
 }
+.box_inet .interna {
+    margin-bottom: 4px;
+    text-align: justify;
+}
 .box_inet img{
     float: left; 
-    height: 244px;
+    height: 218px;
 }
 
 .box_catalogo{
     padding-top: 6px;
     padding-bottom: 7px;
+}
+.box_catalogo .interna {
+    margin-bottom: 4px;
+    text-align: justify;
 }
 
 .box_catalogo img{
@@ -38,6 +46,7 @@
 }
 .box_catalogo_titulo{
     width:450px;
+    margin-left: 74px;
 }
 
 
@@ -46,6 +55,7 @@
 }
 .box_home_buscadores .interna {
     min-height: 171px;
+    text-align: justify;
 }
 .box_home_buscadores_separador {
     width: 1%;
