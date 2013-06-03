@@ -59,7 +59,7 @@ $this->pageTitle =  $titulo['Titulo']['name'];
             <h3 class="instit"><?php  __('Instituciones que ofrecen el t&iacute;tulo o certificaci&oacute;n');?></h3>
             
             <?php 
-            $reqUrl = '/instits/search_results/Plan.titulo_id:'.$titulo['Titulo']['id'];
+            $reqUrl = '/instits/search_results/Plan.titulo_id:'.$titulo['Titulo']['id'].'/Titulo.es_bb:'.$titulo['Titulo']['es_bb'];
             $tieneFiltro = false;
             foreach ($this->passedArgs as $k=>$v) {
                 $reqUrl .= '/'.$k.':'.$v;

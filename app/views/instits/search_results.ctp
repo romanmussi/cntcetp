@@ -47,7 +47,14 @@
                         ?>" class="linkconatiner-more-info">
                     
                 <span class="items-nombre">
-                    <?= "".($instit['Instit']['cue']*100)+$instit['Instit']['anexo']." - ". $instit['Instit']['nombre_completo']; ?>
+                    <?= "".($instit['Instit']['cue']*100)+$instit['Instit']['anexo']." - ". $instit['Instit']['nombre_completo']; ?> 
+                    <?php echo ($instit['Instit']['gestion_id'] == 1 && $this->passedArgs['Titulo.es_bb'] ? 
+                                        $html->image('bb.png', array(
+                                            'alt'=> __("Carrera prioritaria", true),
+                                            'title'=> __("Carrera prioritaria", true),
+                                            'border'=>"0",
+                                            'class'=>'prioritaria-icon'
+                                            )) : '') ?>
                 </span>
                 <br />
                 <span class="items-gestion"><?= $instit['Gestion']['name'] ?></span>
@@ -73,7 +80,7 @@
     }
     else {
         ?>
-    <div id="no_results">No hay resultados</div>
+    <div id="no_results">No se encontraron resultados con los criterios de búsqueda definidos.</div>
     <?php
     }
     

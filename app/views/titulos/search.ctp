@@ -210,7 +210,7 @@ if ($vino_formulario) {
         else {
             ?>
             <div class="clear"></div><br />
-            <div id="no_results" style="color: red">No hay resultados</div><br />
+            <div id="no_results">No se encontraron resultados con los criterios de búsqueda definidos.</div><br />
             
         <?php
         }

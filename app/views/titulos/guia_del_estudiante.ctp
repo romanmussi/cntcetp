@@ -59,7 +59,7 @@ $contieneBb = false;
 
 <div class="grid_12">
     <h1>Guía del Estudiante</h1>
-    <p>La Guía del Estudiante ayudará a que puedas encontrarar dónde estudiar y obtener un título o certificación según tus gustos e intereses. </p>
+    <p class="guia_de_estudiante_desc">La Guía del Estudiante ayudará a que puedas encontrarar dónde estudiar y obtener un título o certificación según tus gustos e intereses. </p>
 
     <div class="boxblanca">
         <?php echo $html->image('step1.gif', array('class' => 'step'));?>
