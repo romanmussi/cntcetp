@@ -1,11 +1,10 @@
-config/database.php
-config/core.php
 app/tmp/logs/*
 app/tmp/sessions/*
 app/tmp/cache/*
 app/tmp/tests/*
 app/config/database.php
 app/config/config.email.php
+app/config/core.php
 app/webroot/img/mail/*
 app/webroot/css/cache-*
 app/webroot/js/cache-*
