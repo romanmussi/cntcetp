@@ -1,4 +1,5 @@
 config/database.php
+config/core.php
 app/tmp/logs/*
 app/tmp/sessions/*
 app/tmp/cache/*
