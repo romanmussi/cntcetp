@@ -692,3 +692,7 @@ ul.ul-horizontal{
     margin-top: 10px;
     text-align: justify;
 }
+
+#no_results{
+    font-weight: bold;
+}

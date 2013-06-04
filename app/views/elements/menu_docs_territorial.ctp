@@ -13,7 +13,7 @@
                         <li><?php echo $html->link('Región Noreste', array('controller' => 'pages', 'action' => 'display', 'regiones/noreste'));?></li>
                         <li><?php echo $html->link('Región Cuyo', array('controller' => 'pages', 'action' => 'display', 'regiones/cuyo'));?></li>
                         <li><?php echo $html->link('Región Centro', array('controller' => 'pages', 'action' => 'display', 'regiones/centro'));?></li>
-                        <li><?php echo $html->link('Región Patagonia', array('controller' => 'pages', 'action' => 'display', 'regiones/patagonia'));?></li>
+                        <li><?php echo $html->link('Región Sur', array('controller' => 'pages', 'action' => 'display', 'regiones/sur'));?></li>
 	            </ul>
 	        </li>
 	    </ul>
