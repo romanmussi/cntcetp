@@ -1,5 +1,5 @@
 <?php 
-$this->pageTitle= 'Informacion Territorial';
+$this->pageTitle= 'Información socio-productiva';
 ?>
 
 <?php echo $this->element('menu_docs_territorial')?>

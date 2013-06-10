@@ -1,7 +1,7 @@
 <?php
     echo $html->css('documentacion', false);
 ?>
-<h1 class="grid_12 no-print">Informaci&oacute;n Territorial</h1>
+<h1 class="grid_12 no-print">Información socio-productiva</h1>
 
 <div id="menu1" class="grid_3 no-print">
     <div class="boxblanca">    

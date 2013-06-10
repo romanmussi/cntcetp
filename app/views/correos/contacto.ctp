@@ -2,12 +2,13 @@
 <div class="grid_6">
     <div class='boxblanca formu_6'>
         <h3>Formulario de contacto</h3>
+        <div>(*) Datos obligatorios</div>
         <?php
         echo $form->create('Correo', array('action' => 'contacto'));
         echo $form->input('from', array('label'=>'Nombre'));
-        echo $form->input('mail', array('label'=>'E-Mail'));
+        echo $form->input('mail', array('label'=>'E-Mail', 'after'=>' *'));
         echo $form->input('telefono', array('label'=>'Teléfono'));
-        echo $form->input('descripcion', array('label'=>false, 'rows' => 5, 'cols' => 50));
+        echo $form->input('descripcion', array('label'=>false, 'rows' => 5, 'cols' => 50, 'after'=>' *'));
         echo $form->end('Enviar');
         ?>
     </div>

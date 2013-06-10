@@ -71,7 +71,11 @@ class TitulosController extends AppController {
                     'field' => 'name',
                     'input-name' => 'tituloname',
                     'friendlyName' => 'Nombre');
-                 
+                 $ops[] = array(
+                    'model' => 'Plan',
+                    'field' => 'nombre',
+                    'input-name' => 'tituloname',
+                    'friendlyName' => 'Nombre');
                  
                  
                  //      Oferta

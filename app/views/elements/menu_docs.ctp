@@ -69,5 +69,8 @@
 	        </li>
 	    </ul>
     </div>
-</div>
 
+    <div class="boxblanca">
+        <?php echo $html->link('Información socio-productiva', array('controller'=>'pages', 'action'=>'doc_territorial_index'), array('class'=>'menu-item')); ?>
+    </div>
+</div>
