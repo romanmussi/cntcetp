@@ -7,15 +7,15 @@ $this->pageTitle = "Inicio";
 <!--                
             El Catálogo
 -->
-<div class="grid_9 alpha">
+<div class="grid_8 alpha">
     <div class="boxblanca">
-        <h2>Catálogo Nacional de Títulos y Certificaciones</h2>
+        <?php echo $html->image('catalogotitulo.png', array(
+                    'border'=> 0,
+                    'class' => 'box_catalogo_titulo'
+                    )); 
+                ?>
         <div class="boxcontent box_catalogo">
-            <div class="picround" style="margin-right: 10px;">
-            <?php echo $html->image('material/fotoinet.jpg') ?>
-            </div>
-
-            <div style="margin-bottom: 4px;">
+            <div class="interna">
                En este sitio usted encontrará la oferta de educación técnico profesional de nivel secundario, superior y formación profesional de gestión estatal y privada. La oferta aquí declarada resulta de la información suministrada por cada una de las jurisdicciones (las 23 provincias y la Ciudad Autónoma de Buenos Aires).
 El propósito de este Catálogo es ofrecer un servicio permanente de información actualizada sobre los títulos técnicos y certificaciones de formación profesional, de forma de constituirse en un canal de información contínua sobre la oferta técnica existente en todo el territorio del país.
             </div>
@@ -30,10 +30,10 @@ El propósito de este Catálogo es ofrecer un servicio permanente de información a
 <!--                
             Buscador
 -->
-<div class="grid_3 omega">
+<div class="grid_4 omega">
     <div class="boxgris box_home_buscadores">
         <h2>Buscadores</h2>
-        <div>
+        <div class="interna">
             Por medio de los buscadores se facilita a los distintos usuarios una 
             consulta ágil referida a la oferta de títulos y certificados, según 
             sectores, niveles y especialidades, así como su localización en las 
@@ -56,8 +56,10 @@ El propósito de este Catálogo es ofrecer un servicio permanente de información a
     <div class="boxblanca inet">
         <h2>El Instituto Nacional de Educación Tecnológica</h2>
         <div class="boxcontent box_inet">
-
-            <div style="margin-bottom: 4px;">
+            <div class="picround" style="margin-right: 10px;">
+            <?php echo $html->image('material/fotoinet.jpg') ?>
+            </div>
+            <div class="interna">
                El INET es el organismo del Ministerio de Educación que tiene a su cargo la coordinación de la
 aplicación de las políticas públicas de manera concertada y concurrente con las provincias y la
 Ciudad Autónoma de Buenos Aires, relativas a la educación técnico profesional en los niveles

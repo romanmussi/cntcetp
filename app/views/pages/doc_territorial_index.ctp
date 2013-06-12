@@ -11,7 +11,7 @@ $this->pageTitle= 'Información socio-productiva';
     	
         <p>En esta sección puede consultar información sobre algunos aspectos centrales de la estructura socio-productiva de las diferentes regiones de Argentina.</p>
         
-        <div style="display: block; margin: 0 auto; width: 200px;"><? echo $html->image('mapa_regiones.gif', array('style' => 'float: left;')); ?></div>
+        <div style="display: block; margin: 0 auto; width: 423px;"><? echo $html->image('mapa_regiones.gif', array('style' => 'float: left;')); ?></div>
     <div class="clear"></div>
     </div>
 </div>

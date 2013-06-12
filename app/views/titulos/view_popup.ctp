@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
         if (!empty($plan['Plan']['ultimo_ciclo'])) {
         ?>
         <li class="">
-            <strong><?php __('Ultima actualización'); ?>:</strong> <?php echo $plan['Plan']['ultimo_ciclo']; ?>
+            <strong><?php __('Información suministrada al'); ?>:</strong> <?php echo $plan['Plan']['ultimo_ciclo']; ?>
         </li>
         <?php }?>
     </ul>

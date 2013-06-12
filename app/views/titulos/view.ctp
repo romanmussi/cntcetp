@@ -16,8 +16,8 @@ $this->pageTitle =  $titulo['Titulo']['name'];
 <div class="grid_12">
     <h1><?php echo $titulo['Titulo']['name']?> <?php echo ($titulo['Titulo']['es_bb'] ? 
                                         $html->image('bb.png', array(
-                                            'alt'=> __("Carrera prioritaria", true),
-                                            'title'=> __("Carrera prioritaria", true),
+                                            'alt'=> __("Carrera prioritaria - Becas Bicentenario", true),
+                                            'title'=> __("Carrera prioritaria - Becas Bicentenario", true),
                                             'border'=>"0",
                                             'class'=>'prioritaria-icon'
                                             )) : '') ?></h1>
@@ -59,7 +59,7 @@ $this->pageTitle =  $titulo['Titulo']['name'];
             <h3 class="instit"><?php  __('Instituciones que ofrecen el t&iacute;tulo o certificaci&oacute;n');?></h3>
             
             <?php 
-            $reqUrl = '/instits/search_results/Plan.titulo_id:'.$titulo['Titulo']['id'];
+            $reqUrl = '/instits/search_results/Plan.titulo_id:'.$titulo['Titulo']['id'].'/Titulo.es_bb:'.$titulo['Titulo']['es_bb'];
             $tieneFiltro = false;
             foreach ($this->passedArgs as $k=>$v) {
                 $reqUrl .= '/'.$k.':'.$v;

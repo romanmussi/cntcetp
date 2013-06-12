@@ -172,7 +172,7 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
                 $planNombre .= ' (' .  $plan['Titulo']['name'] . ')';
             }
 
-            if ($plan['Titulo']['es_bb']) {
+            if ($instit['Instit']['gestion_id'] == 1 && $plan['Titulo']['es_bb']) {
                 $planNombre .= " ". $html->image('bb.png', array(
                     'alt'=> __("Carrera prioritaria", true),
                     'title'=> __("Carrera prioritaria", true),
@@ -202,7 +202,7 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
     </div>
     
     <?php 
-    if (!empty($contieneBb) && $contieneBb) {
+    if ($instit['Instit']['gestion_id'] == 1 && !empty($contieneBb) && $contieneBb) {
         echo $this->element('aclaracion_bb');
     } ?>
     

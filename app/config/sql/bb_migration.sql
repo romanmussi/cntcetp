@@ -19,6 +19,8 @@ CREATE EXTENSION dblink;
 select dblink_connect('rfietp','host=127.0.0.1 port=5432
     dbname=rfietp user=postgres password=postgres');
 
+INSERT INTO etp_estados (id, name) VALUES (1, 'Institución de Otro Nivel y/o Modalidad');
+
 /* Instits */
 INSERT INTO instits_bb (id, gestion_id,
                 dependencia_id,

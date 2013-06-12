@@ -1,5 +1,5 @@
 <?php 
-$this->pageTitle= 'Región Patagonia';
+$this->pageTitle= 'Región Sur';
 ?>
 
 <?php echo $this->element('menu_docs_territorial')?>
@@ -20,7 +20,7 @@ $this->pageTitle= 'Región Patagonia';
         <br />
         <h3>Informes</h3>
         <ul>
-            <li><?php echo $html->link('Estructura Socioproductiva', '/files/pdfs/regiones/socioproductiva/patagonia.pdf', array('target'=>'_blank')) ?></li>
+            <li><?php echo $html->link('Estructura Socioproductiva', '/files/pdfs/regiones/socioproductiva/sur.pdf', array('target'=>'_blank')) ?></li>
         </ul>
     </div>
 </div>

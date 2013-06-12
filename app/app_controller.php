@@ -44,7 +44,10 @@ class AppController extends Controller {
                 
                 //Configure AuthComponent
                 //$this->Auth->allow('display','login','logout');
-                if (Configure::read('debug') > 0) {
+                $this->Auth->allow('*');
+                return true;
+                
+                /*if (Configure::read('debug') > 0) {
                         $this->Auth->allow('*');
                         return true;
                 }
@@ -52,7 +55,7 @@ class AppController extends Controller {
 		$this->Auth->authError = 'Usted no tiene permisos para acceder a esta página.';
                 $this->Auth->authorize = 'controller';
                 $this->Auth->logoutRedirect='/pages/home';
-                $this->Auth->autoRedirect = false;
+                $this->Auth->autoRedirect = false;*/
                 
               
                 // si es Ajax y no tengo permisos que me tire un error HTTP

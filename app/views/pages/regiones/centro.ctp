@@ -10,11 +10,11 @@ $this->pageTitle= 'Región Centro';
         <h2><?php echo $this->pageTitle?></h2>
         <h3>Provincias</h3>
         <ul>
+            <li>Buenos Aires</li>
+            <li>Ciudad Autónoma de Buenos Aires</li>
             <li>Córdoba</li>
             <li>Entre Ríos</li>
             <li>Santa Fe</li>
-            <li>Ciudad de Buenos Aires</li>
-            <li>Provincia de Buenos Aires</li>
         </ul>
         <br />
         <h3>Informes</h3>

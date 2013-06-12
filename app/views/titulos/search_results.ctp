@@ -89,7 +89,7 @@ $paginator->options(array( 'url' => $this->passedArgs,
     }
     else {
         ?>
-    <div id="no_results">No hay resultados</div>
+    <div id="no_results">No se encontraron resultados con los criterios de búsqueda definidos.</div>
     <?php
     }
 
