@@ -26,12 +26,12 @@
             <h4>Nivel y Sector</h4>
             <?php
                 echo $form->input('oferta_id',array( 'div' => true,
-                                                    'class' => 'autosubmit ',
-                                                    'label'=> 'Nivel',
-                                                    'id' => 'ofertaId',
-                                                    'empty' => 'Todos',
-                                                    'type' => (empty($oferta_id) ? 'select' : 'hidden'),
-                                                   ));
+                                        'class' => 'autosubmit ',
+                                        'label'=> 'Nivel',
+                                        'id' => 'ofertaId',
+                                        'empty' => 'Todos',
+                                        'type' => (empty($oferta_id) ? 'select' : 'hidden'),
+                                        ));
                 
                 
                 echo $form->input('SectoresTitulo.sector_id',array(
@@ -235,7 +235,7 @@ if ($vino_formulario) {
 <?php } ?>
     
     <?php 
-    if ($contieneBb) {
+    if (!empty($contieneBb)) {
         echo $this->element('aclaracion_bb');
     } ?>
     
