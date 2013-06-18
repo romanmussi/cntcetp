@@ -185,7 +185,7 @@ class TitulosController extends AppController {
                 $this->data['Titulo']['oferta_id'] = $this->passedArgs['Titulo.oferta_id'] = $oferta_id;
                 
                 $this->Titulo->Oferta->id = $oferta_id;
-                $this->paginate['viewConditions']['Nivel'] = $this->Titulo->Oferta->field('name');
+                $this->paginate['viewConditions']['Oferta o Nivel'] = $this->Titulo->Oferta->field('name');
             }
             if(!empty($sector_id)) {
                 $conditions['SectoresTitulo.sector_id'] = $sector_id;
