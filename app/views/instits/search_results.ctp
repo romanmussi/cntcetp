@@ -43,15 +43,17 @@
                                     'controller' => 'instits',
                                     'action' => 'view',                                    
                                     'id' => $instit['Instit']['id'],
-                                    'slug' => slug($instit['Instit']['nombre_completo'])))
+                                    'slug' => slug($instit['Instit']['nombre_completo']),
+                                    'referer' => $referer
+                                ));
                         ?>" class="linkconatiner-more-info">
                     
                 <span class="items-nombre">
                     <?= "".($instit['Instit']['cue']*100)+$instit['Instit']['anexo']." - ". $instit['Instit']['nombre_completo']; ?> 
                     <?php echo ($instit['Instit']['gestion_id'] == 1 && $this->passedArgs['Titulo.es_bb'] ? 
                                         $html->image('bb.png', array(
-                                            'alt'=> __("Institución con Carrera Prioritaria - Becas Bicentenario", true),
-                                            'title'=> __("Institución con Carrera Prioritaria - Becas Bicentenario", true),
+                                            'alt'=> __(BB_INSTIT_ALT, true),
+                                            'title'=> __(BB_INSTIT_ALT, true),
                                             'border'=>"0",
                                             'class'=>'prioritaria-icon'
                                             )) : '') ?>

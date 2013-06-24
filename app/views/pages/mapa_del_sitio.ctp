@@ -55,6 +55,7 @@
                 
             </li>
             <li><?php echo $html->link('Información socio-productiva', array('controller' => 'pages', 'action' => 'doc_territorial_index')); ?></li>
+            <li><?php echo $html->link('Glosario', array('controller' => 'pages', 'action' => 'glosario')); ?></li>
             <li><?php echo $html->link('Contacto', array('controller' => 'correos', 'action' => 'contacto')); ?></li>
         </ul>
     </div>

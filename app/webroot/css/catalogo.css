@@ -618,6 +618,13 @@ li{
     color: black;
 }
 
+.refererlink{
+    font-size:12pt;
+}
+.refererlink:HOVER{
+    background: none !important;
+    color: black;
+}
 
 ul.ul-horizontal{
     margin: 0px;

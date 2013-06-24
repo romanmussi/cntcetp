@@ -129,6 +129,23 @@ ul.titulos-list li .mas_info_azul_small, ul.titulos-list li .mas_info_gris_small
     float: right;
 }
 
+ul.referer li{
+    border:none !important;
+    cursor: pointer;
+    height: auto !important;
+    margin: 0;
+    padding: 3px 0;
+    position: relative;
+}
+ul.referer li:hover{
+    color:black;
+}
+
+ul.referer li .mas_info_azul_small, ul.referer li .mas_info_gris_small{
+    cursor: pointer;
+    float: right;
+}
+
 
 .ficha_info{
     min-height: 158px;

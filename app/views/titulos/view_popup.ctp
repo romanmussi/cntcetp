@@ -33,8 +33,8 @@ jQuery(document).ready(function() {
         ?>
         <li class="">
             Carrera prioritaria <?php echo $html->image('bb.png', array(
-                        'alt'=> __("Carrera prioritaria", true),
-                        'title'=> __("Carrera prioritaria", true),
+                        'alt'=> __(BB_ALT, true),
+                        'title'=> __(BB_ALT, true),
                         'border'=>"0",
                         'class'=>'prioritaria-icon'
                         )); ?>

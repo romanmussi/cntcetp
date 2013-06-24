@@ -16,8 +16,8 @@ $this->pageTitle =  $titulo['Titulo']['name'];
 <div class="grid_12">
     <h1><?php echo $titulo['Titulo']['name']?> <?php echo ($titulo['Titulo']['es_bb'] ? 
                                         $html->image('bb.png', array(
-                                            'alt'=> __("Carrera prioritaria - Becas Bicentenario", true),
-                                            'title'=> __("Carrera prioritaria - Becas Bicentenario", true),
+                                            'alt'=> __(BB_ALT, true),
+                                            'title'=> __(BB_ALT, true),
                                             'border'=>"0",
                                             'class'=>'prioritaria-icon'
                                             )) : '') ?></h1>

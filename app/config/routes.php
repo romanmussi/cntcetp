@@ -47,6 +47,7 @@
         Router::connect('/titulos-formacion-profesional', array('controller' => 'titulos', 'action' => 'search', 1));
         
         /* buscador con sector preseleccionado */
+        Router::connect('/titulos-administracion', array('controller' => 'titulos', 'action' => 'search', 0, 1));
         Router::connect('/titulos-agropecuarios', array('controller' => 'titulos', 'action' => 'search', 0, 3));
         Router::connect('/titulos-automotriz', array('controller' => 'titulos', 'action' => 'search', 0, 4));
         Router::connect('/titulos-construcciones', array('controller' => 'titulos', 'action' => 'search', 0, 8));
@@ -58,6 +59,8 @@
         Router::connect('/titulos-salud', array('controller' => 'titulos', 'action' => 'search', 0, 30));
         Router::connect('/titulos-textil-e-indumentaria', array('controller' => 'titulos', 'action' => 'search', 0, 40));
         Router::connect('/titulos-cuero-y-calzado', array('controller' => 'titulos', 'action' => 'search', 0, 9));
+        Router::connect('/titulos-hoteleria-y-gastronomia', array('controller' => 'titulos', 'action' => 'search', 0, 34));
+        Router::connect('/titulos-industria-alimentaria', array('controller' => 'titulos', 'action' => 'search', 0, 15));
         
 
         Router::connect('/buscador-de-titulos-y-certificaciones', array('controller' => 'titulos', 'action' => 'search'));
@@ -78,6 +81,16 @@
 
         Router::connect(    // E.g. /instits/CakePHP_Rocks-3
             '/institucion/:slug-:id',
+            array('controller' => 'instits', 'action' => 'view'),
+            array(
+                // order matters since this will simply map ":id" to $id in your action
+                'pass' => array('id', 'slug'),
+                'id' => '[0-9]+'
+            )
+        );
+        
+        Router::connect(    // E.g. /instits/CakePHP_Rocks-3
+            '/institucion/referer::referer/:slug-:id',
             array('controller' => 'instits', 'action' => 'view'),
             array(
                 // order matters since this will simply map ":id" to $id in your action

@@ -144,60 +144,94 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
     <div class="boxblanca">
         <h3 class="titulo">Títulos o Certificaciones que ofrece la institución</h3>
         <?php
-        if (!empty($planes)) {
-            ?>  
-        
-        <ul id="titulos-list" class="titulos-list items">
-        <?php
-        $ofertaAnt = '';
-        foreach ($planes as $plan) {
-            if ($ofertaAnt != $plan['Oferta']['id'] ) {
-                echo "<h4 style='margin-top: 15px;'>". $plan['Oferta']['name'] ."</h4>";
-                $ofertaAnt = $plan['Oferta']['id'];
-            }
-
-            // inicializo el nombre del titulo que voy a escribir
-            $planTituloNombre = '';
+        if (!empty($referer)) {
+            
             $planNombre = '';
-            // le agrego un link hacia el titulo de referencias
+            $planNombre .= $referer['Plan']['nombre'];
+            
+            if (!empty($referer['Titulo']) && strcasecmp(trim($referer['Plan']['nombre']), trim($referer['Titulo']['name'])) != 0) {
 
-            $planNombre .= $plan['Plan']['nombre'];
-
-
-            // si el titulo de referencia es distinto que el nombre del
-            // plan se lo tengo que agregar entre parentesis
-            // entonces quedaria: Asistente de Peluquero (Titulo: Peluquero)
-            if (!empty($plan['Titulo']) && strcasecmp(trim($plan['Plan']['nombre']), trim($plan['Titulo']['name'])) != 0) {
-
-                $planNombre .= ' (' .  $plan['Titulo']['name'] . ')';
+                $planNombre .= ' (' .  $referer['Titulo']['name'] . ')';
             }
-
-            if ($instit['Instit']['gestion_id'] == 1 && $plan['Titulo']['es_bb']) {
+            
+            if ($instit['Instit']['gestion_id'] == 1 && $referer['Titulo']['es_bb']) {
                 $planNombre .= " ". $html->image('bb.png', array(
-                    'alt'=> __("Carrera prioritaria", true),
-                    'title'=> __("Carrera prioritaria", true),
+                    'alt'=> __(BB_ALT, true),
+                    'title'=> __(BB_ALT, true),
                     'border'=>"0",
                     'class'=>'prioritaria-icon'
                     ));
-                
+
                 $contieneBb = true;
             }
-            ?>
-            <li onclick="viewTitulo('<?php echo $html->url('/titulos/view_titulo_plan/'.$plan['Titulo']['id'].'/'.$plan['Plan']['id'])?>', '<?php echo $plan['Titulo']['name']?>');">
-                <a class="linkconatiner-more-info">
-                    <?php echo $planNombre?>
-                </a>
-            </li>
-            <?php }?>
-        </ul>
+        ?>
+            <h4 style='margin-top: 15px;'>Título o Certificado seleccionado</h4>
+            <ul id="referer-list" class="referer items">
+                <li onclick="viewTitulo('<?php echo $html->url('/titulos/view_titulo_plan/'.$referer['Titulo']['id'].'/'.$referer['Plan']['id'])?>', '<?php echo $referer['Titulo']['name']?>');">
+                    <a class="linkconatiner-more-info refererlink">
+                        <?php echo $planNombre?>
+                    </a>
+                </li>
+            </ul>
+        <?php
+        }
+        
+        if (!empty($planes)) {
+        ?>  
+            <h4 style='margin-top: 15px;'>Otras ofertas de la institución</h4>
+            <ul id="titulos-list" class="titulos-list items">
             <?php
+            $ofertaAnt = '';
+            foreach ($planes as $plan) {
+                if ($ofertaAnt != $plan['Oferta']['id'] ) {
+                    echo "<h4 style='margin-top: 15px;'>". $plan['Oferta']['name'] ."</h4>";
+                    $ofertaAnt = $plan['Oferta']['id'];
+                }
+
+                if (!empty($referer) && $plan['Titulo']['id'] != $referer['Titulo']['id']) {
+                    // inicializo el nombre del titulo que voy a escribir
+                    $planTituloNombre = '';
+                    $planNombre = '';
+                    // le agrego un link hacia el titulo de referencias
+
+                    $planNombre .= $plan['Plan']['nombre'];
+
+
+                    // si el titulo de referencia es distinto que el nombre del
+                    // plan se lo tengo que agregar entre parentesis
+                    // entonces quedaria: Asistente de Peluquero (Titulo: Peluquero)
+                    if (!empty($plan['Titulo']) && strcasecmp(trim($plan['Plan']['nombre']), trim($plan['Titulo']['name'])) != 0) {
+
+                        $planNombre .= ' (' .  $plan['Titulo']['name'] . ')';
+                    }
+
+                    if ($instit['Instit']['gestion_id'] == 1 && $plan['Titulo']['es_bb']) {
+                        $planNombre .= " ". $html->image('bb.png', array(
+                            'alt'=> __(BB_ALT, true),
+                            'title'=> __(BB_ALT, true),
+                            'border'=>"0",
+                            'class'=>'prioritaria-icon'
+                            ));
+
+                        $contieneBb = true;
+                    }
+                    ?>
+                    <li onclick="viewTitulo('<?php echo $html->url('/titulos/view_titulo_plan/'.$plan['Titulo']['id'].'/'.$plan['Plan']['id'])?>', '<?php echo $plan['Titulo']['name']?>');">
+                        <a class="linkconatiner-more-info">
+                            <?php echo $planNombre?>
+                        </a>
+                    </li>
+        <?php 
+                }
+            }
         }
         else {
-            ?>
-        <i>La institución no presenta Títulos ni Certificaciones</i>
-            <?php
+        ?>
+            <i>La institución no presenta Títulos ni Certificaciones</i>
+        <?php
         }
         ?>
+        </ul>
         <div class="clear"></div>
     </div>
     

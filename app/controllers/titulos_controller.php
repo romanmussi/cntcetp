@@ -674,48 +674,6 @@ class TitulosController extends AppController {
         $this->pageTitle = "Guía del Estudiante";
 
         $bySession = false;
-        // si existe búsqueda en Session, realiza búsqueda
-        /*if ($this->Session->read($this->sesNames['nombre'])) {
-            $this->data['Titulo']['tituloName'] = $this->passedArgs['tituloName'] = $this->Session->read($this->sesNames['nombre']);
-            $bySession = true;
-        }
-        if ($this->Session->read($this->sesNames['oferta'])) {
-            $this->data['Titulo']['oferta_id'] = $this->passedArgs['ofertaId'] = $this->Session->read($this->sesNames['oferta']);
-            $bySession = true;
-        }
-        if ($this->Session->read($this->sesNames['sector'])) {
-            $this->data['Titulo']['sector_id'] = $this->passedArgs['sectorId'] = $this->Session->read($this->sesNames['sector']);
-            $bySession = true;
-
-            $subsectores = $this->Titulo->Subsector->con_sector('list', $this->Session->read($this->sesNames['sector']));
-        }
-        if ($this->Session->read($this->sesNames['subsector'])) {
-            $this->data['Titulo']['subsector_id'] = $this->passedArgs['subsectorId'] = $this->Session->read($this->sesNames['subsector']);
-            $bySession = true;
-        }
-        if ($this->Session->read($this->sesNames['jurisdiccion'])) {
-            $this->data['Instit']['jurisdiccion_id'] = $this->passedArgs['jurisdiccionId'] = $this->Session->read($this->sesNames['jurisdiccion']);
-            $bySession = true;
-        }
-        if ($this->Session->read($this->sesNames['departamento'])) {
-            $this->data['Instit']['departamento_id'] = $this->passedArgs['departamentoId'] = $this->Session->read($this->sesNames['departamento']);
-            $bySession = true;
-        }
-        if ($this->Session->read($this->sesNames['localidad'])) {
-            $this->data['Instit']['localidad_id'] = $this->passedArgs['localidadId'] = $this->Session->read($this->sesNames['localidad']);
-            $bySession = true;
-        }
-        if ($this->Session->read($this->sesNames['tituloJurDepLoc'])) {
-            $this->data['Instit']['jur_dep_loc'] = $this->passedArgs['tituloJurDepLoc'] = $this->Session->read($this->sesNames['tituloJurDepLoc']);
-            $bySession = true;
-        }
-        if ($this->Session->read($this->sesNames['gestion'])) {
-            $this->data['Instit']['gestion_id'] = $this->passedArgs['gestionId'] = $this->Session->read($this->sesNames['gestion']);
-            $bySession = true;
-        }
-        if ($this->Session->read($this->sesNames['page'])) {
-            $bySession = true;
-        }*/
 
         $this->set('bySession', $bySession);
         $this->set('sectores', $this->Titulo->Sector->find('list'));

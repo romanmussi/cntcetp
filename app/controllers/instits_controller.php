@@ -46,23 +46,24 @@ class InstitsController extends AppController {
             )
         ));
 
-        /*$instit['Instit']['dir_tipodoc_name'] = '';
-        $tipodoc = ClassRegistry::init('Tipodoc')->find('first', array(
-            'conditions'=>array(
-                'Tipodoc.id'=> $instit['Instit']['dir_tipodoc_id'],
-        )));
-        $instit['Instit']['dir_tipodoc_name'] = $tipodoc['Tipodoc']['abrev'];
-
-        $tipodoc = ClassRegistry::init('Tipodoc')->find('first', array(
-            'conditions'=>array(
-                'Tipodoc.id'=> $instit['Instit']['vice_tipodoc_id'],
-        )));
-        $instit['Instit']['vice_tipodoc_name'] = $tipodoc['Tipodoc']['abrev'];*/
-
         $programa_de_etp = false;
         // si la institucion es con programa de ETP
         if($instit['EtpEstado']['id']== 1) {
             $programa_de_etp = true;
+        }
+        
+        if (!empty($this->params['referer'])) {
+            // Título seleccionado: busca info del titulo y si corresponde a esta instit
+            $referer = $this->Instit->Plan->find('first', array(
+                'conditions' => array(
+                    'Plan.titulo_id' => $this->params['referer'],
+                    'Plan.instit_id' => $id,
+                    )
+            ));
+            
+            if (!empty($referer)) {
+                $this->set('referer', $referer);
+            }
         }
         
         $this->set('con_programa_de_etp', $programa_de_etp);
@@ -256,12 +257,7 @@ class InstitsController extends AppController {
 
         // primero seteo si vino formulario o fue el paginador quien llego a este action"
         $vino_formulario = (!empty($this->data)) ? true : false;
-
-        // dejo un log de la busqueda realizada
-        //$username = $this->Auth->user('nombre').' '.$this->Auth->user('apellido').' ('.$this->Auth->user('username').')';
-        //$grupo = $this->Session->read('User.group_alias');
-
-
+        
         /*******************************************************************
          *    INICIALIZACION DE FILTROS
          *
@@ -542,10 +538,11 @@ class InstitsController extends AppController {
         $this->set('instits', $pagin);
         $this->set('url_conditions', $this->passedArgs);      
         $this->set('conditions', $this->paginate['viewConditions']);
-
-        // genero un log sobre las busquedas realizadas
-        //$this->Instit->searchLog($this->data, $username, $grupo, $this->params['paging']['Instit']['count']);
         
+        if (!empty($this->passedArgs['Plan.titulo_id'])) {
+            $this->set('referer', $this->passedArgs['Plan.titulo_id']);
+        }
+
         if (!$this->RequestHandler->isAjax()) {         
             // si se encontro solo 1 institucion, ir directamente a la vista de esa institucion
             // si el resultado me trajo 1, y eestoy buscando por CUE, entonces ir directamente a la vista d esas institucion
@@ -555,10 +552,6 @@ class InstitsController extends AppController {
                         $this->redirect('view/'.$pagin[0]['Instit']['id']);
                     }
         }
-//        else {
-//            // si es ajax renderizo otra vista
-//            $this->render('ajax_search');
-//        }
     }
 }
 ?>
