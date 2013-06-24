@@ -183,12 +183,12 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
             <?php
             $ofertaAnt = '';
             foreach ($planes as $plan) {
-                if ($ofertaAnt != $plan['Oferta']['id'] ) {
-                    echo "<h4 style='margin-top: 15px;'>". $plan['Oferta']['name'] ."</h4>";
-                    $ofertaAnt = $plan['Oferta']['id'];
-                }
-
-                if (!empty($referer) && $plan['Titulo']['id'] != $referer['Titulo']['id']) {
+                if (empty($referer) || (!empty($referer) && $plan['Titulo']['id'] != $referer['Titulo']['id'])) {
+                    
+                    if ($ofertaAnt != $plan['Oferta']['id'] ) {
+                        echo "<h4 style='margin-top: 15px;'>". $plan['Oferta']['name'] ."</h4>";
+                        $ofertaAnt = $plan['Oferta']['id'];
+                    }
                     // inicializo el nombre del titulo que voy a escribir
                     $planTituloNombre = '';
                     $planNombre = '';
