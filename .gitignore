@@ -9,6 +9,7 @@ app/webroot/img/mail/*
 app/webroot/css/cache-*
 app/webroot/js/cache-*
 nbproject/*
+*.sublime-*
 !empty
 *.pdf
 

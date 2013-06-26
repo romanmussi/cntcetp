@@ -53,7 +53,7 @@ class FileStructureWritterHelper extends AppHelper {
         $files = $dir[1];
         $vArchivos[$folderName]['folders'] = array();
         foreach ( $subfolders as $sf) {
-            $this->getFiles($carpeta . DS . $sf, &$vArchivos[$folderName]['folders']);
+            $this->getFiles($carpeta . DS . $sf, $vArchivos[$folderName]['folders']);
         }
                 
         $vArchivos[$folderName]['files'] = $files; // 1 lee solo los archivos (creo) no lee las carpetas

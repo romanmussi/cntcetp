@@ -38,7 +38,7 @@
         
         Router::connect('/docs/*', array('controller' => 'pages', 'action' => 'display'));
         
-        Router::connect('/files', '/app/webroot/files');
+        //Router::connect('/files', '/app/webroot/files');
 
         Router::connect('/guia-del-estudiante', array('controller' => 'titulos', 'action' => 'guiaDelEstudiante'));
 
