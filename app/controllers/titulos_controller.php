@@ -36,7 +36,7 @@ class TitulosController extends AppController {
             $this->passedArgs['SectoresTitulo.sector_id'] = $sector_id;
             $this->set('sector_id', $sector_id);
         }
-        debug($this->data);
+        
         // Datos para inputs
         $ofertas = $this->Titulo->Oferta->find('list');
         $sectores = $this->Titulo->Sector->find('list',array('order'=>'Sector.name'));
@@ -172,8 +172,8 @@ class TitulosController extends AppController {
             
             if(!empty($tituloname)) {
                 $conditions['OR'] = array(
-                    array('lower(Titulo.name) SIMILAR TO ?' => convertir_para_busqueda_avanzada(utf8_decode($tituloname)) ),
-                    array('lower(Plan.nombre) SIMILAR TO ?' => convertir_para_busqueda_avanzada(utf8_decode($tituloname)) ),
+                    array('lower(Titulo.name) SIMILAR TO ?' => convertir_para_busqueda_avanzada($tituloname) ),
+                    array('lower(Plan.nombre) SIMILAR TO ?' => convertir_para_busqueda_avanzada($tituloname) ),
                 );
                 
                 $this->data['Titulo']['tituloname'] = $this->passedArgs['Titulo.name'] = $tituloname;
@@ -250,9 +250,6 @@ class TitulosController extends AppController {
             $this->set('conditions', $this->paginate['viewConditions']);
         }
         
-        
-        //$this->Titulo->recursive = 0;
-        //$this->set('titulos', $this->paginate());
         $this->set('vino_formulario', $vino_formulario);
         $this->set(compact('ofertas', 'sectores', 'subsectores', 'jurisdicciones', 
                 'departamentos', 'localidad', 'bySession','bloquearOferta', 'contieneBb'));
