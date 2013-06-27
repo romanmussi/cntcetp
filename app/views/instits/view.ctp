@@ -166,9 +166,9 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
             }
         ?>
             <h4 style='margin-top: 15px;'>Título o Certificado seleccionado</h4>
-            <ul id="referer-list" class="referer items">
+            <ul id="titulos-list" class="titulos-list items">
                 <li onclick="viewTitulo('<?php echo $html->url('/titulos/view_titulo_plan/'.$referer['Titulo']['id'].'/'.$referer['Plan']['id'])?>', '<?php echo $referer['Titulo']['name']?>');">
-                    <a class="linkconatiner-more-info refererlink">
+                    <a class="linkconatiner-more-info">
                         <?php echo $planNombre?>
                     </a>
                 </li>
