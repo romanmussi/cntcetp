@@ -67,6 +67,7 @@ function viewTitulo(url, title) {
     jQuery.ajax({
         url: url,
         cache: false,
+        type: 'get',
         success: function(data) {
             dialog.html(data);
         }

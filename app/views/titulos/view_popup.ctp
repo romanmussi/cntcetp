@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
 <div class="titulosview">
     <ul>
         <li class="">
-            <strong><?php __('Nivel'); ?>:</strong> <?php echo utf8_decode($plan['Oferta']['name']); ?>
+            <strong><?php __('Nivel'); ?>:</strong> <?php echo $plan['Oferta']['name']; ?>
         </li>
         <li class="">
             <strong><?php echo ($plan['Titulo']['marco_ref']==1)? "Especialidad con marco de referencia":"Especialidad sin marco de referencia"; ?></strong>
@@ -22,8 +22,8 @@ jQuery(document).ready(function() {
         <?php
         foreach ($plan['Titulo']['SectoresTitulo'] as $sector) {
         ?>
-                <?php echo utf8_decode($sector['Sector']['name']); ?>
-                <?php echo (!empty($sector['Subsector']['name']) ? ' / '.utf8_decode($sector['Subsector']['name']) : '' ); ?>
+                <?php echo $sector['Sector']['name']; ?>
+                <?php echo (!empty($sector['Subsector']['name']) ? ' / '.$sector['Subsector']['name'] : '' ); ?>
         <?php
         }
         ?>
