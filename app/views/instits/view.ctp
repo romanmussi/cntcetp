@@ -176,7 +176,7 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
         <?php
         }
         
-        if (!empty($planes)) {
+        if ( !empty($planes) && !(count($planes) == 1 && !empty($referer)) ) {
         ?>  
             <h4 style='margin-top: 15px;'>Otras ofertas de la institución</h4>
             <ul id="titulos-list" class="titulos-list items">
@@ -225,7 +225,8 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
                 }
             }
         }
-        else {
+        
+        if (empty($planes)) {
         ?>
             <i>La institución no presenta Títulos ni Certificaciones</i>
         <?php
