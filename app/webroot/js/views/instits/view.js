@@ -67,7 +67,6 @@ function viewTitulo(url, title) {
     jQuery.ajax({
         url: url,
         cache: false,
-        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-15",
         success: function(data) {
             dialog.html(data);
         }
