@@ -1,3 +1,4 @@
+<?php header('Content-Type: text/html; charset=ISO-8859-15'); ?>
 <script type="text/javascript">
 jQuery(document).ready(function() {
         if (jQuery("#arrowlink").attr("src") == "<?php echo $html->url('/img'); ?>/arrow_down.png") {
