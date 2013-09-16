@@ -99,8 +99,10 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
                     <dd>
                             <?php
                             if(!empty($instit['Instit']['mail'])) {
-                                echo $hideMail->hide($instit['Instit']['mail']);
-                                echo "&nbsp;"; //pongo un espacio para que el campo tome la altura del texto
+                                echo $html->link($instit['Instit']['mail'], 'mailto:'.$instit['Instit']['mail'] , array('target'=>'_blank'));
+                                //echo $instit['Instit']['mail'];
+                                //echo $hideMail->hide($instit['Instit']['mail']);
+                                //echo "&nbsp;"; //pongo un espacio para que el campo tome la altura del texto
                             }else {
                                 echo "<i>No declarado</i>";
                             } ?>
@@ -111,7 +113,8 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
                     <dd>
                             <?php
                             if(!empty($instit['Instit']['web'])) {
-                                echo $instit['Instit']['web'];
+                                echo $html->link($instit['Instit']['web'], 'http://'.$instit['Instit']['web'] , array('target'=>'_blank'));
+                                //echo $instit['Instit']['web'];
                             }else {
                                 echo "<i>No declarado</i>";
                             } ?>
