@@ -1,4 +1,4 @@
-﻿(function($) {
+(function($) {
     $.fn.extend({
         dnews: function(options) {
             var settings = $.extend({
