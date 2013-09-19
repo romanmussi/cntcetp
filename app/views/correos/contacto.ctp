@@ -2,6 +2,10 @@
 <div class="grid_6">
     <div class='boxblanca formu_6'>
         <h3>Formulario de contacto</h3>
+        <p style="margin: 10px 0px;">Cualquier consulta acerca de la oferta, la validez de los títulos y certificados, horarios y carga horaria  y/o cualquier otra información en relación a los establecimientos que figuran en este Catálogo debe contactarse directamente con la institución mediante la información provista en la ficha de contacto que figura en el apartado del establecimiento.
+            <br />
+            <br />
+        </p> 
         <?php
         echo $form->create('Correo', array('action' => 'contacto'));
         echo $form->input('from', array('label'=>'Nombre'));
