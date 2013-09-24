@@ -38,7 +38,11 @@
  * In development mode, you need to click the flash message to continue.
  */
 	Configure::write('debug', 0);
-/**
+/*
+ * Otras opciones
+ */
+	Configure::write('modo_linux', true);
+ /**
  * Application wide charset encoding
  */
 	Configure::write('App.encoding', 'iso-8859-1');
