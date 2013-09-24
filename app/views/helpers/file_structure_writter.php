@@ -118,7 +118,7 @@ class FileStructureWritterHelper extends AppHelper {
                 } else {
                     $val = $val;
                 }
-                echo "<li><a href='" . $this->_getFileFullPath($val) . "' href='_blank'>" . $val . "</a></li>";
+                echo "<li><a target='_blank' href='" . $this->_getFileFullPath($val) . "'>" . $val . "</a></li>";
             }
         }
     }
