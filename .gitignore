@@ -11,7 +11,7 @@ app/webroot/js/cache-*
 nbproject/*
 *.sublime-*
 !empty
-*.pdf
+# *.pdf
 
 # Packages #
 ############
