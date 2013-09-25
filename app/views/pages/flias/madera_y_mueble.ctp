@@ -23,20 +23,20 @@ echo $this->element('menu_docs')
 		</tr>
 		<tr>
 			<td rowspan="2">Primera Transformación</td>
-			<td>Auxiliar de  Aserradero</td>
-			<td>Auxiliar de  Aserradero</td>
+<td><a href="<?php echo $html->url('/').DIR ?>fp/Auxiliar de Aserradero - 2011.pdf" target="_blank">Auxiliar de  Aserradero</a></td>
+			<td>Auxiliar de Aserradero</td>
 		</tr>
 		<tr>
-			<td>Operador de Máquina Principal de Aserradero</td>
-			<td>Operador de Máquina Principal de Aserradero</td>
+<td><a href="<?php echo $html->url('/').DIR ?>fp/Operador de Máquina Principal de Aserradero - 2011.pdf" target="_blank">Operador de Máquina Principal de Aserradero</a></td>
+                        <td>Operador de Máquina Principal de Aserradero</td>
 		</tr>
 		<tr>
                         <td rowspan="4">Segunda Transformación</td>
-			<td>Operador de Moldurera</td>
+<td><a href="<?php echo $html->url('/').DIR ?>fp/Operador de Moldurera - 2011.pdf" target="_blank">Operador de Moldurera</a></td>
 			<td>Operador de Moldurera</td>
 		</tr>
 		<tr>
-			<td>Operador de Secado y Tratamiento Térmico de la Madera</td>
+<td><a href="<?php echo $html->url('/').DIR ?>fp/Operador de Secado y Tratamiento Térmico de la Madera - 2011.pdf" target="_blank">Operador de Secado y Tratamiento Térmico de la Madera</a></td>
 			<td>Operador de Camara de Secado</td>
 		</tr>
                 <tr>
@@ -57,8 +57,7 @@ echo $this->element('menu_docs')
                         <td>Carpintero de Obra</td>
 		</tr>
 		<tr>
-			<td>Operador de Sala de Afilado (pertinente también a la Primera y Segunda Transformación)</td>
-			<td>Afilador</td>
+<td><a href="<?php echo $html->url('/').DIR ?>fp/Operador de Sala de Afilado - 2011.pdf" target="_blank">Operador de Sala de Afilado</a>(pertinente también a la Primera y Segunda Transformación)</td>			<td>Afilador</td>
 		</tr>
                 <tr>
 			<td>Operador de Centro de Mecanizado</td>

@@ -136,8 +136,8 @@ echo $this->element('menu_docs')
     </tr>
     <tr>
       <td rowspan="4">Mantenimiento y Reparación de carrocería</td>
-      <td><a href="<?php echo $html->url('/').DIR ?>fp/Chapista - 2012.pdf" target="_blank">Chapista</a></td>
-      <td>Chapista</td>
+      <td><a href="<?php echo $html->url('/').DIR ?>fp/Chapista de Automotores - 2012.pdf" target="_blank">Chapista de Automotores</a></td>
+      <td>Chapista de Automotores</td>
       <td></td>
     </tr>
     <tr>

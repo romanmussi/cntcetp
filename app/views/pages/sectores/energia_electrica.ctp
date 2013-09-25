@@ -1,10 +1,7 @@
 <?php 
 $this->pageTitle= 'Energía Eléctrica';
 ?>
-
 <?php echo $this->element('menu_docs')?>
-
-
 <div class="grid_9">
     <div class="boxblanca boxdocs">
         <h2>Sector Energía Eléctrica</h2>

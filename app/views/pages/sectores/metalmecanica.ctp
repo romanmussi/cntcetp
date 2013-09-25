@@ -1,5 +1,5 @@
 <?php 
-$this->pageTitle= 'Metalmecánica';
+$this->pageTitle= 'Mecánica, Metalmecánica y Metalurgia';
 ?>
 
 <?php echo $this->element('menu_docs')?>
@@ -7,7 +7,7 @@ $this->pageTitle= 'Metalmecánica';
 
 <div class="grid_9">
     <div class="boxblanca boxdocs">
-        <h2>Sector Metalmecánica</h2>
+        <h2>Sector Mecánica, Metalmecánica y Metalurgia</h2>
 	<?php echo $this->element('marcos_ref')?>
         <br />
         <?php echo $html->link('< Volver a la familia profesional', array('controller' => 'pages', 'action' => 'display', 'flias/metalmecanica'));?>

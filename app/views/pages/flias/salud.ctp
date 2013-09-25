@@ -5,7 +5,6 @@ echo $this->element('menu_docs')
   <div id="cuerpo1" class="grid_9">
     <div class=" boxblanca boxdocs">
     <h2>Sector Salud</h2>
-
     	<?php  
         $vops = array(
             'foroName' => 'Salud',
@@ -19,5 +18,7 @@ echo $this->element('menu_docs')
                 <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/salud'));?></li>
                 <li><?php echo $html->link('Ver títulos del sector Salud', '/titulos-salud') ?></li>
             </ul>
+        <br />
+        <br />
     </div>
 </div>

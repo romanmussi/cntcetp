@@ -4,7 +4,7 @@ echo $this->element('menu_docs')
 ?>
   <div id="cuerpo1" class="grid_9">
     <div class=" boxblanca boxdocs">
-    <h2>Sector Metalmecánica</h2>
+    <h2>Sector Mecánica, Metalmecánica y Metalurgia</h2>
     <h3>Familia profesional</h3>
 <table>
   <thead>
@@ -184,7 +184,7 @@ echo $this->element('menu_docs')
         <h3>Más información</h3>
             <ul>
                 <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/metalmecanica'));?></li>
-                <li><?php echo $html->link('Ver títulos del sector Metalmecánica', '/titulos-metalmecanica') ?></li>
+                <li><?php echo $html->link('Ver títulos del sector Mecánica, Metalmecánica y Metalurgia', '/titulos-metalmecanica') ?></li>
             </ul>    
   </div>
 </div>

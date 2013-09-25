@@ -33,11 +33,11 @@ echo $this->element('menu_docs')
 			<td>Albañil en construcciones tradicionales</td>
 		</tr>
 		<tr>
-                        <td><a href="<?php echo $html->url('/').DIR ?>fp/Armador de Hierros para HA - 2010.pdf" target="_blank">Armador de hierros para hormigón armado</a></td>
+                        <td><a href="<?php echo $html->url('/').DIR ?>fp/Armador de hierros para hormigón armado - 2010.pdf" target="_blank">Armador de hierros para hormigón armado</a></td>
 			<td rowspan="2">Armador y carpintero en hormigón armado</td>
 		</tr>
 		<tr>
-			<td><a href="<?php echo $html->url('/').DIR ?>fp/Carpintero para Hormigón Armado - 2010.pdf" target="_blank">Carpintero para hormigón armado</a></td>
+			<td><a href="<?php echo $html->url('/').DIR ?>fp/Carpintero para hormigón armado - 2010.pdf" target="_blank">Carpintero para hormigón armado</a></td>
 			</tr>
 		<tr>
 			<td><a href="<?php echo $html->url('/').DIR ?>fp/Techista de Faldones Inclinados - 2010.pdf" target="_blank">Techista de faldones inclinados</a></td>

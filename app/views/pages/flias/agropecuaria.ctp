@@ -4,7 +4,7 @@ echo $this->element('menu_docs')
 ?>
   <div id="cuerpo1" class="grid_9">
     <div class=" boxblanca boxdocs">
-    <h2>Sector Agropecuaria</h2>
+    <h2>Sector Agropecuario</h2>
     <h3>Familia profesional</h3>
     <table>
 	<thead>
@@ -19,13 +19,13 @@ echo $this->element('menu_docs')
 
 		<tr>
 			<td></td>
-			<td><a href="<?php echo $html->url('/').DIR ?>sec/Técnico medio en Producción Agropecuaria - 2007.pdf" target="_blank">Técnico medio en Producción Agropecuaria</a></td>
-			<td>Técnico medio en Producción Agropecuaria</td>
+			<td><a href="<?php echo $html->url('/').DIR ?>sec/Técnico en Producción Agropecuaria - 2007.pdf" target="_blank">Técnico en Producción Agropecuaria</a></td>
+			<td>Técnico en Producción Agropecuaria</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td><a href="<?php echo $html->url('/').DIR ?>sup/Técnico Superior en Producción Agropecuaria - 2009.pdf" target="_blank">Técnico Superior en Producción Agropecuaria</a></td>
+			<td><a href="<?php echo $html->url('/').DIR ?>sup/Técnico Superior en Gestión de la Producción Agropecuaria - 2009.pdf" target="_blank">Técnico Superior en Gestión de la Producción Agropecuaria</a></td>
 			<td>Técnico Superior en Gestión de la Producción Agropecuaria</td>
 			<td></td>
 		</tr>
@@ -277,7 +277,7 @@ echo $this->element('menu_docs')
         <h3>Más información</h3>
             <ul>
                 <li><?php echo $html->link('Listado de Marcos de Referencia del sector', array('controller' => 'pages', 'action' => 'display', 'sectores/agropecuaria'));?></li>
-                <li><?php echo $html->link('Ver títulos del sector Agropecuaria', '/titulos-agropecuarios') ?></li>
+                <li><?php echo $html->link('Ver títulos del sector Agropecuario', '/titulos-agropecuarios') ?></li>
             </ul>
     </div>	
 </div>
