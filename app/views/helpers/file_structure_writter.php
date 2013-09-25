@@ -82,6 +82,7 @@ class FileStructureWritterHelper extends AppHelper {
         } else {
             echo "<ul>";
             if (@$cantFolders) {
+                $modo_linux = Configure::read('modo_linux');
                 foreach ($array[$mainkey][$this->folders] as $k => $folder) {
                     if (!empty($folder)) {
                         $this->level++;
@@ -112,6 +113,7 @@ class FileStructureWritterHelper extends AppHelper {
 
     function _readFiles($array) {
         if (!empty($array)) {
+            $modo_linux = Configure::read('modo_linux'); 
             foreach ($array as $val) {
                 if ($modo_linux) {
                     $val = utf8_decode($val);
