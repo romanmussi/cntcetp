@@ -1,10 +1,7 @@
 <?php
 echo $html->css('catalogo.instits', false);
-
 $cue_instit = ($instit['Instit']['cue']*100)+$instit['Instit']['anexo'];
-
 $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
-
 ?>
 <div class="grid_12">
     <h1>
@@ -100,9 +97,6 @@ $this->pageTitle =  $cue_instit.' '.$instit['Instit']['nombre_completo'];
                             <?php
                             if(!empty($instit['Instit']['mail'])) {
                                 echo $html->link($instit['Instit']['mail'], 'mailto:'.$instit['Instit']['mail'] , array('target'=>'_blank'));
-                                //echo $instit['Instit']['mail'];
-                                //echo $hideMail->hide($instit['Instit']['mail']);
-                                //echo "&nbsp;"; //pongo un espacio para que el campo tome la altura del texto
                             }else {
                                 echo "<i>No declarado</i>";
                             } ?>
