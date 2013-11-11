@@ -45,8 +45,7 @@ require_once('config.email.php');
 define('NOMBRE_CONTACTO', 'Unidad de Información');
 define('EMAIL_CONTACTO', 'desarrolloetp@inet.edu.ar');
 
-
-define('FECHA_ACTUALIZACION_DDBB','Mayo de 2013');
+define('FECHA_ACTUALIZACION_DDBB','Noviembre de 2013');
 
 define('BB_ALT', 'Carrera Prioritaria - Becas Bicentenario');
 define('BB_INSTIT_ALT', 'Institución con Carrera Prioritaria - Becas Bicentenario');
